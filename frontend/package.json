@@ -9,14 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-icons": "^1.3.0",
+<<<<<<< HEAD
     "@radix-ui/react-navigation-menu": "^1.2.0",
+=======
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.1",
+>>>>>>> a549c0c8fb4ef26c0d4cb805b9226f152c33bdb9
     "@tanstack/react-table": "^8.20.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "date-fns": "^3.6.0",
     "lucide-react": "^0.439.0",
     "next": "14.2.6",
     "react": "^18",
+    "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"
