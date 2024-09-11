@@ -1,0 +1,51 @@
+# Ignorar el entorno virtual
+env-tpi/
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorar archivos de configuración de entornos específicos
+*.env
+*.venv
+*.idea/
+*.vscode/
+
+# Ignorar archivos de logs
+*.log
+
+# Ignorar archivos de base de datos
+*.sqlite3
+*.db
+
+# Ignorar archivos generados por IDEs y editores
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos de pruebas
+*.coverage
+*.nosetests.xml
+*.tox
+*.nox
+*.coverage
+*.hypothesis/
+*.pytest_cache/
+.coverage
+
+# Ignorar archivos de instalación
+pip-wheel-metadata/
+dist/
+build/
+*.egg-info/
+
+# Ignorar configuraciones de PyCharm
+.idea/
+
+# Ignorar archivos de configuración de conda
+conda-meta/
