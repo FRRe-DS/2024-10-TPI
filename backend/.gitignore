@@ -2,6 +2,9 @@
 env-tpi/
 .venv/
 
+# Migraciones de Alembic
+migrations/versions/
+
 # Ignorar archivos compilados de Python
 __pycache__/
 *.pyc

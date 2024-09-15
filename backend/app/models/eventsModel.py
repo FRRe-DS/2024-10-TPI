@@ -1,7 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, func
-from sqlalchemy.ext.declarative import declarative_base
-
-Base = declarative_base()   
+from app.models.base import Base
 
 class EventModel(Base):
   __tablename__ = 'events'  

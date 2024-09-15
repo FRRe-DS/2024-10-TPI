@@ -4,10 +4,12 @@ from sqlalchemy import engine_from_config
 from sqlalchemy import pool
 from alembic import context
 from dotenv import load_dotenv
-from app.models.eventsModel import Base
+
+from app.models.base import Base
+from app.models import eventsModel
 
 load_dotenv()
-db_user = os.getenv('DB_USER')
+db_user = os.getenv('DB_USER')  
 db_password = os.getenv('DB_PASSWORD')
 db_host = os.getenv('DB_HOST')
 db_port = os.getenv('DB_PORT')
