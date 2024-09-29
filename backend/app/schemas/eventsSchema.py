@@ -16,7 +16,12 @@ class EventCreate(EventBase):
 
 # Clase para la actualización de eventos
 class EventUpdate(EventBase):
-    pass
+    nombre: Optional[str] = None
+    fecha: Optional[datetime] = None
+    lugar: Optional[str] = None
+    nroEdicion: Optional[int] = None
+    descripcion: Optional[str] = None
+    tematica: Optional[str] = None
 
 # Clase para la respuesta de los eventos
 class Event(EventBase):
@@ -26,5 +31,5 @@ class Event(EventBase):
     deleted_at: Optional[datetime]
 
     class Config:
-        orm_mode = True
+        from_attributes = True
   

@@ -13,5 +13,5 @@ class EventModel(Base):
   tematica = Column(String(255), nullable=False)
 
   created_at = Column(DateTime, server_default=func.now(), nullable=False)
-  updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now(), nullable=False)
+  updated_at = Column(DateTime, onupdate=func.now(), nullable=True)
   deleted_at = Column(DateTime, nullable=True)
