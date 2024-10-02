@@ -7,21 +7,21 @@ from app.config.db import get_db
 event = APIRouter()
 
 @event.get("/eventos")
-async def get_events(db: Session = Depends(get_db)):
+def get_events(db: Session = Depends(get_db)):
     return EventController.get_events(db)
 
-@event.get("/eventos/{id}")
-def get_event_by_id(id: int, db: Session = Depends(get_db)):
-    return EventController.get_event_by_id(id, db)
+@event.get("/eventos/{nombre}/{edicion}")
+def get_event_by_nombre_and_edicion(nombre: str, edicion: int, db: Session = Depends(get_db)):
+    return EventController.get_event_by_nombre_and_edicion(nombre, edicion, db)
 
 @event.post("/eventos")
 def create_event(event: EventCreate, db: Session = Depends(get_db)):
     return EventController.create_event(event, db)
 
-@event.patch("/eventos/{id}")
-def update_event(id: int, updatedEvent: EventUpdate, db: Session = Depends(get_db)):
-    return EventController.update_event(id, updatedEvent, db)
+@event.patch("/eventos/{nombre}/{edicion}")
+def update_event(nombre: str, edicion: int, updatedEvent: EventUpdate, db: Session = Depends(get_db)):
+    return EventController.update_event(nombre, edicion, updatedEvent, db)
 
-@event.delete("/eventos/{id}")
-def delete_event(id: int, db: Session = Depends(get_db)):
-    return EventController.delete_event(id, db)
+@event.delete("/eventos/{nombre}/{edicion}")
+def delete_event(nombre: str, edicion: int, db: Session = Depends(get_db)):
+    return EventController.delete_event(nombre, edicion, db)

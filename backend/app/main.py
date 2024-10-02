@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.config.db import Base, engine
 from app.routes.eventsRoutes import event
+from app.routes.authorsRoutes import author
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -31,5 +32,7 @@ app.add_middleware(
 def read_root():
     return {"message": "Hello, World!"}
 
-# Agrego las rutas de los eventos
-app.include_router(event)   
+# Agrego las rutas de las tablas
+app.include_router(event)
+app.include_router(author)
+

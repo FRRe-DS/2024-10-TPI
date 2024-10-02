@@ -6,7 +6,7 @@ from alembic import context
 from dotenv import load_dotenv
 
 from app.models.base import Base
-from app.models import eventsModel
+from app.models import eventsModel, authorsModel
 
 load_dotenv()
 db_user = os.getenv('DB_USER')  
