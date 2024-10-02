@@ -1,0 +1,33 @@
+/* Nav.module.css */
+.button {
+  position: relative; /* Ensure the button itself is positioned correctly */
+  cursor: pointer;
+  width: fit-content;
+}
+
+.svg {
+  fill: black;
+  stroke: black;
+  width: fit-content;
+  height: 60px;
+  stroke-width: 1px;
+  stroke-dasharray: 250;
+  stroke-dashoffset: -250;
+  font-size: 50px;
+  transition:
+    stroke-dashoffset 0.9s ease-in-out,
+    fill 1s;
+}
+
+.button:hover .svg {
+  stroke-dashoffset: 0;
+  transition:
+    stroke-dashoffset 0.6s ease-in-out,
+    fill 0.6s;
+  fill: transparent;
+}
+.text {
+  fill: black;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+}
