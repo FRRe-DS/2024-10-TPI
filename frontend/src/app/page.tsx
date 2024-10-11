@@ -1,3 +1,4 @@
+import Nav from "@/components/ui/nav";
 import dynamic from "next/dynamic";
 
 const Model = dynamic(() => import("@/components/Model"), { ssr: false });
