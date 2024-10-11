@@ -21,6 +21,10 @@
     text-wrap: balance;
   }
 }
+model-viewer {
+  width: 500px;
+  height: 500px;
+}
 
 @layer base {
   :root {
@@ -86,3 +90,4 @@
     @apply bg-background text-foreground;
   }
 }
+
