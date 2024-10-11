@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from app.config.db import Base, engine
+from app.config.migrations import apply_migrations
 from app.routes.eventsRoutes import event
 from app.routes.authorsRoutes import author
 from contextlib import asynccontextmanager
@@ -27,6 +28,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Aplicar las migraciones
+apply_migrations()
 
 @app.get("/")
 def read_root():

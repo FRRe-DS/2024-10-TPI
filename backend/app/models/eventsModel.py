@@ -4,9 +4,9 @@ from app.models.base import Base
 class EventModel(Base):
   __tablename__ = 'events'  
 
-  # id = Column(Integer, primary_key=True, index=True)
-  nombre = Column(String(255), primary_key=True, index=True)
-  edicion = Column(Integer, primary_key=True, index=True)
+  id = Column(Integer, primary_key=True, index=True)
+  nombre = Column(String(255), nullable=False)
+  edicion = Column(Integer, nullable=False)
   fecha_inicio = Column(DateTime, nullable=False)
   fecha_fin = Column(DateTime, nullable=False)
   lugar = Column(String(255), nullable=False)

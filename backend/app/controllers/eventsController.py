@@ -9,8 +9,8 @@ class EventController:
   def get_events(db: Session):
       return db.query(EventModel).all()
 
-  def get_event_by_nombre_and_edicion(nombre: str, edicion: int, db: Session):
-      event = db.query(EventModel).filter(EventModel.nombre == nombre and EventModel.edicion == edicion).one_or_none()
+  def get_event_by_id(id: int, db: Session):
+      event = db.query(EventModel).filter(EventModel.id == id).one_or_none()
       if event is None:
           raise HTTPException(status_code=404, detail="Evento no encontrado")
       return event
@@ -22,8 +22,8 @@ class EventController:
       db.refresh(new_event)
       return {"mensaje": "Evento creado correctamente"}
 
-  def update_event(nombre: str, edicion: int, updatedEvent: EventUpdate, db: Session):
-      event = db.query(EventModel).filter(EventModel.nombre == nombre and EventModel.edicion == edicion).one_or_none()
+  def update_event(id: int, updatedEvent: EventUpdate, db: Session):
+      event = db.query(EventModel).filter(EventModel.id == id).one_or_none()
       if event is None:
           raise HTTPException(status_code=404, detail="Evento no encontrado")
       
@@ -33,8 +33,8 @@ class EventController:
       db.refresh(event)
       return {"mensaje": "Evento actualizado correctamente"}
 
-  def delete_event(nombre: str, edicion: int, db: Session):   
-      event = db.query(EventModel).filter(EventModel.nombre == nombre and EventModel.edicion == edicion).one_or_none()
+  def delete_event(id: int, db: Session):   
+      event = db.query(EventModel).filter(EventModel.id == id).one_or_none()
       if event is None:
           raise HTTPException(status_code=404, detail="Evento no encontrado")
       # db.delete(event)

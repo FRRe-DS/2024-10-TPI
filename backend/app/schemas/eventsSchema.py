@@ -3,6 +3,7 @@ from typing import Optional
 from datetime import datetime
 
 class EventBase(BaseModel):
+    id: int
     nombre: str
     edicion: int
     fecha_inicio: datetime
@@ -25,6 +26,7 @@ class EventUpdate(EventBase):
 
 # Clase para la respuesta de los eventos
 class Event(EventBase):
+    id: Optional[int]
     nombre: Optional[str]
     edicion: Optional[int]
     created_at: datetime
