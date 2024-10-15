@@ -1,20 +1,18 @@
-from sqlalchemy import Column, Integer, String, DateTime, func
-from app.models.base import Base
+from sqlalchemy import Integer, String, Date, Text
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+from typing import List
+from app.models.contactsModel import Contacto
+from app.config.db import Base
 
 class AuthorModel(Base):
-  __tablename__ = 'authors'
+    __tablename__ = "Autores"
 
-  dni = Column(Integer, primary_key=True, index=True)
-  nombre = Column(String(255), nullable=False)
-  apellido = Column(String(255), nullable=False)
-  fec_nac = Column(DateTime)
-  biografia = Column(String(255))
-  nacionalidad = Column(String(255), nullable=False)
-  premios = Column(String(255))
-  telefono = Column(String(255))
-  email = Column(String(255))
-  obras_previas = Column(String(255))
+    id_autor: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
+    dni: Mapped[str] = mapped_column(String(8), nullable=False)
+    nombre: Mapped[str] = mapped_column(String(255), nullable=False)
+    apellido: Mapped[str] = mapped_column(String(255), nullable=False)
+    fec_nac: Mapped[str] = mapped_column(Date, nullable=False)
+    biografia: Mapped[str] = mapped_column(Text, nullable=False)
+    pais_origen: Mapped[str] = mapped_column(String(255), nullable=False)
 
-  created_at = Column(DateTime, server_default=func.now(), nullable=False)
-  updated_at = Column(DateTime, onupdate=func.now(), nullable=True)
-  deleted_at = Column(DateTime, nullable=True)
+    contactos: Mapped[List["Contacto"]] = relationship("Contacto", back_populates="autor_relacion")

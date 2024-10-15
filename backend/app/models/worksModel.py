@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, Time, func, ForeignKey
 from sqlalchemy.orm import relationship
-from app.models.base import Base
+from app.config.db import Base
 from app.models.authorsModel import AuthorModel
 from app.models.eventsModel import EventModel
 
