@@ -1,8 +1,10 @@
 from fastapi import FastAPI
 from app.config.db import Base, engine
 from app.config.migrations import apply_migrations
-from app.routes.eventsRoutes import event
+# from app.routes.eventsRoutes import event
+from app.routes.usersRoutes import user
 from app.routes.authorsRoutes import author
+from app.routes.contactsRoutes import contact
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -37,6 +39,7 @@ def read_root():
     return {"message": "Hello, World!"}
 
 # Agrego las rutas de las tablas
-app.include_router(event)
+# app.include_router(event)
+app.include_router(user)
 app.include_router(author)
-
+app.include_router(contact)

@@ -12,8 +12,7 @@ class AuthorBase(BaseModel):
   pais_origen: str
 
 class AuthorCreate(AuthorBase):
-  fec_nac: Optional[date] = None
-  biografia: Optional[str] = None
+  pass
 
 class AuthorUpdate(AuthorBase):
   dni: Optional[str] = None

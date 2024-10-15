@@ -10,4 +10,4 @@ class ContactModel(Base):
     tipo: Mapped[str] = mapped_column(String(255), nullable=False)
     contenido: Mapped[str] = mapped_column(String(255), nullable=False)
 
-    autor_relacion: Mapped["AuthorModel"] = relationship("AuthorModel", back_populates="contactos")
+    autor_relacion: Mapped["AuthorModel"] = relationship("AuthorModel", back_populates="contactos") # type: ignore
