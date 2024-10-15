@@ -46,7 +46,21 @@ Cuando termines de trabajar, puedes desactivar el entorno virtual usando el coma
 deactivate
 ```
 
-### 4. Actualizar dependencias (opcional)
+### 4. Agregar o eliminar dependencias
+
+Si deseas añadir una dependencia debes ejecutar el comando:
+
+```sh
+pip install nombre_dependencia
+```
+
+Si deseas eliminar una dependencia debes ejecutar el comando:
+
+```sh
+pip uninstall nombre_dependencia
+```
+
+### 5. Actualizar dependencias
 
 Si añades o cambias dependencias, asegúrate de actualizar el archivo requirements.txt con:
 
