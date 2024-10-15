@@ -9,8 +9,8 @@ class AuthorController:
   def get_authors(db: Session):
       return db.query(AuthorModel).all()
 
-  def get_author_by_id(id_autor: int, db: Session):
-      author = db.query(AuthorModel).filter(AuthorModel.id_autor == id_autor).one_or_none()
+  def get_author_by_id(id: int, db: Session):
+      author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
       if author is None:
           raise HTTPException(status_code=404, detail="Autor no encontrado")
       return author
@@ -22,8 +22,8 @@ class AuthorController:
       db.refresh(new_author)
       return {"mensaje": "Autor creado correctamente"}
   
-  def update_author(id_autor: int, updatedAuthor: AuthorUpdate, db: Session):
-      author = db.query(AuthorModel).filter(AuthorModel.id_autor == id_autor).one_or_none()
+  def update_author(id: int, updatedAuthor: AuthorUpdate, db: Session):
+      author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
       if author is None:
           raise HTTPException(status_code=404, detail="Autor no encontrado")
       
@@ -33,16 +33,16 @@ class AuthorController:
       db.refresh(author)
       return {"mensaje": "Autor actualizado correctamente"}
   
-  def delete_author(id_autor: int, db: Session):   
-      author = db.query(AuthorModel).filter(AuthorModel.id_autor == id_autor).one_or_none()
+  def delete_author(id: int, db: Session):   
+      author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
       if author is None:
           raise HTTPException(status_code=404, detail="Autor no encontrado")
       author.deleted_at = datetime.now()
       db.commit()
       return {"mensaje": "Autor eliminado correctamente"}
   
-  def exists_author_by_id(id_autor: int, db: Session):
-      author = db.query(AuthorModel).filter(AuthorModel.id_autor == id_autor).one_or_none()
+  def exists_author_by_id(id: int, db: Session):
+      author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
       return {"existe": author is not None}
   
   def exists_author_by_dni(dni: str, db: Session):

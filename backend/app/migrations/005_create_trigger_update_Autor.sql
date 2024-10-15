@@ -1,0 +1,6 @@
+CREATE TRIGGER IF NOT EXISTS update_Autor_date
+BEFORE UPDATE ON Autores
+FOR EACH ROW
+BEGIN
+  SET NEW.updated_at = NOW();
+END;
