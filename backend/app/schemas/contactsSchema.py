@@ -9,9 +9,10 @@ class ContactBase(BaseModel):
     contenido: str
 
 class ContactCreate(ContactBase):
-    pass
+    id: Optional[int] = None
 
 class ContactUpdate(ContactBase):
+    id: Optional[int] = None
     tipo: Optional[str] = None
     contenido: Optional[str] = None
 

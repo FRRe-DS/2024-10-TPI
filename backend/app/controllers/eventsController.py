@@ -37,8 +37,6 @@ class EventController:
       event = db.query(EventModel).filter(EventModel.id == id).one_or_none()
       if event is None:
           raise HTTPException(status_code=404, detail="Evento no encontrado")
-      # db.delete(event)
-      # Actualizacion del campo deleted_at para la eliminacion logica
-      event.deleted_at = datetime.now()
+      db.delete(event)
       db.commit()
       return {"mensaje": "Evento eliminado correctamente"}

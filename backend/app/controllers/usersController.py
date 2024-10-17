@@ -37,7 +37,7 @@ class UserController:
       user = db.query(UserModel).filter(UserModel.id == id).one_or_none()
       if user is None:
           raise HTTPException(status_code=404, detail="Usuario no encontrado")
-      user.deleted_at = datetime.now()
+      db.delete(user)
       db.commit()
       return {"mensaje": "Usuario eliminado correctamente"}
   

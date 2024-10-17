@@ -12,9 +12,10 @@ class AuthorBase(BaseModel):
   pais_origen: str
 
 class AuthorCreate(AuthorBase):
-  pass
+  id: Optional[int] = None
 
 class AuthorUpdate(AuthorBase):
+  id: Optional[int] = None
   dni: Optional[str] = None
   nombre: Optional[str] = None
   apellido: Optional[str] = None

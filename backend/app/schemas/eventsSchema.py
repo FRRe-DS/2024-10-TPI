@@ -14,10 +14,11 @@ class EventBase(BaseModel):
 
 # Clase para la creación de eventos
 class EventCreate(EventBase):
-    pass
+    id: Optional[int] = None
 
 # Clase para la actualización de eventos
 class EventUpdate(EventBase):
+    id: Optional[int] = None
     fecha_inicio: Optional[datetime] = None
     fecha_fin: Optional[datetime] = None
     lugar: Optional[str] = None

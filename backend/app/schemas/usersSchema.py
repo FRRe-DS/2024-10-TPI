@@ -11,9 +11,10 @@ class UserBase(BaseModel):
   correo: str
 
 class UserCreate(UserBase):
-  pass
+  id: Optional[int] = None
 
 class UserUpdate(UserBase):
+  id: Optional[int] = None
   nombre: Optional[str] = None
   apellido: Optional[str] = None
   contrasenia: Optional[str] = None

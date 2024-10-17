@@ -37,7 +37,7 @@ class ContactController:
       contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
       if contact is None:
           raise HTTPException(status_code=404, detail="Contacto no encontrado")
-      contact.deleted_at = datetime.now()
+      db.delete(contact)
       db.commit()
       return {"mensaje": "Contacto eliminado correctamente"}
   

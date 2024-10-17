@@ -37,7 +37,7 @@ class AuthorController:
       author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
       if author is None:
           raise HTTPException(status_code=404, detail="Autor no encontrado")
-      author.deleted_at = datetime.now()
+      db.delete(author)
       db.commit()
       return {"mensaje": "Autor eliminado correctamente"}
   
