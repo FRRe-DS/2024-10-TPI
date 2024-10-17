@@ -7,13 +7,13 @@ export async function handleAuth({ formData, isLogin }) {
 
   try {
     const response = await fetch(endpoint, {
-      method: "POST",
+      method:"POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
-
+    console.log(response)
     const data = await response.json();
     console.log(data);
     if (!response.ok) {
@@ -24,6 +24,7 @@ export async function handleAuth({ formData, isLogin }) {
       data,
       success: true,
       message: isLogin ? "Logueado" : "Registrado",
+      detail: data?.detail
     };
   } catch (error) {
     return {

@@ -36,14 +36,15 @@ export default function Page() {
         correo: formData.correo,
         contrasenia_hasheada: formData.contrasenia_hasheada,
       };
-      result = await handleAuth({ loginData, isLogin });
-      localStorage.setItem("token", result.data.token);
+      result = await handleAuth({ formData: loginData, isLogin });
     }
 
     if (result.success) {
       alert(result.message);
+      localStorage.setItem("token", result?.data?.access_token);
     } else {
       alert(result.message);
+      //alert(result?.detail[0]?.msg);
     }
   };
 
