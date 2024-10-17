@@ -19,8 +19,10 @@ origins = [
 # crear el ciclo de vida de la app
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    Base.metadata.create_all(bind=engine)
+    # inicializaciones
+    # Base.metadata.create_all(bind=engine)
     yield
+    # limpiezas y cierres
 
 app = FastAPI(lifespan=lifespan)
 
