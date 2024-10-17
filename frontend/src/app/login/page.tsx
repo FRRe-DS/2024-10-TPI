@@ -23,17 +23,28 @@ export default function Page() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isLogin && formData.contrasenia_hasheada !== confirmarContra) {
-      alert("Passwords do not match");
-      return;
-    }
+    let result;
+    if (!isLogin) {
+      if (formData.contrasenia_hasheada !== confirmarContra) {
+        alert("Passwords do not match");
+        return;
+      }
 
-    const result = await handleAuth({ formData, isLogin });
+      result = await handleAuth({ formData, isLogin });
+    } else {
+      const loginData = {
+        correo: formData.correo,
+        contrasenia_hasheada: formData.contrasenia_hasheada,
+      };
+      result = await handleAuth({ formData: loginData, isLogin });
+    }
 
     if (result.success) {
       alert(result.message);
+      localStorage.setItem("token", result?.data?.access_token);
     } else {
       alert(result.message);
+      //alert(result?.detail[0]?.msg);
     }
   };
 

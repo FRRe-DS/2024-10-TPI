@@ -14,13 +14,16 @@ origins = [
     "http://localhost",
     "http://localhost:8080",
     "http://localhost:3000",
+    "http://127.0.0.1:8000/login",
 ]
 
 # crear el ciclo de vida de la app
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    Base.metadata.create_all(bind=engine)
+    # inicializaciones
+    # Base.metadata.create_all(bind=engine)
     yield
+    # limpiezas y cierres
 
 app = FastAPI(lifespan=lifespan)
 

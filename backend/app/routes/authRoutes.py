@@ -10,6 +10,6 @@ auth = APIRouter()
 def register(user: UserCreate, db: Session = Depends(get_db)):
     return AuthController.register(user, db)
 
-@auth.get("/login")
+@auth.post("/login")
 def login(user: UserLogin, db: Session = Depends(get_db)):
     return AuthController.login(user, db)
