@@ -22,6 +22,11 @@ python -m venv env-tpi
 env-tpi\Scripts\activate
 ```
 
+for linux:
+
+````sh
+source env-tpi/bin/activate```
+
 > Nota: Si obtienes un error sobre la ejecución de scripts, ejecuta lo siguiente en PowerShell:
 
 ```sh
@@ -87,3 +92,4 @@ uvicorn app.main:app --reload
 ```sh
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
 ```
+````
