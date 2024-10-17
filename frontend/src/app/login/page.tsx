@@ -15,6 +15,28 @@ export default function Page() {
           {isLogin ? "Inicio de sesion" : "Registrarse"}
         </h1>
         <form className="flex flex-col space-y-4">
+          {!isLogin && (
+            <>
+              <input
+                type="text"
+                placeholder="Nombre"
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="text"
+                placeholder="Apellido"
+                className="border p-2 rounded"
+                required
+              />
+              <input
+                type="number"
+                placeholder="DNI"
+                className="border p-2 rounded"
+                required
+              />
+            </>
+          )}
           <input
             type="email"
             placeholder="Email"
@@ -40,7 +62,7 @@ export default function Page() {
           </button>
         </form>
         <button onClick={toggleForm} className="mt-4 text-blue-500 underline">
-          {isLogin ? "Crea una cuenta" : "Ya tienes una cuenta?, logeate"}
+          {isLogin ? "Crea una cuenta" : "Ya tienes una cuenta?, logueate"}
         </button>
       </div>
     </div>
