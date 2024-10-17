@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from app.models.usersModel import UserModel
 from app.schemas.usersSchema import UserCreate, UserUpdate
+from passlib.context import CryptContext
 
 class UserController:
 
@@ -16,6 +17,8 @@ class UserController:
       return user
   
   def create_user(user: UserCreate, db: Session):
+      pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+      user.contrasenia_hasheada = pwd_context.hash(user.contrasenia_hasheada)
       new_user = UserModel(**user.model_dump())
       db.add(new_user)
       db.commit()

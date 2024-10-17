@@ -5,6 +5,7 @@ from app.config.migrations import apply_migrations
 from app.routes.usersRoutes import user
 from app.routes.authorsRoutes import author
 from app.routes.contactsRoutes import contact
+from app.routes.authRoutes import auth
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -43,3 +44,4 @@ def read_root():
 app.include_router(user)
 app.include_router(author)
 app.include_router(contact)
+app.include_router(auth)
