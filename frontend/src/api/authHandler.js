@@ -2,8 +2,8 @@
 
 export async function handleAuth({ formData, isLogin }) {
   const endpoint = isLogin
-    ? `${process.env.PUBLIC_API_URL}/login`
-    : `${process.env.PUBLIC_API_URL}/register`;
+    ? `${process.env.NEXT_PUBLIC_API_URL}/login`
+    : `${process.env.NEXT_PUBLIC_API_URL}/register`;
 
   try {
     const response = await fetch(endpoint, {
