@@ -2,13 +2,17 @@
 .button {
   position: relative; /* Ensure the button itself is positioned correctly */
   cursor: pointer;
-  width: fit-content;
+  width: full;
 }
 
 .svg {
-  fill: black;
-  stroke: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
+  fill: black;
+  overflow: visible;
+  stroke: black;
   height: 60px;
   stroke-width: 1px;
   stroke-dasharray: 250;
