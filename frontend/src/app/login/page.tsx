@@ -1,98 +1,47 @@
-"use client";
-import { useState } from "react";
-import { handleAuth } from "@/api/authHandler";
+import { revalidatePath } from "next/cache";
+import Link from "next/link";
 
 export default function Page() {
-  const [isLogin, setIsLogin] = useState(true);
-  const [confirmarContra, setConfirmarContra] = useState("");
-  const [formData, setFormData] = useState({
-    nombre: "",
-    apellido: "",
-    dni: "",
-    correo: "",
-    contrasenia_hasheada: "",
-  });
-  const handleInputChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  async function handleLogin(data: FormData) {
+    "use server";
+    const formData = {
+      correo: data.get("correo"),
+      contrasenia_hasheada: data.get("contrasenia_hasheada"),
+    };
 
-  const toggleForm = () => {
-    setIsLogin(!isLogin);
-  };
+    const endpoint = true
+      ? `${process.env.NEXT_PUBLIC_API}/login`
+      : `${process.env.NEXT_PUBLIC_API}/register`;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    let result;
-    if (!isLogin) {
-      if (formData.contrasenia_hasheada !== confirmarContra) {
-        alert("Passwords do not match");
-        return;
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+      if (!response.ok) {
+        throw new Error(data.message || "Algo salió mal.");
       }
-
-      result = await handleAuth({ formData, isLogin });
-    } else {
-      const loginData = {
-        correo: formData.correo,
-        contrasenia_hasheada: formData.contrasenia_hasheada,
-      };
-      result = await handleAuth({ formData: loginData, isLogin });
+      revalidatePath("/");
+    } catch (error) {
+      console.log(error);
     }
-
-    if (result.success) {
-      alert(result.message);
-      localStorage.setItem("token", result?.data?.access_token);
-    } else {
-      alert(result.message);
-      //alert(result?.detail[0]?.msg);
-    }
-  };
-
+  }
   return (
     <div className="mx-auto flex p-5 flex-col justify-center items-center">
       <div className="p-10 border drop-shadow-md shadow-sm w-96 rounded-xl">
-        <h1 className="font-bold text-xl mb-4">
-          {isLogin ? "Inicio de sesion" : "Registrarse"}
-        </h1>
-        <form className="flex flex-col space-y-4" onSubmit={handleSubmit}>
-          {!isLogin && (
-            <>
-              <input
-                type="text"
-                placeholder="Nombre"
-                name="nombre"
-                className="border p-2 rounded"
-                value={formData.nombre}
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                type="text"
-                placeholder="Apellido"
-                name="apellido"
-                className="border p-2 rounded"
-                value={formData.apellido}
-                onChange={handleInputChange}
-                required
-              />
-              <input
-                type="number"
-                placeholder="DNI"
-                name="dni"
-                className="border p-2 rounded"
-                value={formData.dni}
-                onChange={handleInputChange}
-                required
-              />
-            </>
-          )}
+        <h1 className="font-bold text-xl mb-4">Inicio de sesión</h1>
+        <form className="flex flex-col space-y-4" action={handleLogin}>
           <input
             type="email"
             placeholder="Email"
             name="correo"
             className="border p-2 rounded"
-            value={formData.correo}
-            onChange={handleInputChange}
             required
           />
           <input
@@ -100,28 +49,15 @@ export default function Page() {
             placeholder="Contraseña"
             name="contrasenia_hasheada"
             className="border p-2 rounded"
-            value={formData.contrasenia_hasheada}
-            onChange={handleInputChange}
             required
           />
-          {!isLogin && (
-            <input
-              type="password"
-              placeholder="Confirmar contraseña"
-              name="confirmarContra"
-              className="border p-2 rounded"
-              value={confirmarContra}
-              onChange={(e) => setConfirmarContra(e.target.value)}
-              required
-            />
-          )}
           <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-            {isLogin ? "Iniciar Sesion" : "Registrarse"}
+            Iniciar sesión
           </button>
         </form>
-        <button onClick={toggleForm} className="mt-4 text-blue-500 underline">
-          {isLogin ? "Crea una cuenta" : "Ya tienes una cuenta?, logueate"}
-        </button>
+        <Link href="/" className="mt-4 text-blue-500 underline">
+          Crear una cuenta
+        </Link>
       </div>
     </div>
   );
