@@ -1,37 +1,10 @@
-import { revalidatePath } from "next/cache";
+"use client";
 import Link from "next/link";
+import { handleLogin } from "./actions";
+import { useFormStatus } from "react-dom";
 
 export default function Page() {
-  async function handleLogin(data: FormData) {
-    "use server";
-    const formData = {
-      correo: data.get("correo"),
-      contrasenia_hasheada: data.get("contrasenia_hasheada"),
-    };
-
-    const endpoint = true
-      ? `${process.env.NEXT_PUBLIC_API}/login`
-      : `${process.env.NEXT_PUBLIC_API}/register`;
-
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
-      if (!response.ok) {
-        throw new Error(data.message || "Algo salió mal.");
-      }
-      revalidatePath("/");
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  const { pending } = useFormStatus();
   return (
     <div className="mx-auto flex p-5 flex-col justify-center items-center">
       <div className="p-10 border drop-shadow-md shadow-sm w-96 rounded-xl">
@@ -51,7 +24,11 @@ export default function Page() {
             className="border p-2 rounded"
             required
           />
-          <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+          <button
+            disabled={pending}
+            type="submit"
+            className="disabled:bg-gray-400 bg-blue-500 text-white p-2 rounded"
+          >
             Iniciar sesión
           </button>
         </form>
