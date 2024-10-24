@@ -43,7 +43,8 @@ Una vez que el entorno virtual esté activado, instala todas las dependencias ne
 pip install -r requirements.txt
 ```
 
-### 3. Desactivar el entorno virtual
+
+### 5. Desactivar el entorno virtual
 
 Cuando termines de trabajar, puedes desactivar el entorno virtual usando el comando:
 
@@ -51,7 +52,7 @@ Cuando termines de trabajar, puedes desactivar el entorno virtual usando el coma
 deactivate
 ```
 
-### 4. Agregar o eliminar dependencias
+### 6. Agregar o eliminar dependencias
 
 Si deseas añadir una dependencia debes ejecutar el comando:
 
@@ -65,7 +66,7 @@ Si deseas eliminar una dependencia debes ejecutar el comando:
 pip uninstall nombre_dependencia
 ```
 
-### 5. Actualizar dependencias
+### 7. Actualizar dependencias
 
 Si añades o cambias dependencias, asegúrate de actualizar el archivo requirements.txt con:
 
@@ -91,5 +92,11 @@ uvicorn app.main:app --reload
 
 ```sh
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
+```
+````
+## Para ejecutar los scripts de generacion de datos (remplazar tabla por el nombre de la tabla que deseas generar datos)
+
+```sh
+-m app.seeds.generators.tablaGenerator
 ```
 ````

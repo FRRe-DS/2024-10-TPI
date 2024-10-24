@@ -8,6 +8,8 @@ from app.routes.contactsRoutes import contact
 from app.routes.authRoutes import auth
 from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
+from app.seeds.seedAll import seed_all  # Importa la función de poblar datos
+from app.utils.tags import tags
 
 # configurar CORS
 origins = [
@@ -17,16 +19,29 @@ origins = [
     "http://127.0.0.1:8000/login",
 ]
 
-# crear el ciclo de vida de la app
+# Crear el ciclo de vida de la app
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # inicializaciones
+    # Inicializaciones
     # Base.metadata.create_all(bind=engine)
+
+    # Aplicar las migraciones
+    apply_migrations()
+
+    # Llamar al seed de autores (u otros) aquí si es necesario
+    seed_all()
+
     yield
-    # limpiezas y cierres
+    # Limpiezas y cierres
 
-app = FastAPI(lifespan=lifespan)
+# Crear la instancia de FastAPI
+app = FastAPI(
+    lifespan=lifespan,
+    title = "DESARROLLO DE SOFTWARE G-10",
+    description = "TPI Bienal Chaco",
+    openapi_tags = tags)
 
+# Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -35,16 +50,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Aplicar las migraciones
-apply_migrations()
-
+# Rutas de la aplicación
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
 
-# Agrego las rutas de las tablas
+# Incluir las rutas de las tablas
 # app.include_router(event)
 app.include_router(user)
 app.include_router(author)
 app.include_router(contact)
 app.include_router(auth)
+#app.include_router(events)
