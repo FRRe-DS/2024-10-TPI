@@ -1,102 +1,104 @@
 # Backend con FastAPI
+Este repositorio contiene el backend desarrollado con FastAPI, una framework moderno y rápido para construir APIs en Python
+## Requisitos Previos
+* Python 3.8+
+* pip (Administrador de paquetes de Python)
 
-## Pasos para configurar el entorno virtual:
+## Configuración del Entorno de Desarrollo
+Sigue los siguientes pasos para configurar tu entorno de desarrollo:
 
-### 1. Navega al directorio del proyecto
+### 1. Clona el repositorio y navega al directorio del proyecto
 
 ```sh
+git clone https://github.com/tu-repo/backend-fastapi.git
 cd backend
 ```
-
 ### 2. Crea un entorno virtual
-
-Crea un entorno virtual en tu máquina local. El entorno virtual se llamará env-tpi.
+Crea un entorno virtual en tu máquina local, que llamaremos `env-tpi`.
 
 ```sh
 python -m venv env-tpi
 ```
-
 ### 3. Activa el entorno virtual
-
+**En Windows:**
 ```sh
 env-tpi\Scripts\activate
 ```
-
-for linux:
-
-````sh
-source env-tpi/bin/activate```
-
-> Nota: Si obtienes un error sobre la ejecución de scripts, ejecuta lo siguiente en PowerShell:
+**En Linux/MacOS:**
+``` sh
+source env-tpi/bin/activate
+```
+> Nota: Si encuentras un error relacionado con la ejecución de scripts en Windows, puedes solucionarlo ejecutando el siguiente comando en PowerShell:
 
 ```sh
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
-
-> Luego, intenta activar el entorno de nuevo.
+Luego, intenta activar el entorno nuevamente.
 
 ### 4. Instala las dependencias
-
-Una vez que el entorno virtual esté activado, instala todas las dependencias necesarias utilizando el archivo requirements.txt.
+Una vez que el entorno virtual esté activado, instala todas las dependencias necesarias utilizando el archivo `requirements.txt`.
 
 ```sh
 pip install -r requirements.txt
 ```
 
-
-### 5. Desactivar el entorno virtual
-
-Cuando termines de trabajar, puedes desactivar el entorno virtual usando el comando:
+### 5. Desactiva el entorno virtual
+Cuando termines de trabajar, puedes desactivar el entorno virtual usando el siguiente comando:
 
 ```sh
 deactivate
 ```
-
-### 6. Agregar o eliminar dependencias
-
-Si deseas añadir una dependencia debes ejecutar el comando:
+## Gestión de Dependencias
+### Agregar una dependencia
+Para agregar una nueva dependencia al proyecto, puedes usar:
 
 ```sh
 pip install nombre_dependencia
 ```
-
-Si deseas eliminar una dependencia debes ejecutar el comando:
+### Eliminar una dependencia
+Para eliminar una dependencia existente:
 
 ```sh
 pip uninstall nombre_dependencia
 ```
-
-### 7. Actualizar dependencias
-
-Si añades o cambias dependencias, asegúrate de actualizar el archivo requirements.txt con:
+### Actualizar `requirements.txt`
+Si has agregado o eliminado dependencias, asegúrate de actualizar el archivo requirements.txt ejecutando:
 
 ```sh
 pip freeze > requirements.txt
 ```
+> [!NOTA]: Asegúrate de hacer esto antes de desactivar el entorno virtual.
 
-> Nota: Esto lo debes hacer antes de desactivar el entorno virtual.
-
-## Para ejecutar la aplicacion:
+## Ejecución de la Aplicación
+### Iniciar la aplicación
+Para iniciar el servidor FastAPI, ejecuta:
 
 ```sh
 uvicorn app.main:app
 ```
-
-## Para ejecutar la aplicacion y que se actualice en cada cambio
+### Ejecución en modo de recarga automática
+Si deseas que la aplicación se recargue automáticamente al realizar cambios en el código:
 
 ```sh
 uvicorn app.main:app --reload
 ```
-
-## Para ejecutar la aplicacion especificando host y puerto
+### Especificar host y puerto
+Si necesitas que la aplicación escuche en un host o puerto específico:
 
 ```sh
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8080
 ```
-````
-## Para ejecutar los scripts de generacion de datos (remplazar tabla por el nombre de la tabla que deseas generar datos)
+
+### Generación de Datos en la Base de Datos
+Puedes ejecutar scripts de generación de datos para poblar las tablas de la base de datos.
+
+### Ejecutar script de generación de datos
+Reemplaza `tablaGenerator` por el nombre del generador de la tabla correspondiente:
 
 ```sh
--m app.seeds.generators.tablaGenerator
+python -m app.seeds.generators.tablaGenerator
 ```
-````
+
+## Contribuciones
+Si deseas contribuir a este proyecto, por favor sigue los siguientes pasos:
+...
