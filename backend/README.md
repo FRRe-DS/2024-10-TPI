@@ -10,7 +10,7 @@ Sigue los siguientes pasos para configurar tu entorno de desarrollo:
 ### 1. Clona el repositorio y navega al directorio del proyecto
 
 ```sh
-git clone https://github.com/tu-repo/backend-fastapi.git
+git clone https://github.com/FRRe-DS/2024-10-TPI.git
 cd backend
 ```
 ### 2. Crea un entorno virtual
