@@ -1,14 +1,15 @@
 "use server";
-import { revalidatePath } from "next/cache";
+
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+
 export async function handleLogin(data: FormData) {
   const formData = {
     correo: data.get("correo"),
     contrasenia_hasheada: data.get("contrasenia_hasheada"),
   };
 
-  const endpoint = true
-    ? `${process.env.NEXT_PUBLIC_API}/login`
-    : `${process.env.NEXT_PUBLIC_API}/register`;
+  const endpoint = `${process.env.NEXT_PUBLIC_API}/login`;
 
   try {
     const response = await fetch(endpoint, {
@@ -19,13 +20,16 @@ export async function handleLogin(data: FormData) {
       body: JSON.stringify(formData),
     });
     console.log(response);
-    const data = await response.json();
-    console.log(data);
+    const respData = await response.json();
+    console.log(respData);
     if (!response.ok) {
-      throw new Error(data.message || "Algo salió mal.");
+      throw new Error(respData.message || "Algo salió mal.");
     }
-    revalidatePath("/");
+    const cookieStore = await cookies();
+    cookieStore.set("access_token", respData.access_token);
+    cookieStore.set("correo", formData.correo as string);
   } catch (error) {
     console.log(error);
   }
+  redirect("/");
 }
