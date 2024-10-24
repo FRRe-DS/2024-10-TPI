@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/ui/navbar";
 import Nav from "@/components/ui/nav";
+import { cookies } from "next/headers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -15,11 +16,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookieStore = cookies();
+  const accessToken = cookieStore.get("access_token");
   return (
     <>
-      <html lang="es" >
-        <body className={inter.className + "min-h-screen bg-transparent" }>
-          <Nav />
+      <html lang="es">
+        <body className={inter.className + "min-h-screen bg-transparent"}>
+          <Nav accessToken={accessToken} />
           {children}
         </body>
       </html>
