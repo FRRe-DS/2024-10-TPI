@@ -28,7 +28,8 @@ env-tpi\Scripts\activate
 ``` sh
 source env-tpi/bin/activate
 ```
-> Nota: Si encuentras un error relacionado con la ejecución de scripts en Windows, puedes solucionarlo ejecutando el siguiente comando en PowerShell:
+> [!NOTE]
+> Si encuentras un error relacionado con la ejecución de scripts en Windows, puedes solucionarlo ejecutando el siguiente comando en PowerShell:
 
 ```sh
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -67,7 +68,8 @@ Si has agregado o eliminado dependencias, asegúrate de actualizar el archivo re
 ```sh
 pip freeze > requirements.txt
 ```
-> [!NOTA]: Asegúrate de hacer esto antes de desactivar el entorno virtual.
+> [!NOTE]
+> Asegúrate de hacer esto antes de desactivar el entorno virtual.
 
 ## Ejecución de la Aplicación
 ### Iniciar la aplicación
