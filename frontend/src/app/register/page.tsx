@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { handleLogin } from "./actions";
+import { handleRegister } from "./actions";
 import { useFormStatus } from "react-dom";
 
 export default function Page() {
@@ -8,8 +8,29 @@ export default function Page() {
   return (
     <div className="mx-auto flex p-5 flex-col justify-center items-center">
       <div className="p-10 border drop-shadow-md shadow-sm w-96 rounded-xl">
-        <h1 className="font-bold text-xl mb-4">Inicio de sesión</h1>
-        <form className="flex flex-col space-y-4" action={handleLogin}>
+        <h1 className="font-bold text-xl mb-4">Registrarse</h1>
+        <form className="flex flex-col space-y-4" action={handleRegister}>
+        <input
+            type="name"
+            placeholder="Nombre"
+            name="nombre"
+            className="border p-2 rounded"
+            required
+          />
+          <input
+            type="lastname"
+            placeholder="Apellido"
+            name="apellido"
+            className="border p-2 rounded"
+            required
+          />
+          <input
+            type="dni"
+            placeholder="DNI"
+            name="dni"
+            className="border p-2 rounded"
+            required
+          />
           <input
             type="email"
             placeholder="Email"
@@ -29,11 +50,11 @@ export default function Page() {
             type="submit"
             className="disabled:bg-gray-400 bg-blue-500 text-white p-2 rounded"
           >
-            Iniciar sesión
+            Registrarse
           </button>
         </form>
-        <Link href="/register" className="mt-4 text-blue-500 underline">
-          Crear una cuenta
+        <Link href="/login" className="mt-4 text-blue-500 underline">
+          Volver a Login
         </Link>
       </div>
     </div>
