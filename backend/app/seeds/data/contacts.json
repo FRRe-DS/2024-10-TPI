@@ -1,0 +1,27 @@
+[
+  {
+    "autor": 1,
+    "tipo": "Email",
+    "contenido": "juan.mendoza@example.com"
+  },
+  {
+    "autor": 2,
+    "tipo": "Teléfono",
+    "contenido": "+1 809 555 7890"
+  },
+  {
+    "autor": 2,
+    "tipo": "Email",
+    "contenido": "mia.gonzalez@example.com"
+  },
+  {
+    "autor": 2,
+    "tipo": "Teléfono",
+    "contenido": "+54 9 11 2345 6789"
+  },
+  {
+    "autor": 3,
+    "tipo": "Red Social",
+    "contenido": "@sofia_romero"
+  }
+]

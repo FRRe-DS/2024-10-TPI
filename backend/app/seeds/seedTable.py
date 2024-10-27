@@ -1,9 +1,8 @@
-import os
-import sys
 import json
 from datetime import datetime
+
 from sqlalchemy.orm import Session
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 def seed_table(model, json_file: str, db: Session, date_fields: list = []):
     # Verificar si la tabla ya tiene datos
@@ -31,10 +30,12 @@ def seed_table(model, json_file: str, db: Session, date_fields: list = []):
             # Crear una instancia del modelo, usando solo los campos válidos
             record = model(**record_data)
             records.append(record)
-        
+
         # Insertar los registros en la base de datos
         db.add_all(records)
         db.commit()
         print(f"{len(records)} registros insertados en la tabla {model.__tablename__}.")
     else:
-        print(f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevos registros.")
+        print(
+            f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevos registros."
+        )
