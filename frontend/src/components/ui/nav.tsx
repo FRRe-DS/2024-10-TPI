@@ -3,7 +3,11 @@ import { useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
 import { deleteCookie } from "@/app/actions";
-export default function Nav(accessToken: Record<string, string> | undefined) {
+export default function Nav(
+  cookieData: Record<string, string> | undefined,
+
+  correo: Record<string, string> | undefined,
+) {
   function traducir(palabra: string) {
     if (palabra === "/") return "Ediciones";
     return palabra;
@@ -43,7 +47,7 @@ export default function Nav(accessToken: Record<string, string> | undefined) {
             </svg>
           </Link>
         ))}
-        {accessToken?.accessToken ? (
+        {cookieData?.accessToken ? (
           <button
             onClick={async () => {
               await deleteCookie();
@@ -68,14 +72,16 @@ export default function Nav(accessToken: Record<string, string> | undefined) {
         )}
       </nav>
 
-      <div className="relative">
+      <div className="relative shadow-lg w-full px-8 py-4 min-h-14 flex items-center justify-center text-center">
         <button
           onClick={toggleMenu}
-          className="shadow-lg sticky w-full px-8 py-4 flex items-center justify-center text-center"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          <div className="absolute inset-0 blur-sm bg-opacity-50"></div>
-          <span className="relative">Abrir Menú</span>
+          Abrir Menú
         </button>
+        {cookieData?.accessToken && (
+          <p className="ml-auto">Usuario: {cookieData?.correo?.value}</p>
+        )}
       </div>
     </>
   );
