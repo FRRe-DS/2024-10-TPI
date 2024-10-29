@@ -49,6 +49,32 @@ Cuando termines de trabajar, puedes desactivar el entorno virtual usando el sigu
 ```sh
 deactivate
 ```
+## Creacion de la base de datos
+Antes de ejecutar los scripts de generación de datos, crea la base de datos llamada `bienaldb` en MySQL. Asegúrate de que esté configurada para soportar UTF-8:
+```sql
+CREATE DATABASE bienaldb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+
+## Configuración de Variables de Entorno
+**Crea un archivo** `.env` **dentro de la carpeta backend** que contenga las variables necesarias para la conexión a la base de datos y la configuración de seguridad de la aplicación.
+
+Para crear el archivo `.env` y agregar las variables, sigue estos pasos:
+* Navega hasta la carpeta `backend` en el proyecto.
+* Crea un archivo `.env` y agrega las siguientes variables de entorno, reemplazando los datos genéricos con tus valores específicos (por ejemplo, el usuario y contraseña de la base de datos).
+```plaintext
+DB_USER=tu_usuario
+DB_PASSWORD=tu_contraseña
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=bienaldb
+SECRET_KEY="593c5c8e64ea4650beaa810af3a36f82"
+ALGORITHM="HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+```
+[!NOTE]
+* `DB_USER` y `DB_PASSWORD`: Reemplaza estos con el nombre de usuario y la contraseña de tu base de datos.
+* `SECRET_KEY`, `ALGORITHM`, y `ACCESS_TOKEN_EXPIRE_MINUTES`: Son necesarios para la autenticación y seguridad del backend.
+
 ## Gestión de Dependencias
 ### Agregar una dependencia
 Para agregar una nueva dependencia al proyecto, puedes usar:
