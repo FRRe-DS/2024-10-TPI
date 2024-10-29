@@ -1,3 +1,6 @@
+#ignorar las generadores de datos
+app/seeds/generators/
+
 # Ignorar el entorno virtual
 env-tpi/
 .venv/
