@@ -11,7 +11,7 @@ tags = [{
         "description": "contact routes"
     },
     {
-        "name": "authentication",
+        "name": "autenticacion",
         "description": "authentication routes"
     },
     {
