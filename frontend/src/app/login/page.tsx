@@ -32,7 +32,7 @@ export default function Page() {
             Iniciar sesión
           </button>
         </form>
-        <Link href="/" className="mt-4 text-blue-500 underline">
+        <Link href="/register" className="mt-4 text-blue-500 underline">
           Crear una cuenta
         </Link>
       </div>

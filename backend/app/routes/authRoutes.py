@@ -6,10 +6,12 @@ from app.config.db import get_db
 
 auth = APIRouter()
 
-@auth.post("/register")
+# manejamos la logica para registrar el usuario
+@auth.post("/register",tags = ["autenticacion"])
 def register(user: UserCreate, db: Session = Depends(get_db)):
     return AuthController.register(user, db)
 
-@auth.post("/login")
+# manejamos la logica para logear el usuario
+@auth.post("/login",tags = ["autenticacion"])
 def login(user: UserLogin, db: Session = Depends(get_db)):
     return AuthController.login(user, db)

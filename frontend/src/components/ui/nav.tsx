@@ -1,16 +1,20 @@
 "use client";
-import React from "react";
+import { useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
-export default function Nav() {
+import { deleteCookie } from "@/app/actions";
+export default function Nav(
+  cookieData: Record<string, string> | undefined,
+
+  correo: Record<string, string> | undefined,
+) {
   function traducir(palabra: string) {
-    if (palabra === "login") return "Iniciar sesión";
     if (palabra === "/") return "Ediciones";
     return palabra;
   }
   // Este array contiene la ruta a la que redirigir, se la traduce para mostrarle al usuario
-  const menuItems = ["Escultores", "Esculturas", "/", "login"];
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const menuItems = ["Escultores", "Esculturas", "/"];
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Toggle menu visibility
   const toggleMenu = () => {
@@ -43,16 +47,41 @@ export default function Nav() {
             </svg>
           </Link>
         ))}
+        {cookieData?.accessToken ? (
+          <button
+            onClick={async () => {
+              await deleteCookie();
+              setIsMenuOpen(false);
+            }}
+            className={styles.button}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
+              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
+                Cerrar sesión
+              </text>
+            </svg>
+          </button>
+        ) : (
+          <Link href="/login" className={styles.button} onClick={toggleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
+              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
+                Iniciar sesión
+              </text>
+            </svg>
+          </Link>
+        )}
       </nav>
 
-      <div className="relative">
+      <div className="relative shadow-lg w-full px-8 py-4 min-h-14 flex items-center justify-center text-center">
         <button
           onClick={toggleMenu}
-          className="shadow-lg sticky w-full px-8 py-4 flex items-center justify-center text-center"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          <div className="absolute inset-0 blur-sm bg-opacity-50"></div>
-          <span className="relative">Abrir Menú</span>
+          Abrir Menú
         </button>
+        {cookieData?.accessToken && (
+          <p className="ml-auto">Usuario: {cookieData?.correo?.value}</p>
+        )}
       </div>
     </>
   );

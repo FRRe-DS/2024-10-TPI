@@ -12,8 +12,9 @@ DB_HOST = getenv('DB_HOST')
 DB_PORT = getenv('DB_PORT') 
 DB_NAME = getenv('DB_NAME')
 
+
 # Cadena de conexión a MySQL usando SQLAlchemy y pymysql
-SQLALCHEMY_DATABASE_URL = f'mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}'
+SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}?charset=utf8mb4"
 
 # Crear el motor de conexión
 engine = create_engine(SQLALCHEMY_DATABASE_URL)

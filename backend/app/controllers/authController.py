@@ -23,6 +23,7 @@ class AuthController:
       return token_response
 
   def register(user: UserCreate, db: Session):
+      
       user_exists = UserController.exists_user_by_dni(user.dni, db)
       if user_exists["existe"]:
           raise HTTPException(status_code=400, detail="El usuario ya existe")
