@@ -3,11 +3,12 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from app.models.authorsModel import AuthorModel
 from app.schemas.authorsSchema import AuthorCreate, AuthorUpdate
-
+from fastapi_pagination import paginate
 class AuthorController:
 
   def get_authors(db: Session):
-      return db.query(AuthorModel).all()
+      results = db.query(AuthorModel).all()
+      return paginate(results)
 
   def get_author_by_id(id: int, db: Session):
       author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()

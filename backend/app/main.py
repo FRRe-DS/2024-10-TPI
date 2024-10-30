@@ -10,6 +10,7 @@ from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 from app.seeds.seedAll import seed_all  # Importa la función de poblar datos
 from app.utils.tags import tags
+from fastapi_pagination import add_pagination
 
 # configurar CORS
 origins = [
@@ -62,3 +63,6 @@ app.include_router(author)
 app.include_router(contact)
 app.include_router(auth)
 #app.include_router(events)
+
+# Agrega la configuración de paginación
+add_pagination(app)

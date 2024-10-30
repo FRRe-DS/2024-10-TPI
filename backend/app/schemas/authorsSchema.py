@@ -33,3 +33,7 @@ class Author(AuthorBase):
 
   class Config:
     from_attributes = True
+  
+class AuthorOut(AuthorBase):
+  class Config:
+    from_attributes = True
