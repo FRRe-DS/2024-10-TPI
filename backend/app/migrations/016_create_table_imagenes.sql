@@ -4,8 +4,10 @@ CREATE TABLE IF NOT EXISTS imagenes (
     nombre_obra VARCHAR(120) NOT NULL,
 	tipo_imagen VARCHAR(50), -- tipo de archivo (jpg, png, etc.)
 	imagen BLOB, -- almacenamos la imagen en formato binario
+
 	created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME DEFAULT NULL,
 	deleted_at DATETIME DEFAULT NULL,
+	
 	FOREIGN KEY (id_obra) REFERENCES Obras(id) ON DELETE CASCADE -- Eliminación en cascada
 );
