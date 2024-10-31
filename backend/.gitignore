@@ -3,7 +3,7 @@ app/seeds/generators/
 
 # Ignorar el entorno virtual
 env-tpi/
-.venv/
+venv/
 
 # Migraciones de Alembic
 migrations/versions/
