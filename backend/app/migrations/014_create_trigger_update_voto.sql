@@ -1,1 +1,0 @@
--- Aqui se podria analizar la logica del voto

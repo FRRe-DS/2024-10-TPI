@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS Obras (
     edicion INT NOT NULL,
 	nombre_obra VARCHAR(255) NOT NULL,
 	descripcion TEXT,
-	tipo_imagen VARCHAR(50), --  tipo de archivo (jpg, png, otros)
+	tecnica VARCHAR(50),
 	imagen BLOB, -- almacenamos la imagen en formato binario
    
 	
