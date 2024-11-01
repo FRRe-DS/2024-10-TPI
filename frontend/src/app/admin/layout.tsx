@@ -12,13 +12,9 @@ export default function AdminLayout({
         <AppSidebar />
         <main>
           <SidebarTrigger />
-
         </main>
-        <div className=''>{children}</div>
-
-
+        <div className="p-10">{children}</div>
       </SidebarProvider>
-
     </>
   );
 }
