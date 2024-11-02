@@ -1,28 +1,49 @@
-// ¿Por qué tantas carpetas? Porque NextAuth necesita saber donde estan las credenciales de Google y es la ruta que NextAuth necesita para funcionar.
 import NextAuth from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { Profile } from 'next-auth';
+
+interface GoogleProfile extends Profile {
+  email_verified?: boolean;
+  locale?: string;
+  sub?: string;
+}
 
 const handler = NextAuth({
   providers: [
     GoogleProvider({
-    // Aca le decimos que use estas credenciales para hablar con Google
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID ?? '',
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
+      authorization: {
+        params: {
+          scope: "openid email profile"
+        }
+      }
     }),
   ],
-  // Agregamos configuración de páginas y manejo de errores
-  pages: {
-    signIn: '/login',
-    error: '/login', // Redirige a login en caso de error
-  },
   callbacks: {
     async signIn({ user, account, profile }) {
       if (account?.provider === 'google') {
-        return true; // Permite el login
+        const googleProfile = profile as GoogleProfile;
+        console.log('\n🌟 ===============================');
+        console.log('📧 Inicio de sesión con Google exitoso');
+        console.log('===============================');
+        console.log('👤 Datos del usuario:');
+        console.log('   • Nombre:', user.name);
+        console.log('   • Email:', user.email);
+        console.log('   • Foto de perfil:', user.image);
+        console.log('🔑 Información adicional:');
+        console.log('   • ID de Google:', googleProfile.sub);
+        console.log('   • Email verificado:', googleProfile.email_verified ? 'Sí' : 'No');
+        console.log('   • Idioma:', googleProfile.locale);
+        console.log('===============================\n');
       }
-      return false; // Rechaza otros providers
+      return true;
     },
+    async session({ session }) {
+      return session;
+    }
   },
+  debug: false,
 });
-// Esto es como decir "cuando alguien intente hacer login, usa esta configuracion"
+
 export { handler as GET, handler as POST };

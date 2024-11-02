@@ -1,9 +1,21 @@
 "use server";
-
+import { signIn } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
+export const handleGoogleLogin = async () => {
+    try {
+        return {
+            url: `/api/auth/signin/google?callbackUrl=${encodeURIComponent(process.env.NEXTAUTH_URL || 'http://localhost:3000')}`
+        };
+    } catch (error) {
+        console.error("Error en login de Google:", error);
+        throw error;
+    }
+};
 
+// manejo de login normal
+// esta funcion el facuBlanco no toco nada de nada.
 export async function handleLogin(data: FormData) {
   const formData = {
     correo: data.get("correo"),
@@ -35,3 +47,4 @@ export async function handleLogin(data: FormData) {
   }
   redirect("/");
 }
+

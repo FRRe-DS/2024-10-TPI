@@ -2,11 +2,21 @@
 import Link from "next/link";
 import { handleLogin } from "./actions";
 import { useFormStatus } from "react-dom";
-import { signIn } from 'next-auth/react';
-
+import { handleGoogleLogin } from './actions';
 
 export default function Page() {
   const { pending } = useFormStatus();
+  
+  const handleGoogleClick = async () => {
+    try {
+        const response = await handleGoogleLogin();
+        console.log("URL de redirección:", response.url);
+        window.location.href = response.url;
+    } catch (error) {
+        console.error("Error al iniciar sesión con Google:", error);
+    }
+  };
+  
   return (
     <div className="mx-auto flex p-5 flex-col justify-center items-center">
       <div className="p-10 border drop-shadow-md shadow-sm w-96 rounded-xl">
@@ -34,10 +44,10 @@ export default function Page() {
             Iniciar sesión
           </button>
 
-          {/* Agregamos el botón de Google */}
+          {/* boton de google */}
           <button
             type="button"
-            onClick={() => signIn('google', { callbackUrl: '/' })}
+            onClick={handleGoogleClick}
             className="flex items-center justify-center gap-2 w-full bg-white text-gray-700 p-2 rounded border border-gray-300 hover:bg-gray-50"
           >
             <img src="/google.svg" alt="Google logo" className="w-5 h-5" />
