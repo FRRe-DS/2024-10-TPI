@@ -1,16 +1,21 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi_pagination import add_pagination
+
 from app.config.db import Base, engine
 from app.config.migrations import apply_migrations
+from app.routes.authorsRoutes import author
+from app.routes.authRoutes import auth
+from app.routes.contactsRoutes import contact
+from app.routes.eventsRoutes import events
+from app.routes.obrasRoutes import obras
+
 # from app.routes.eventsRoutes import event
 from app.routes.usersRoutes import user
-from app.routes.authorsRoutes import author
-from app.routes.contactsRoutes import contact
-from app.routes.authRoutes import auth
-from contextlib import asynccontextmanager
-from fastapi.middleware.cors import CORSMiddleware
 from app.seeds.seedAll import seed_all  # Importa la función de poblar datos
 from app.utils.tags import tags
-from fastapi_pagination import add_pagination
 
 # configurar CORS
 origins = [
@@ -19,6 +24,7 @@ origins = [
     "http://localhost:3000",
     "http://127.0.0.1:8000/login",
 ]
+
 
 # Crear el ciclo de vida de la app
 @asynccontextmanager
@@ -35,12 +41,14 @@ async def lifespan(app: FastAPI):
     yield
     # Limpiezas y cierres
 
+
 # Crear la instancia de FastAPI
 app = FastAPI(
     lifespan=lifespan,
-    title = "DESARROLLO DE SOFTWARE G-10",
-    description = "TPI Bienal Chaco",
-    openapi_tags = tags)
+    title="DESARROLLO DE SOFTWARE G-10",
+    description="TPI Bienal Chaco",
+    openapi_tags=tags,
+)
 
 # Configuración de CORS
 app.add_middleware(
@@ -51,10 +59,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 # Rutas de la aplicación
 @app.get("/")
 def read_root():
     return {"message": "Hello, World!"}
+
 
 # Incluir las rutas de las tablas
 # app.include_router(event)
@@ -62,7 +72,9 @@ app.include_router(user)
 app.include_router(author)
 app.include_router(contact)
 app.include_router(auth)
-#app.include_router(events)
+app.include_router(obras)
+app.include_router(events)
 
 # Agrega la configuración de paginación
 add_pagination(app)
+

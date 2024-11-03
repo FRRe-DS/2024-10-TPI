@@ -5,6 +5,8 @@ from sqlalchemy.orm import Session
 from app.config.db import SessionLocal
 from app.models.authorsModel import AuthorModel
 from app.models.contactsModel import ContactModel
+from app.models.eventsModel import EventModel
+from app.models.obrasModel import ObrasModel
 from app.models.usersModel import UserModel
 from app.seeds.seedTable import seed_table
 
@@ -21,6 +23,13 @@ def seed_all():
 
         json_path = path.join(path.dirname(__file__), "data", "contacts.json")
         seed_table(ContactModel, json_path, db, date_fields=[])
+
+        json_path = path.join(path.dirname(__file__), "data", "eventos.json")
+        seed_table(EventModel, json_path, db, date_fields=[])
+
+        json_path = path.join(path.dirname(__file__), "data", "obras.json")
+        seed_table(ObrasModel, json_path, db, date_fields=[])
+
     except Exception as e:
         print(e)
     finally:
