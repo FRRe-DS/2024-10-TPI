@@ -31,10 +31,6 @@ const handler = NextAuth({
         console.log('   • Nombre:', user.name);
         console.log('   • Email:', user.email);
         console.log('   • Foto de perfil:', user.image);
-        console.log('🔑 Información adicional:');
-        console.log('   • ID de Google:', googleProfile.sub);
-        console.log('   • Email verificado:', googleProfile.email_verified ? 'Sí' : 'No');
-        console.log('   • Idioma:', googleProfile.locale);
         console.log('===============================\n');
       }
       return true;

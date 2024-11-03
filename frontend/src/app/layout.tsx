@@ -23,10 +23,12 @@ export default async function RootLayout({
   
   return (
     <html lang="es">
-      <body className={inter.className + "min-h-screen bg-transparent"}>
+      <body className={`${inter.className} min-h-screen bg-transparent`}>
         <NextAuthProvider>
           <Nav accessToken={accessToken} correo={correo} />
-          {children}
+          <main className="pt-14">
+            {children}
+          </main>
         </NextAuthProvider>
       </body>
     </html>

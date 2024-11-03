@@ -1,22 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
 import { deleteCookie } from "@/app/actions";
+
 export default function Nav(
   cookieData: Record<string, string> | undefined,
-
   correo: Record<string, string> | undefined,
 ) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
   function traducir(palabra: string) {
     if (palabra === "/") return "Ediciones";
     return palabra;
   }
-  // Este array contiene la ruta a la que redirigir, se la traduce para mostrarle al usuario
-  const menuItems = ["Escultores", "Esculturas", "/"];
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Toggle menu visibility
+  const menuItems = ["Escultores", "Esculturas", "/"];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const scrollingUp = prevScrollPos > currentScrollPos;
+      
+      // Mostrar navbar cuando scrolleamos hacia arriba o estamos en el top
+      setIsVisible(scrollingUp || currentScrollPos < 10);
+      
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -72,12 +89,22 @@ export default function Nav(
         )}
       </nav>
 
-      <div className="relative shadow-lg w-full px-8 py-4 min-h-14 flex items-center justify-center text-center">
+      <div 
+        className={`
+          fixed top-0 left-0 right-0 
+          shadow-lg w-full px-8 py-4 
+          min-h-14 flex items-center 
+          justify-center text-center 
+          bg-white
+          transition-transform duration-300 ease-in-out
+          ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+        `}
+      >
         <button
           onClick={toggleMenu}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          Abrir Menú
+          Menú
         </button>
         {cookieData?.accessToken && (
           <p className="ml-auto">Usuario: {cookieData?.correo?.value}</p>
