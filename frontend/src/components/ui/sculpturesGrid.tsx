@@ -11,7 +11,6 @@ interface Escultura {
   autor: string; 
   autorImagen: string;  // URL de la foto de perfil del autor
   votosPositivos: number;
-  votosNegativos: number;
 }
 
 // creamos un array de esculturas de prueba
@@ -23,8 +22,7 @@ const esculturasDePrueba: Escultura[] = Array.from({ length: 20 }, (_, i) => ({
     autor: `Artista ${i + 1}`,
     fecha: "2 horas",
     autorImagen: "https://via.placeholder.com/40x40",
-    votosPositivos: 0,
-    votosNegativos: 0
+    votosPositivos: 0
   }));
 
 export default function EsculturasGrid() {
@@ -68,39 +66,38 @@ export default function EsculturasGrid() {
     }
   }, [inView]);
 
-
   return (
-    <div className="max-w-md mx-auto">
-      {esculturas.map((escultura) => (
-        <div key={escultura.id} className="bg-white border rounded-lg mb-6">
-          <div className="flex items-center p-3">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {esculturas.map((escultura) => (
+          <div key={escultura.id} className="bg-white border rounded-lg cursor-pointer hover:shadow-lg transition-shadow">
+            <div className="flex items-center p-3">
+              <img 
+                src={escultura.autorImagen}
+                alt={escultura.autor}
+                className="w-8 h-8 rounded-full object-cover"
+              />
+              <div className="font-semibold text-sm ml-2">{escultura.autor}</div>
+            </div>
+            
             <img 
-              src={escultura.autorImagen}
-              alt={escultura.autor}
-              className="w-8 h-8 rounded-full object-cover"
+              src={escultura.imagen} 
+              alt={escultura.nombre}
+              className="w-full aspect-[16/9] object-cover"
             />
-            <div className="font-semibold text-sm ml-2">{escultura.autor}</div>
+            
+            <div className="p-3">
+              <VoteButtons 
+                  esculturaId={escultura.id}
+                  votosIniciales={{
+                      positivos: escultura.votosPositivos,
+                  }}
+              />
+              <h3 className="font-semibold text-sm truncate">{escultura.nombre}</h3>
+            </div>
           </div>
-          
-          <img 
-            src={escultura.imagen} 
-            alt={escultura.nombre}
-            className="w-full aspect-square object-cover"
-          />
-          
-          <div className="p-3">
-            <VoteButtons 
-                esculturaId={escultura.id}
-                votosIniciales={{
-                    positivos: escultura.votosPositivos,
-                    negativos: escultura.votosNegativos
-                }}
-            />
-            <h3 className="font-semibold text-sm">{escultura.nombre}</h3>
-            <p className="text-gray-600 mt-1 text-sm">{escultura.descripcion}</p>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
       
       {loading && (
         <div className="text-center p-3 text-sm">Cargando más esculturas...</div>
