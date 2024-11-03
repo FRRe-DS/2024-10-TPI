@@ -24,20 +24,34 @@ export default function Nav(
       const currentScrollPos = window.scrollY;
       const scrollingUp = prevScrollPos > currentScrollPos;
       
-      // Mostrar navbar cuando scrolleamos hacia arriba o estamos en el top
       setIsVisible(scrollingUp || currentScrollPos < 10);
-      
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos]);
+    if (isMenuOpen) {
+      // Bloquear scroll cuando el menú está abierto
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restaurar scroll y añadir event listener cuando está cerrado
+      document.body.style.overflow = 'auto';
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    // Cleanup
+    return () => {
+      document.body.style.overflow = 'auto';
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos, isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    if (!isMenuOpen) {
+      setIsVisible(true);
+    }
   };
 
+  
   return (
     <>
       <nav
