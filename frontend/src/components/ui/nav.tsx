@@ -17,30 +17,30 @@ export default function Nav(
     return palabra;
   }
 
-  const menuItems = ["Escultores", "Esculturas", "/"];
+  const menuItems = ["autores", "Esculturas", "/"];
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       const scrollingUp = prevScrollPos > currentScrollPos;
-      
+
       setIsVisible(scrollingUp || currentScrollPos < 10);
       setPrevScrollPos(currentScrollPos);
     };
 
     if (isMenuOpen) {
       // Bloquear scroll cuando el menú está abierto
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
       // Restaurar scroll y añadir event listener cuando está cerrado
-      document.body.style.overflow = 'auto';
-      window.addEventListener('scroll', handleScroll);
+      document.body.style.overflow = "auto";
+      window.addEventListener("scroll", handleScroll);
     }
 
     // Cleanup
     return () => {
-      document.body.style.overflow = 'auto';
-      window.removeEventListener('scroll', handleScroll);
+      document.body.style.overflow = "auto";
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos, isMenuOpen]);
 
@@ -51,7 +51,6 @@ export default function Nav(
     }
   };
 
-  
   return (
     <>
       <nav
@@ -72,7 +71,11 @@ export default function Nav(
             onClick={toggleMenu}
           >
             <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
-              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
+              <text
+                x="10"
+                y="45"
+                className={styles.text + "font-[60vh] capitalize"}
+              >
                 {traducir(item)}
               </text>
             </svg>
@@ -103,7 +106,7 @@ export default function Nav(
         )}
       </nav>
 
-      <div 
+      <div
         className={`
           fixed top-0 left-0 right-0 
           shadow-lg w-full px-8 py-4 
@@ -111,7 +114,7 @@ export default function Nav(
           justify-center text-center 
           bg-white
           transition-transform duration-300 ease-in-out
-          ${isVisible ? 'translate-y-0' : '-translate-y-full'}
+          ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
       >
         <button
