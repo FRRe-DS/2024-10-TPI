@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS Obras (
 	deleted_at DATETIME DEFAULT NULL,
 
 	FOREIGN KEY (autor_id) REFERENCES Autores(id),
-	FOREIGN KEY (id_evento) REFERENCES evento(id)
+	FOREIGN KEY (id_edicion) REFERENCES Eventos(edicion)
 );
 
 -- otro enfoque podria ser almacenar por la ruta la imagen para no cargar tanto a la base de datos, todo depende que tipo de enfoque se de al momento de almacenar

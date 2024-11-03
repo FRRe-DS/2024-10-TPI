@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS Usuarios (
 	nombre VARCHAR(255) NOT NULL,
 	apellido VARCHAR(255) NOT NULL,
 	contrasenia_hasheada VARCHAR(255) NOT NULL,
+	rol VARCHAR(25),
 	dni VARCHAR(8) NOT NULL UNIQUE,
 	correo VARCHAR(255) NOT NULL UNIQUE,
   
