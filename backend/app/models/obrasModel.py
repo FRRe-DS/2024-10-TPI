@@ -9,7 +9,9 @@ class ObrasModel(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     autor_id: Mapped[int] = mapped_column(ForeignKey("Autores.id"), nullable=False)
-    id_evento: Mapped[int] = mapped_column(ForeignKey("Eventos.id"), nullable=False)
+    id_edicion: Mapped[int] = mapped_column(
+        ForeignKey("Eventos.edicion"), nullable=False
+    )
     nombre_obra: Mapped[str] = mapped_column(String(255), nullable=False)
     descripcion: Mapped[str] = mapped_column(Text, nullable=False)
     tecnica: Mapped[str] = mapped_column(String(50), nullable=False)

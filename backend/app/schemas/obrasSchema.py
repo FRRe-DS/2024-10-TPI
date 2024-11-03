@@ -7,7 +7,7 @@ from pydantic import BaseModel
 class ObraBase(BaseModel):
     id: int
     autor_id: int
-    id_evento: int
+    id_edicion: int
     nombre_obra: str
     descripcion: str
     tecnica: str
