@@ -2,7 +2,7 @@
   {
     "id": 1,
     "autor_id": 101,
-    "id_evento": 1,
+    "id_edicion": 2022,
     "nombre_obra": "Paisaje en Primavera",
     "descripcion": "Un hermoso paisaje de primavera con flores y árboles en plena floración.",
     "tecnica": "Acuarela",
@@ -13,7 +13,7 @@
   {
     "id": 2,
     "autor_id": 102,
-    "id_evento": 2,
+    "id_edicion": 2024,
     "nombre_obra": "Retrato de una Dama",
     "descripcion": "Un retrato clásico al óleo de una mujer elegante.",
     "tecnica": "Óleo",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "autor_id": 103,
-    "id_evento": 1,
+    "id_edicion": 2022,
     "nombre_obra": "Ciudad Futurista",
     "descripcion": "Una ilustración digital de una ciudad avanzada en el futuro.",
     "tecnica": "Digital",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "autor_id": 104,
-    "id_evento": 2,
+    "id_edicion": 2024,
     "nombre_obra": "Amanecer en el Mar",
     "descripcion": "Escena de un amanecer en el océano, con tonos cálidos y reflejos.",
     "tecnica": "Acrílico",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "autor_id": 105,
-    "id_evento": 1,
+    "id_edicion": 2022,
     "nombre_obra": "Bosque Encantado",
     "descripcion": "Un bosque lleno de luces místicas y sombras intrigantes.",
     "tecnica": "Lápiz y Carboncillo",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "autor_id": 106,
-    "id_evento": 2,
+    "id_edicion": 2024,
     "nombre_obra": "Montañas Nevadas",
     "descripcion": "Paisaje montañoso en invierno, con cumbres cubiertas de nieve.",
     "tecnica": "Acuarela",
@@ -68,7 +68,7 @@
   {
     "id": 7,
     "autor_id": 107,
-    "id_evento": 1,
+    "id_edicion": 2022,
     "nombre_obra": "Flores Silvestres",
     "descripcion": "Un cuadro de flores silvestres en una pradera soleada.",
     "tecnica": "Pastel",
@@ -79,7 +79,7 @@
   {
     "id": 8,
     "autor_id": 108,
-    "id_evento": 2,
+    "id_edicion": 2024,
     "nombre_obra": "Reflejos Urbanos",
     "descripcion": "Reflejos de edificios en charcos de lluvia en una ciudad.",
     "tecnica": "Fotografía",
@@ -90,7 +90,7 @@
   {
     "id": 9,
     "autor_id": 109,
-    "id_evento": 1,
+    "id_edicion": 2022,
     "nombre_obra": "Danza de Colores",
     "descripcion": "Una representación abstracta de colores y formas en movimiento.",
     "tecnica": "Tinta",
@@ -101,7 +101,7 @@
   {
     "id": 10,
     "autor_id": 110,
-    "id_evento": 2,
+    "id_edicion": 2024,
     "nombre_obra": "Siluetas Nocturnas",
     "descripcion": "Siluetas de personas y árboles bajo la luz de la luna.",
     "tecnica": "Grafito",

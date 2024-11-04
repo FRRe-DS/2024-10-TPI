@@ -1,7 +1,6 @@
-CREATE TABLE IF NOT EXISTS evento (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS Eventos (
+    edicion INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
-    edicion INT NOT NULL,
     fecha_inicio DATETIME NOT NULL,
     fecha_fin DATETIME NOT NULL,
     lugar VARCHAR(255) NOT NULL,
@@ -12,3 +11,5 @@ CREATE TABLE IF NOT EXISTS evento (
     updated_at DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     deleted_at DATETIME DEFAULT NULL
 );
+
+-- tabla y sus referencias renombradas a Eventos

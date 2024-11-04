@@ -1,8 +1,7 @@
 [
   {
-    "id": 1,
-    "nombre": "Evento 1",
     "edicion": 2022,
+    "nombre": "Evento 1",
     "fecha_inicio": "2022-01-01T00:00:00",
     "fecha_fin": "2022-01-10T00:00:00",
     "lugar": "Lugar 1",
@@ -13,9 +12,8 @@
     "deleted_at": null
   },
   {
-    "id": 2,
-    "nombre": "Evento 2",
     "edicion": 2024,
+    "nombre": "Evento 2",
     "fecha_inicio": "2024-01-01T00:00:00",
     "fecha_fin": "2024-01-10T00:00:00",
     "lugar": "Lugar 2",
