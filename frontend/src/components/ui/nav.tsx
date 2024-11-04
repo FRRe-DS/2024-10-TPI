@@ -51,11 +51,11 @@ export default function Nav(
     }
   };
 
-  
+
   return (
     <>
       <nav
-        className={`z-10 flex flex-col gap-8 py-6 h-screen items-center absolute w-full bg-white top-0 left-0 transition-all duration-200 ease-in-out ${
+        className={`fixed z-[100] flex flex-col gap-8 py-6 h-screen items-center w-full bg-white top-0 left-0 transition-all duration-200 ease-in-out ${
           isMenuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -109,14 +109,19 @@ export default function Nav(
           shadow-lg w-full px-8 py-4 
           min-h-14 flex items-center 
           justify-center text-center 
-          bg-white
+          bg-white relative
           transition-transform duration-300 ease-in-out
           ${isVisible ? 'translate-y-0' : '-translate-y-full'}
         `}
       >
+        <img 
+          src="/Bienal-del-Chaco.jpg" 
+          alt="Bienal del Chaco" 
+          className="h-10 w-auto absolute left-5 top-1/2  -translate-y-1/2"
+        />
         <button
           onClick={toggleMenu}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="mx-auto"
         >
           Menú
         </button>

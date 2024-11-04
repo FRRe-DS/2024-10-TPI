@@ -26,7 +26,7 @@ export default async function RootLayout({
       <body className={`${inter.className} min-h-screen bg-transparent`}>
         <NextAuthProvider>
           <Nav accessToken={accessToken} correo={correo} />
-          <main className="pt-14">
+          <main>
             {children}
           </main>
         </NextAuthProvider>
