@@ -1,6 +1,7 @@
 import json
 from datetime import datetime
 
+from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 
 
@@ -39,3 +40,34 @@ def seed_table(model, json_file: str, db: Session, date_fields: list = []):
         print(
             f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevos registros."
         )
+
+
+# Set up passlib with bcrypt (or your preferred hashing scheme)
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+
+def insert_admin(model, db: Session):
+    # User data to insert
+    admin_data = {
+        "nombre": "admin",
+        "apellido": "admin",
+        "contrasenia_hasheada": pwd_context.hash("admin"),
+        "dni": "11111111",
+        "correo": "admin@admin.com",
+        "rol": "admin",
+    }
+
+    existing_user = db.query(model).filter_by(correo=admin_data["correo"]).first()
+    if existing_user:
+        print("El admin ya existe, no se insertaron nuevos registros.")
+        return
+
+    # Create a new user record
+    new_user = model(**admin_data)
+
+    # Insert the user into the database
+    db.add(new_user)
+    db.commit()
+    print(
+        f"Usuario {admin_data['nombre']} insertado en la tabla {model.__tablename__}."
+    )
