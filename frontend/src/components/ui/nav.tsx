@@ -119,7 +119,7 @@ export default function Nav(
         `}
       >
         <img 
-          src="/Bienal-del-Chaco.jpg" 
+          src="/bienal-del-chaco.jpg" 
           alt="Bienal del Chaco" 
           className="h-10 w-auto absolute left-5 top-1/2  -translate-y-1/2"
         />
