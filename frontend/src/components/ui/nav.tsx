@@ -24,13 +24,13 @@ export default function Nav(
   }
 
   // Elementos del menú principal
-  const menuItems = ["autores", "Esculturas", "Contacto", "/"];
+  const menuItems = ["Escultores", "Esculturas", "/"];
 
   // Elementos del submenú de ediciones
   const ediciones = [
-    { nombre: "Edición 2016", ruta: "/ediciones/edicion1" },
-    { nombre: "Edición 2018", ruta: "/ediciones/edicion2" },
-    { nombre: "Edición 2020", ruta: "/ediciones/edicion3" },
+    { nombre: "Edición 2022", ruta: "/ediciones/2022"},
+    { nombre: "Edición 2018", ruta: "/ediciones/2018"},
+    { nombre: "Edición 2016", ruta: "/ediciones/2016"},
   ];
 
   // Efecto para manejar el scroll y mostrar/ocultar la barra de navegación
