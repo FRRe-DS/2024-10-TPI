@@ -51,7 +51,6 @@ export default function Nav(
     }
   };
 
-  
   return (
     <>
       <nav
@@ -118,20 +117,17 @@ export default function Nav(
           ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
       >
-        <img 
-          src="/bienal-del-chaco.jpg" 
-          alt="Bienal del Chaco" 
+        <img
+          src="/bienal-del-chaco.jpg"
+          alt="Bienal del Chaco"
           className="h-10 w-auto absolute left-5 top-1/2  -translate-y-1/2"
         />
-        <button
-          onClick={toggleMenu}
-          className="mx-auto"
-        >
+        <button onClick={toggleMenu} className="mx-auto">
           Menú
         </button>
         {cookieData?.accessToken && (
-        <p className="ml-auto">Usuario: {cookieData.correo}</p>
-      )}
+          <p className="ml-auto">Usuario: {cookieData?.correo?.value}</p>
+        )}
       </div>
     </>
   );
