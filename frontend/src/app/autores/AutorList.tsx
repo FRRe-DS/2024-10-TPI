@@ -1,7 +1,7 @@
 "use client";
 import type { Autor } from "@/types";
 import AutorCard from "./AutorCard";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getAutores } from "./action";
 import { useInView } from "react-intersection-observer";
 
@@ -14,18 +14,18 @@ export default function AutorList({ autoresInicio }: AutorList) {
   const [pageNumber, setPageNumber] = useState(2);
   const { ref, inView } = useInView();
 
-  const loadMoreAutores = async () => {
+  const loadMoreAutores = useCallback(async () => {
     const apiAutores = await getAutores(pageNumber);
     console.log(apiAutores);
     setAutores((autores) => [...autores, ...apiAutores]);
     setPageNumber((pageNumber) => pageNumber + 1);
-  };
+  }, [pageNumber]);
 
   useEffect(() => {
     if (inView) {
       loadMoreAutores();
     }
-  }, [inView]);
+  }, [inView, loadMoreAutores]);
 
   return (
     <div className="flex flex-col gap-3 flex-wrap">
