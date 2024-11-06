@@ -27,13 +27,13 @@ export default function SculptureList({ esculturasInicio }: SculptureList) {
   }, [inView]);
 
   return (
-    <div className="container mx-auto p-10">
+    <div className="container mx-auto p-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 justify-items-center">
       {esculturas.map((escultura: Escultura) => (
         <SculptureCard key={escultura.id} escultura={escultura} />
         ))}
       </div>
-      <div ref={ref}>Loading...</div>
+      <div ref={ref} className="text-center mt-4">Cargando más esculturas...</div>
     </div>
   );
 }

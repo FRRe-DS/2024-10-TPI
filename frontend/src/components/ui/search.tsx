@@ -13,7 +13,7 @@ export default function Search({ onSearch }: SearchProps) {
   };
 
   return (
-    <div className="max-w-xl mx-auto mt-4">
+    <div className="max-w-xl mx-auto mt-8">
       <form onSubmit={handleSubmit}>
         <div className="relative">
           <span className="absolute left-3 top-2.5 text-gray-400">
