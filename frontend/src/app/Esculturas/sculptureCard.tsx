@@ -44,7 +44,7 @@ export default function SculptureCard({ escultura }: UserProps) {
           />
         </div>
 
-        <div className="p-3">
+        <div className="p-3" onClick={(e) => e.stopPropagation()}>
           <VoteButtons 
             esculturaId={escultura.id}
             votosIniciales={{
