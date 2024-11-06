@@ -1,10 +1,5 @@
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi_pagination import add_pagination
-
-from app.config.db import Base, engine
 from app.config.migrations import apply_migrations
 from app.routes.authorsRoutes import author
 from app.routes.authRoutes import auth
@@ -14,8 +9,12 @@ from app.routes.obrasRoutes import obras
 
 # from app.routes.eventsRoutes import event
 from app.routes.usersRoutes import user
+from app.routes.votosRoutes import votos
 from app.seeds.seedAll import seed_all  # Importa la función de poblar datos
 from app.utils.tags import tags
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi_pagination import add_pagination
 
 # configurar CORS
 origins = [
@@ -74,7 +73,7 @@ app.include_router(contact)
 app.include_router(auth)
 app.include_router(obras)
 app.include_router(events)
+app.include_router(votos)
 
 # Agrega la configuración de paginación
 add_pagination(app)
-
