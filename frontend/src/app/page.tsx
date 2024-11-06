@@ -30,22 +30,13 @@ export default function Home() {
             {" "}
             {/* Ajusta el py-16 según necesites más o menos espacio */}
             {/* Imagen de fondo */}
-            <div className="absolute inset-0 bg-[url('/imagen1.jpg')] bg-cover bg-center bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url('/parque2DeFebrero/imagen1.jpg')] bg-cover bg-center bg-no-repeat" />
             {/* Overlay oscuro para mejor legibilidad */}
             <div className="absolute inset-0 bg-black/65" />
             {/* Contenido */}
             <div className="relative z-10">
               <p className="text-white text-justify py-8 font-sans max-w-4xl mx-auto px-8 text-xl border-4 border-white rounded-lg">
-                ¡La Bienal Internacional de Esculturas 2024 regresa a
-                Resistencia! 🎨 Transformando las calles de la ciudad en un
-                museo a cielo abierto ⭐, donde artistas internacionales darán
-                vida a sus obras durante diez intensos días de creación 🗿. La
-                Capital Nacional de las Esculturas te invita a ser parte de esta
-                experiencia única, donde el arte y la identidad chaqueña se
-                fusionan para crear un espectáculo sin precedentes ✨. Este año,
-                la Bienal promete sorprender con innovadoras propuestas
-                artísticas que enriquecerán aún más el patrimonio cultural de
-                nuestra ciudad 🌟.
+                Nuestra Bienal es un evento anual que celebra el arte y la cultura en la ciudad de Resistencia, Chaco, Argentina. Desde su creación en 2014, ha sido un espacio donde artistas de todo el mundo han podido mostrar y compartir sus obras de escultura.
               </p>
             </div>
           </div>

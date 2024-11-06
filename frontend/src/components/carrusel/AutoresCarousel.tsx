@@ -13,11 +13,11 @@ import Autoplay from "embla-carousel-autoplay";
 
 export function Autorcarousel() {
   const images = [
-    "/imagen1.jpg",
-    "/imagen2.jpg",
-    "/imagen3.jpg",
-    "/imagen4.jpg",
-    "/imagen5.jpg",
+    "/parque2DeFebrero/imagen1.jpg",
+    "/parque2DeFebrero/imagen2.jpg",
+    "/parque2DeFebrero/imagen3.jpg",
+    "/parque2DeFebrero/imagen4.jpg",
+    "/parque2DeFebrero/imagen5.jpg",
   ];
 
   return (

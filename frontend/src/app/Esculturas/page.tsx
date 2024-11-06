@@ -1,8 +1,10 @@
+// Este archivo es un Server Component por defecto
 import { getEsculturas } from './action';
 import type { Escultura } from '@/types';
-import SculptureList from './sculptureList';
+import ClientPage from './ClientPage';
 
-export default async function Home() {
+export default async function Page() {
   const esculturas: Escultura[] = await getEsculturas();
-  return <SculptureList esculturasInicio={esculturas} />;
+
+  return <ClientPage esculturasInicio={esculturas} />;
 }
