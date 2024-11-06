@@ -1,7 +1,7 @@
 "use client";
 import type { Escultura } from "@/types";
 import SculptureCard from "./sculptureCard";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { getEsculturas } from "./action";
 import { useInView } from "react-intersection-observer";
 
@@ -14,23 +14,23 @@ export default function SculptureList({ esculturasInicio }: SculptureList) {
   const [pageNumber, setPageNumber] = useState(2);
   const { ref, inView } = useInView();
 
-  const loadMoreSculptures = async () => {
+  const loadMoreSculptures = useCallback(async () => {
     const apiEsculturas = await getEsculturas(pageNumber);
     setEsculturas((esculturas) => [...esculturas, ...apiEsculturas]);
     setPageNumber((pageNumber) => pageNumber + 1);
-  };
+  }, [pageNumber]);
 
   useEffect(() => {
     if (inView) {
       loadMoreSculptures();
     }
-  }, [inView]);
+  }, [inView, loadMoreSculptures]);
 
   return (
     <div className="container mx-auto p-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-5 justify-items-center">
-      {esculturas.map((escultura: Escultura) => (
-        <SculptureCard key={escultura.id} escultura={escultura} />
+        {esculturas.map((escultura: Escultura) => (
+          <SculptureCard key={escultura.id} escultura={escultura} />
         ))}
       </div>
       <div ref={ref}>Loading...</div>
