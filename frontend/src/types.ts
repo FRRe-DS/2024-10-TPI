@@ -7,3 +7,12 @@ export interface Autor {
   nombre: string;
   fec_nac: string;
 }
+
+export interface Escultura {
+  id: number;
+  autor_id: string;
+  id_edicion: string;
+  nombre_obra: string;
+  descripcion: string;
+  tecnica: string;
+}

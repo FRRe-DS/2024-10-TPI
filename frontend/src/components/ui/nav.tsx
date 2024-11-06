@@ -24,13 +24,13 @@ export default function Nav(
   }
 
   // Elementos del menú principal
-  const menuItems = ["Escultores", "Esculturas", "/"];
+  const menuItems = ["Esculturas", "Escultores", "/"];
 
   // Elementos del submenú de ediciones
   const ediciones = [
-    { nombre: "Edición 2022", ruta: "/ediciones/2022"},
-    { nombre: "Edición 2018", ruta: "/ediciones/2018"},
-    { nombre: "Edición 2016", ruta: "/ediciones/2016"},
+    { nombre: "Bienal 2022", ruta: "/ediciones/2022"},
+    { nombre: "Bienal 2010", ruta: "/ediciones/2018"},
+    { nombre: "Bienal 2018", ruta: "/ediciones/2016"},
   ];
 
   // Efecto para manejar el scroll y mostrar/ocultar la barra de navegación
@@ -71,7 +71,7 @@ export default function Nav(
 
   return (
     <>
-      {/* Menú lateral */}
+      {/* Menú */}
       <nav
 
         className={`fixed z-[100] flex flex-col gap-8 py-6 h-screen items-center w-full bg-white top-0 left-0 transition-all duration-200 ease-in-out ${
@@ -85,7 +85,31 @@ export default function Nav(
         <button onClick={toggleMenu} className="text-2xl">
           Cerrar
         </button>
-  
+                {/* Botón para cerrar sesión o enlace de inicio de sesión según el estado de la cookie */}
+                {cookieData?.accessToken ? (
+          <button
+            onClick={async () => {
+              await deleteCookie();
+              setIsMenuOpen(false);
+            }}
+            className={styles.button}
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
+              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
+                Cerrar sesión
+              </text>
+            </svg>
+          </button>
+        ) : (
+          <Link href="/login" className={styles.button} onClick={toggleMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
+              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
+                Iniciar sesión
+              </text>
+            </svg>
+          </Link>
+        )}
+
         {/* Renderiza los elementos del menú principal */}
         {menuItems.map((item) => (
           <div
@@ -111,9 +135,9 @@ export default function Nav(
             {/* Renderiza el submenú de ediciones solo cuando el cursor está sobre "Ediciones" */}
             {item === "/" && showEditions && (
               <div
-                className={`${styles.submenu} absolute mt-2 bg-white shadow-gray-400 rounded px-4 py-2`} // Sombra gris para el submenú
+                className={`${styles.submenu} absolute`} // Sombra gris para el submenú
                 style={{
-                  minWidth: "150px",
+                  minWidth: "300px",
                   zIndex: 20,
                 }}
                 onMouseEnter={() => setShowEditions(true)} // Mantiene el submenú abierto al pasar el cursor sobre él
@@ -123,14 +147,12 @@ export default function Nav(
                   <Link
                     href={edicion.ruta}
                     key={edicion.nombre}
-                    className={`${styles.button} block px-4 py-2 hover:bg-gray-400 text-black`}  //Estilo de hover en gris
+                    className={`${styles.button} block px-8 py-5 hover:text-red-700 font-semibold text-3xl`}  //Estilo de hover en gris
                     onClick={toggleMenu}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
-                      <text x="10" y="45" className={styles.text + "font-[60vh]"}>
-                        {edicion.nombre}
-                      </text>
-                    </svg>
+                  > 
+                  <span className="text-3xl font-semibold">
+                    {edicion.nombre}
+                  </span>
                   </Link>
                 ))}
               </div>
@@ -138,30 +160,6 @@ export default function Nav(
           </div>
         ))}
   
-        {/* Botón para cerrar sesión o enlace de inicio de sesión según el estado de la cookie */}
-        {cookieData?.accessToken ? (
-          <button
-            onClick={async () => {
-              await deleteCookie();
-              setIsMenuOpen(false);
-            }}
-            className={styles.button}
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
-              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
-                Cerrar sesión
-              </text>
-            </svg>
-          </button>
-        ) : (
-          <Link href="/login" className={styles.button} onClick={toggleMenu}>
-            <svg xmlns="http://www.w3.org/2000/svg" className={styles.svg}>
-              <text x="10" y="45" className={styles.text + "font-[60vh]"}>
-                Iniciar sesión
-              </text>
-            </svg>
-          </Link>
-        )}
       </nav>
   
       {/* Barra de navegación principal */}

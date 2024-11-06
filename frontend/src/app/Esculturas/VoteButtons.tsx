@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { postVote } from './action';
 
 interface VoteButtonsProps {
   esculturaId: number;
@@ -12,8 +13,12 @@ export default function VoteButtons({ esculturaId, votosIniciales }: VoteButtons
   const [votos, setVotos] = useState(votosIniciales);
   const [userVote, setUserVote] = useState<boolean>(false);
 
+
+
   const handleVote = async () => {
     try {
+      postVote(esculturaId, "positivo");
+      
       // Si ya votó, remover voto
       if (userVote) {
         setUserVote(false);

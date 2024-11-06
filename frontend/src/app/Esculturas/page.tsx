@@ -1,10 +1,8 @@
-import EsculturasGrid from '@/components/ui/sculpturesGrid';
+import { getEsculturas } from './action';
+import type { Escultura } from '@/types';
+import SculptureList from './sculptureList';
 
-export default function EsculturasPage() {
-  return (
-    <main className="container mx-auto">
-      <h1 className="text-2xl font-bold my-4"></h1>
-      <EsculturasGrid />
-    </main>
-  );
+export default async function Home() {
+  const esculturas: Escultura[] = await getEsculturas();
+  return <SculptureList esculturasInicio={esculturas} />;
 }
