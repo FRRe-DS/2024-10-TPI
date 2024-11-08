@@ -34,10 +34,7 @@ class AuthController:
         return {"token": token_response, "user": user_response}
 
     def register(user: UserCreate, db: Session):
-
-        user_exists = UserController.exists_user_by_dni(user.dni, db)
-        if user_exists["existe"]:
-            raise HTTPException(status_code=400, detail="El usuario ya existe")
         respuesta = UserController.create_user(user, db)
-        return respuesta
-
+        access_token = create_access_token(data={"sub": user.correo})
+        token_response = Token(access_token=access_token, token_type="bearer")
+        return {**respuesta, "token": token_response}
