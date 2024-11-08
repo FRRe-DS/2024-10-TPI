@@ -1,15 +1,14 @@
+from app.models.obrasModel import ObrasModel
 from fastapi import HTTPException
 from fastapi_pagination import paginate, set_params
 from fastapi_pagination.default import Params
-from sqlalchemy.orm import Session
-
-from app.models.obrasModel import ObrasModel
+from sqlalchemy.orm import Session, selectinload
 
 
 class ObraController:
 
     def get_obras(db: Session):
-        results = db.query(ObrasModel).all()
+        results = db.query(ObrasModel).options(selectinload(ObrasModel.autor)).all()
         set_params(Params(size=20))
         return paginate(results)
 

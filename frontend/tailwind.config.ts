@@ -11,6 +11,8 @@ const config: Config = {
   	extend: {
   		fontFamily: {
 			'britannic': ['Britannic', 'sans-serif'],
+			'libre': ['"Libre Baskerville"', 'serif'],
+			'handwritten': ['"Caveat"', 'cursive'],
 		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
