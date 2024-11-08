@@ -31,8 +31,8 @@ export async function handleRegister(data: FormData) {
       throw new Error(respData.message || "Algo salió mal.");
     }
     const cookieStore = await cookies();
-    cookieStore.set("access_token", respData.access_token);
-    cookieStore.set("correo", formData.correo as string);
+    cookieStore.set("access_token", respData.token.access_token);
+    cookieStore.set("user", JSON.stringify(respData.user));
   } catch (error) {
     console.log(error);
   }
