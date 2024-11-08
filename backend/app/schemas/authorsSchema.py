@@ -49,6 +49,7 @@ class AuthorObra(BaseModel):
     id: int
     nombre: str
     apellido: str
+    pais_origen: str
 
     class Config:
         orm_mode = True
