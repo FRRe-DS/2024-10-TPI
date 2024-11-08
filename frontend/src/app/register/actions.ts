@@ -15,8 +15,7 @@ export async function handleRegister(data: FormData) {
 
   // me conecto con el endpoint, mi bd
   const endpoint = `${process.env.NEXT_PUBLIC_API}/register`;
-  
-  6
+
   // mando el metodo post
   try {
     const response = await fetch(endpoint, {
@@ -27,11 +26,7 @@ export async function handleRegister(data: FormData) {
       body: JSON.stringify(formData),
     });
 
-
-    // y todo esto son casos de errores.
-    console.log(response);
     const respData = await response.json();
-    console.log(respData);
     if (!response.ok) {
       throw new Error(respData.message || "Algo salió mal.");
     }

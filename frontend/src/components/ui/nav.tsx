@@ -6,7 +6,6 @@ import { deleteCookie } from "@/app/actions";
 import EditionSubmenu from "./editionSubmenu";
 
 export default function Nav(cookieData: any, user: any) {
-  console.log(cookieData);
   // Estado para controlar si el menú lateral está abierto o cerrado
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Estado para controlar la visibilidad de la barra de navegación principal al hacer scroll

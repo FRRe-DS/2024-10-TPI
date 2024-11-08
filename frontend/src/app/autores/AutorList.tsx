@@ -16,7 +16,6 @@ export default function AutorList({ autoresInicio }: AutorList) {
 
   const loadMoreAutores = useCallback(async () => {
     const apiAutores = await getAutores(pageNumber);
-    console.log(apiAutores);
     setAutores((autores) => [...autores, ...apiAutores]);
     setPageNumber((pageNumber) => pageNumber + 1);
   }, [pageNumber]);

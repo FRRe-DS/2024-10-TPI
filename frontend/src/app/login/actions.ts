@@ -32,16 +32,13 @@ export async function handleLogin(data: FormData) {
       },
       body: JSON.stringify(formData),
     });
-    console.log(response);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const respData = await response.json();
-    console.log(respData);
     const cookieStore = cookies();
     cookieStore.set("access_token", respData.token.access_token);
     cookieStore.set("user", JSON.stringify(respData.user));
-    console.log(respData.user);
   } catch (error) {
     console.error(error);
     throw new Error(
