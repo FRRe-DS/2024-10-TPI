@@ -1,7 +1,7 @@
-from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, func
-from sqlalchemy.orm import Mapped, mapped_column
-
 from app.config.db import Base
+from app.models.authorsModel import AuthorModel
+from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, func
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
 class ObrasModel(Base):
@@ -23,3 +23,5 @@ class ObrasModel(Base):
         DateTime, onupdate=func.now(), nullable=True
     )
     deleted_at: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
+
+    autor: Mapped["AuthorModel"] = relationship("AuthorModel", back_populates="obras")

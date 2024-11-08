@@ -1,7 +1,9 @@
-from sqlalchemy import Integer, String, Date, Text
-from sqlalchemy.orm import Mapped, mapped_column, relationship
 from typing import List
+
 from app.config.db import Base
+from sqlalchemy import Date, Integer, String, Text
+from sqlalchemy.orm import Mapped, mapped_column, relationship
+
 
 class AuthorModel(Base):
     __tablename__ = "Autores"
@@ -14,4 +16,6 @@ class AuthorModel(Base):
     biografia: Mapped[str] = mapped_column(Text, nullable=False)
     pais_origen: Mapped[str] = mapped_column(String(255), nullable=False)
 
-    contactos: Mapped[List["ContactModel"]] = relationship("ContactModel", back_populates="autor_relacion") # type: ignore
+    contactos: Mapped[List["ContactModel"]] = relationship("ContactModel", back_populates="autor_relacion")  # type: ignore
+    obras = relationship("ObrasModel", back_populates="autor")
+
