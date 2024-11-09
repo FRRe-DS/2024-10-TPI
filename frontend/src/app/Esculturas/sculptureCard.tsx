@@ -1,5 +1,4 @@
 'use client';
-import VoteButtons from './VoteButtons';
 import type { Escultura } from '@/types';
 import { useState } from 'react';
 import Modal from './modal'; 
@@ -36,7 +35,7 @@ export default function SculptureCard({ escultura }: UserProps) {
           <div className="font-semibold text-sm ml-2">{escultura.autor.nombre} {escultura.autor.apellido}</div>
         </div>
 
-        <div className="w-full h-[400px]">
+        <div className="w-full h-[420px]">
           <img 
             src={getRandomImage()} 
             alt={escultura.nombre_obra}
@@ -45,12 +44,7 @@ export default function SculptureCard({ escultura }: UserProps) {
         </div>
 
         <div className="p-3" onClick={(e) => e.stopPropagation()}>
-          <VoteButtons 
-            esculturaId={escultura.id}
-            votosIniciales={{
-              positivos: 0,
-            }}
-          />
+          
           <h3 className="font-semibold text-sm truncate">{escultura.nombre_obra}</h3>
           <p className="text-sm text-gray-600 mt-1 line-clamp-2 break-words">{escultura.descripcion}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam id ex malesuada, vitae porttitor felis rhoncus. Cras aliquam ipsum a libero laoreet, ut bibendum libero eleifend. Etiam elementum auctor enim ac faucibus. Sed ac velit bibendum, convallis nisi nec, lobortis massa. Etiam tincidunt a arcu in malesuada. Ut dapibus elit eget velit aliquet dignissim non non justo. Aenean bibendum eros in lectus condimentum aliquet. Pellentesque porttitor nunc ac dui interdum malesuada. Nam ac diam ultrices lacus imperdiet aliquet ut eget risus. Nullam tempor tortor in erat posuere, dignissim vestibulum diam pretium. Vivamus malesuada in nisi eget scelerisque. Vivamus dictum velit eget purus pellentesque, vel laoreet urna ullamcorper. Aliquam arcu sapien, mattis ac convallis eget, euismod id orci. Maecenas tincidunt, massa at pulvinar fringilla, dui diam varius tortor, semper auctor odio odio sit amet orci. Quisque congue faucibus elit ut scelerisque.
