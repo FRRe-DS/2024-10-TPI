@@ -4,14 +4,14 @@ import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
 export const handleGoogleLogin = async () => {
-    try {
-        return {
-            url: `/api/auth/signin/google?callbackUrl=${encodeURIComponent(process.env.NEXTAUTH_URL || 'http://localhost:3000')}`
-        };
-    } catch (error) {
-        console.error("Error en login de Google:", error);
-        throw error;
-    }
+  try {
+    return {
+      url: `/api/auth/signin/google?callbackUrl=${encodeURIComponent(process.env.NEXTAUTH_URL || "http://localhost:3000")}`,
+    };
+  } catch (error) {
+    console.error("Error en login de Google:", error);
+    throw error;
+  }
 };
 
 // manejo de login normal
@@ -21,7 +21,7 @@ export async function handleLogin(data: FormData) {
     correo: data.get("correo"),
     contrasenia_hasheada: data.get("contrasenia_hasheada"),
   };
-  
+
   const endpoint = `${process.env.NEXT_PUBLIC_API}/login`;
 
   try {
@@ -32,19 +32,18 @@ export async function handleLogin(data: FormData) {
       },
       body: JSON.stringify(formData),
     });
-    console.log(response);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const respData = await response.json();
-    console.log(respData);
     const cookieStore = cookies();
-    cookieStore.set("access_token", respData.access_token);
-    cookieStore.set("correo", formData.correo as string);
+    cookieStore.set("access_token", respData.token.access_token);
+    cookieStore.set("user", JSON.stringify(respData.user));
   } catch (error) {
     console.error(error);
-    throw new Error(error instanceof Error ? error.message : 'Error desconocido');
+    throw new Error(
+      error instanceof Error ? error.message : "Error desconocido",
+    );
   }
   redirect("/");
 }
-

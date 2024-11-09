@@ -19,13 +19,13 @@ export default async function RootLayout({
 }>) {
   const cookieStore = cookies();
   const accessToken = cookieStore.get("access_token");
-  const correo = cookieStore.get("correo");
-
+  const userString = cookieStore.get("user");
+  const user = userString ? JSON.parse(userString?.value) : null;
   return (
     <html lang="es">
       <body className={`${inter.className} min-h-screen bg-transparent`}>
         <NextAuthProvider>
-          <Nav cookieData={accessToken} correo={correo} />
+          <Nav cookieData={accessToken} user={user} />
           <main>{children}</main>
         </NextAuthProvider>
       </body>

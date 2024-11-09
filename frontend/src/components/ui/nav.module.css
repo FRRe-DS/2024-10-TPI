@@ -35,3 +35,28 @@
   font-size: 24px;
   font-family: Arial, sans-serif;
 }
+
+@media (width < 638px) {
+  .svg {
+    font-size: 30px;
+    width: 200px;
+  }
+}
+
+@keyframes blindsDown {
+  from {
+    transform: scaleY(0); /* Start with zero height */
+    transform-origin: top; /* Scale down from the top */
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1); /* Fully expanded height */
+    opacity: 1;
+  }
+}
+
+.blinds {
+  animation: blindsDown 0.4s ease forwards;
+  transform-origin: top;
+  transform: scaleY(1);
+}
