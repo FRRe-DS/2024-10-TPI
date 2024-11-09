@@ -5,8 +5,6 @@ CREATE TABLE IF NOT EXISTS Obras (
 	nombre_obra VARCHAR(255) NOT NULL,
 	descripcion TEXT,
 	tecnica VARCHAR(50),
-  cant_votos INT DEFAULT 0,
-   
 	
 	created_at DATETIME NOT NULL DEFAULT NOW(),
 	updated_at DATETIME DEFAULT NULL,
