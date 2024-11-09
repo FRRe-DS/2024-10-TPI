@@ -4,6 +4,7 @@ import styles from "./nav.module.css";
 import Link from "next/link";
 import { deleteCookie } from "@/app/actions";
 import EditionSubmenu from "./editionSubmenu";
+import Image from "next/image";
 
 export default function Nav(cookieData: any, user: any) {
   // Estado para controlar si el menú lateral está abierto o cerrado
@@ -143,11 +144,15 @@ ${
           ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
       >
-        <img
-          src="/bienal-del-chaco.jpg"
-          alt="Bienal del Chaco"
-          className="h-10 w-auto absolute left-5 top-1/2  -translate-y-1/2"
-        />
+        <Link href={"/"}>
+          <Image
+            width={120}
+            height={40}
+            src="/bienal-del-chaco.jpg"
+            alt="Bienal del Chaco"
+            className="absolute left-5 top-1/2  -translate-y-1/2"
+          />
+        </Link>
         <button
           onClick={toggleMenu}
           className="absolute left-1/2 -translate-x-1/2"
