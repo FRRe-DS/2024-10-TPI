@@ -1,6 +1,3 @@
-from datetime import datetime
-
-import pytz
 from sqlalchemy.orm import Session
 
 from app.models.votosModel import VotosModel
@@ -52,7 +49,6 @@ class VotosController:
             return {"ok": False, "mensaje": "No existe un voto con ese usuario y obra"}
 
         votoquery.estrellas = voto.estrellas
-        votoquery.updated_at = datetime.now(pytz.utc)
         db.commit()
         db.refresh(votoquery)
         return {
