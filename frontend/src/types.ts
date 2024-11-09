@@ -15,4 +15,10 @@ export interface Escultura {
   nombre_obra: string;
   descripcion: string;
   tecnica: string;
+  autor: {
+    id: number;
+    nombre: string;
+    apellido: string;
+    pais_origen: string;
+  };
 }

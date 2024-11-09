@@ -4,9 +4,9 @@
 import { Escultura } from "@/types";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-export const getEsculturas = async (pageNumber = 1) => {
+export const getEsculturas = async () => {
     try {
-      const url = `${process.env.NEXT_PUBLIC_API}/obras?page=${pageNumber}`;
+      const url = `${process.env.NEXT_PUBLIC_API}/obras`;
       const response = await fetch(url);
     const data = (await response.json()).items as Escultura[];
     return data;

@@ -5,6 +5,5 @@ import ClientPage from './ClientPage';
 
 export default async function Page() {
   const esculturas: Escultura[] = await getEsculturas();
-
   return <ClientPage esculturasInicio={esculturas} />;
 }
