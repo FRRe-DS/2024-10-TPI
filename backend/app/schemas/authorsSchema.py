@@ -6,7 +6,6 @@ from pydantic import BaseModel
 
 class AuthorBase(BaseModel):
     id: int
-    dni: str
     nombre: str
     apellido: str
     fec_nac: date
@@ -20,7 +19,6 @@ class AuthorCreate(AuthorBase):
 
 class AuthorUpdate(AuthorBase):
     id: Optional[int] = None
-    dni: Optional[str] = None
     nombre: Optional[str] = None
     apellido: Optional[str] = None
     fec_nac: Optional[date] = None
@@ -30,7 +28,6 @@ class AuthorUpdate(AuthorBase):
 
 class Author(AuthorBase):
     id: Optional[int]
-    dni: Optional[str]
     contactos: Optional[List["ContactModel"]]
     created_at: datetime
     updated_at: datetime

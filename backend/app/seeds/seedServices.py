@@ -46,28 +46,43 @@ def seed_table(model, json_file: str, db: Session, date_fields: list = []):
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
-def insert_admin(model, db: Session):
+def insert_usuarios(model, db: Session):
     # User data to insert
     admin_data = {
         "nombre": "admin",
         "apellido": "admin",
         "contrasenia_hasheada": pwd_context.hash("admin"),
-        "dni": "11111111",
         "correo": "admin@admin.com",
         "rol": "admin",
+    }
+    votante_data = {
+        "nombre": "prueba",
+        "apellido": "prueba",
+        "contrasenia_hasheada": pwd_context.hash("1234"),
+        "correo": "prueba@hotmail.com",
+        "rol": "votante",
     }
 
     existing_user = db.query(model).filter_by(correo=admin_data["correo"]).first()
     if existing_user:
         print("El admin ya existe, no se insertaron nuevos registros.")
         return
-
+    
+    existing_user = db.query(model).filter_by(correo=votante_data["correo"]).first()
+    if existing_user:
+        print("El votante ya existe, no se insertaron nuevos registros.")
+        return
     # Create a new user record
     new_user = model(**admin_data)
+    new_user2 = model(**votante_data)
 
     # Insert the user into the database
     db.add(new_user)
+    db.add(new_user2)
     db.commit()
     print(
         f"Usuario {admin_data['nombre']} insertado en la tabla {model.__tablename__}."
+    )
+    print(
+        f"Usuario {votante_data['nombre']} insertado en la tabla {model.__tablename__}."
     )

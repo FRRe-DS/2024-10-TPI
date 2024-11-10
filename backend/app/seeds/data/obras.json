@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "autor_id": 101,
+    "autor_id": 1,
     "id_edicion": 2022,
     "nombre_obra": "Paisaje en Primavera",
     "descripcion": "Un hermoso paisaje de primavera con flores y árboles en plena floración.",
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "autor_id": 102,
+    "autor_id": 2,
     "id_edicion": 2024,
     "nombre_obra": "Retrato de una Dama",
     "descripcion": "Un retrato clásico al óleo de una mujer elegante.",
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "autor_id": 103,
+    "autor_id": 3,
     "id_edicion": 2022,
     "nombre_obra": "Ciudad Futurista",
     "descripcion": "Una ilustración digital de una ciudad avanzada en el futuro.",
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "autor_id": 104,
+    "autor_id": 4,
     "id_edicion": 2024,
     "nombre_obra": "Amanecer en el Mar",
     "descripcion": "Escena de un amanecer en el océano, con tonos cálidos y reflejos.",
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "autor_id": 105,
+    "autor_id": 5,
     "id_edicion": 2022,
     "nombre_obra": "Bosque Encantado",
     "descripcion": "Un bosque lleno de luces místicas y sombras intrigantes.",
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "autor_id": 106,
+    "autor_id": 6,
     "id_edicion": 2024,
     "nombre_obra": "Montañas Nevadas",
     "descripcion": "Paisaje montañoso en invierno, con cumbres cubiertas de nieve.",
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "autor_id": 107,
+    "autor_id": 7,
     "id_edicion": 2022,
     "nombre_obra": "Flores Silvestres",
     "descripcion": "Un cuadro de flores silvestres en una pradera soleada.",
@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "autor_id": 108,
+    "autor_id": 8,
     "id_edicion": 2024,
     "nombre_obra": "Reflejos Urbanos",
     "descripcion": "Reflejos de edificios en charcos de lluvia en una ciudad.",
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "autor_id": 109,
+    "autor_id": 9,
     "id_edicion": 2022,
     "nombre_obra": "Danza de Colores",
     "descripcion": "Una representación abstracta de colores y formas en movimiento.",
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "autor_id": 110,
+    "autor_id": 10,
     "id_edicion": 2024,
     "nombre_obra": "Siluetas Nocturnas",
     "descripcion": "Siluetas de personas y árboles bajo la luz de la luna.",

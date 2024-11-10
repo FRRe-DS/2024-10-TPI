@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS Autores (
 	fec_nac DATE NOT NULL,
 	biografia TEXT NOT NULL,
 	pais_origen VARCHAR(255) NOT NULL,
-	id_imagen_perfil 
-  
+
   created_at DATETIME NOT NULL DEFAULT NOW(),
   updated_at DATETIME DEFAULT NULL,
   deleted_at DATETIME DEFAULT NULL
