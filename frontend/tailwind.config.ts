@@ -9,6 +9,11 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+			'britannic': ['Britannic', 'sans-serif'],
+			'libre': ['"Libre Baskerville"', 'serif'],
+			'handwritten': ['"Caveat"', 'cursive'],
+		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
   			'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
@@ -69,7 +74,7 @@ const config: Config = {
   				border: 'hsl(var(--sidebar-border))',
   				ring: 'hsl(var(--sidebar-ring))'
   			}
-  		}
+  		}, 
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,6 +1,7 @@
+from app.config.db import Base
 from sqlalchemy import Integer, String
 from sqlalchemy.orm import Mapped, mapped_column
-from app.config.db import Base
+
 
 class UserModel(Base):
     __tablename__ = "Usuarios"
@@ -11,3 +12,5 @@ class UserModel(Base):
     contrasenia_hasheada: Mapped[str] = mapped_column(String(255), nullable=False)
     dni: Mapped[str] = mapped_column(String(8), nullable=False)
     correo: Mapped[str] = mapped_column(String(255), nullable=False)
+    rol: Mapped[str] = mapped_column(String(255), nullable=True)
+

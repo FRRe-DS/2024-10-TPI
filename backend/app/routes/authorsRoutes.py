@@ -1,13 +1,15 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.controllers.authorsController import AuthorController
-from app.schemas.authorsSchema import AuthorCreate, AuthorUpdate, AuthorBase
+from app.schemas.authorsSchema import AuthorCreate, AuthorUpdate, AuthorBase, AuthorOut
 from app.config.db import get_db
+from fastapi_pagination import Page
+
 
 author = APIRouter()
 
-@author.get("/autores", response_model=list[AuthorBase], tags = ["autores"])
-def get_authors(db: Session = Depends(get_db)):
+@author.get(path="/autores", name="Gets all the rows of Authors table",response_model=Page[AuthorOut], tags = ["autores"])
+async def get_authors(db: Session = Depends(get_db)):
     return AuthorController.get_authors(db)
 
 @author.get("/autores/{id}", response_model=AuthorBase, tags = ["autores"])

@@ -7,6 +7,6 @@ import { redirect } from "next/navigation";
 export async function deleteCookie() {
   const cookieStore = cookies();
   cookieStore.delete("access_token");
-  cookieStore.delete("correo");
+  cookieStore.delete("user");
   redirect("/");
 }

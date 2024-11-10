@@ -1,35 +1,55 @@
+from datetime import date, datetime
+from typing import List, Optional
+
 from pydantic import BaseModel
-from typing import Optional, List
-from datetime import datetime, date
+
 
 class AuthorBase(BaseModel):
-  id: int
-  dni: str
-  nombre: str
-  apellido: str
-  fec_nac: date
-  biografia: str
-  pais_origen: str
+    id: int
+    dni: str
+    nombre: str
+    apellido: str
+    fec_nac: date
+    biografia: str
+    pais_origen: str
+
 
 class AuthorCreate(AuthorBase):
-  id: Optional[int] = None
+    id: Optional[int] = None
+
 
 class AuthorUpdate(AuthorBase):
-  id: Optional[int] = None
-  dni: Optional[str] = None
-  nombre: Optional[str] = None
-  apellido: Optional[str] = None
-  fec_nac: Optional[date] = None
-  biografia: Optional[str] = None
-  pais_origen: Optional[str] = None
+    id: Optional[int] = None
+    dni: Optional[str] = None
+    nombre: Optional[str] = None
+    apellido: Optional[str] = None
+    fec_nac: Optional[date] = None
+    biografia: Optional[str] = None
+    pais_origen: Optional[str] = None
+
 
 class Author(AuthorBase):
-  id: Optional[int]
-  dni: Optional[str]
-  contactos: Optional[List["ContactModel"]] # type: ignore
-  created_at: datetime
-  updated_at: datetime
-  deleted_at: Optional[datetime]
+    id: Optional[int]
+    dni: Optional[str]
+    contactos: Optional[List["ContactModel"]]
+    created_at: datetime
+    updated_at: datetime
+    deleted_at: Optional[datetime]
 
-  class Config:
-    from_attributes = True
+    class Config:
+        from_attributes = True
+
+
+class AuthorOut(AuthorBase):
+    class Config:
+        from_attributes = True
+
+
+class AuthorObra(BaseModel):
+    id: int
+    nombre: str
+    apellido: str
+    pais_origen: str
+
+    class Config:
+        orm_mode = True

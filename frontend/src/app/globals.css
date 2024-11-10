@@ -106,3 +106,49 @@ model-viewer {
     @apply bg-background text-foreground;
   }
 }
+@font-face {
+  font-family: 'Britannic';
+  src: url('/fonts/britannic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes waveEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.moving-waves {
+  background: linear-gradient(45deg, rgba(0, 102, 204, 0.7) 25%, rgba(0, 204, 255, 0.6) 50%, rgba(0, 102, 204, 0.7) 75%);
+  background-size: 200% 200%;
+  animation: waveEffect 8s ease-in-out infinite;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

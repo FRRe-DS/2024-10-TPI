@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/ui/nav";
 import { cookies } from "next/headers";
-import { deleteCookie } from "./actions";
+import { NextAuthProvider } from "./providers";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,15 +19,16 @@ export default async function RootLayout({
 }>) {
   const cookieStore = cookies();
   const accessToken = cookieStore.get("access_token");
-  const correo = cookieStore.get("correo");
+  const userString = cookieStore.get("user");
+  const user = userString ? JSON.parse(userString?.value) : null;
   return (
-    <>
-      <html lang="es">
-        <body className={inter.className + "min-h-screen bg-transparent"}>
-          <Nav accessToken={accessToken} correo={correo} />
-          {children}
-        </body>
-      </html>
-    </>
+    <html lang="es">
+      <body className={`${inter.className} min-h-screen bg-transparent`}>
+        <NextAuthProvider>
+          <Nav cookieData={accessToken} user={user} />
+          <main>{children}</main>
+        </NextAuthProvider>
+      </body>
+    </html>
   );
 }
