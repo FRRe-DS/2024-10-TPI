@@ -1,5 +1,4 @@
 "use server";
-import { signIn } from "next-auth/react";
 import { redirect } from "next/navigation";
 import { cookies } from "next/headers";
 
@@ -36,9 +35,8 @@ export async function handleLogin(data: FormData) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const respData = await response.json();
-    const cookieStore = cookies();
-    cookieStore.set("access_token", respData.token.access_token);
-    cookieStore.set("user", JSON.stringify(respData.user));
+    cookies().set("access_token", respData.token.access_token);
+    cookies().set("user", JSON.stringify(respData.user));
   } catch (error) {
     console.error(error);
     throw new Error(
