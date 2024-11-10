@@ -1,5 +1,5 @@
-import { AppSidebar } from "@/components/ui/app-sidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/navigation/app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/navigation/sidebar";
 
 export default function AdminLayout({
   children,
@@ -12,13 +12,9 @@ export default function AdminLayout({
         <AppSidebar />
         <main>
           <SidebarTrigger />
-
         </main>
-        <div className=''>{children}</div>
-
-
+        <div className="p-10">{children}</div>
       </SidebarProvider>
-
     </>
   );
 }
