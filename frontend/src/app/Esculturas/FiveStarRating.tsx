@@ -1,24 +1,30 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { postVote } from './action';
 
 interface FiveStarRatingProps {
   esculturaId: number;
-  votosIniciales: {
+  votoUsuario: {
     rating: number;
   };
 }
 
-export default function FiveStarRating({ esculturaId, votosIniciales }: FiveStarRatingProps) {
+export default function FiveStarRating({ esculturaId, votoUsuario}: FiveStarRatingProps) {
+  
+  const [selectedRating, setSelectedRating] = useState(votoUsuario?.rating || 0);
   const [hoveredRating, setHoveredRating] = useState(0);
-  const [selectedRating, setSelectedRating] = useState(0);
-  const [hasVoted, setHasVoted] = useState(false);
+  const [hasVoted, setHasVoted] = useState(!!votoUsuario?.rating);
+  
+  useEffect(() => {
+    setSelectedRating(votoUsuario?.rating || 0);
+    setHasVoted(!!votoUsuario?.rating);
+  }, [votoUsuario]);
 
   const handleVote = async () => {
     if (selectedRating === 0) return;
     
     try {
-      await postVote(esculturaId, 'positivo');
+      await postVote(esculturaId, selectedRating);
       setHasVoted(true);
     } catch (error) {
       console.error('Error al votar:', error);
@@ -62,7 +68,7 @@ export default function FiveStarRating({ esculturaId, votosIniciales }: FiveStar
           disabled={selectedRating === 0}
           className={`px-6 py-2 rounded-lg transition-colors ${
             selectedRating === 0 
-              ? 'bg-red-200 text-red-500 cursor-not-allowed'
+              ? 'bg-gray-200 text-gray-500'
               : 'bg-blue-500 text-white hover:bg-blue-600'
           }`}
         >
