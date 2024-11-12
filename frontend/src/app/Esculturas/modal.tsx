@@ -61,8 +61,6 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
     fetchVoto();
   }, [isOpen, escultura.id]);
 
-  console.log('estado actual del voto',voto);
-
   if (!isOpen) return null;
 
   return (
