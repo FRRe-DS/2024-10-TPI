@@ -8,7 +8,6 @@ export async function handleRegister(data: FormData) {
   const formData = {
     nombre: data.get("nombre"),
     apellido: data.get("apellido"),
-    dni: data.get("dni"),
     correo: data.get("correo"),
     contrasenia_hasheada: data.get("contrasenia_hasheada"),
   };

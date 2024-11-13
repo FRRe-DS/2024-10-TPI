@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
@@ -14,11 +19,11 @@ const AltaUser = () => {
     celular: "",
     permiso: "",
   });
-//   const { altaAbogados } = AuthService;
+  //   const { altaAbogados } = AuthService;
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: { target: { name: any; value: any; }; }) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target;
     setUserData({
       ...userData,
@@ -26,12 +31,12 @@ const AltaUser = () => {
     });
   };
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsSubmitted(true);
 
     try {
-    //   await altaAbogados(userData);
+      //   await altaAbogados(userData);
       setUserData({
         id: "",
         nombre: "",
@@ -52,29 +57,14 @@ const AltaUser = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-6">
       <Card className="w-full max-w-lg shadow-lg">
         <CardHeader>
-          <text  className="text-center font-bold">
-            Registrar Abogado
-          </text>
-          <text  className="text-center">
+          <text className="text-center font-bold">Registrar Abogado</text>
+          <text className="text-center">
             Por favor, complete el siguiente formulario
           </text>
         </CardHeader>
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Label htmlFor="dni">DNI</Label>
-              <Input
-                id="dni"
-                name="dni"
-                value={userData.id}
-                onChange={handleInputChange}
-                required
-                // helperText="Debe contener exactamente 8 dígitos"
-                // error={userData.dni.length > 0 && userData.dni.length !== 8}
-              />
-            </div>
-
             <div>
               <Label htmlFor="nombre">Nombre Completo</Label>
               <Input
@@ -131,7 +121,6 @@ const AltaUser = () => {
               />
             </div>
 
-
             <div>
               <Label htmlFor="permiso">Permiso</Label>
               <select
@@ -166,7 +155,7 @@ const AltaUser = () => {
                 Registrar Usuario
               </Button>
               {isSubmitted && (
-                <text  className="text-center mt-4">
+                <text className="text-center mt-4">
                   {userData.id
                     ? "Error al registrar el usuario."
                     : "Usuario registrado exitosamente"}

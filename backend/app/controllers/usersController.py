@@ -35,8 +35,6 @@ class UserController:
 
             if "correo" in error_message:
                 detail_message = "El correo ya existe"
-            elif "dni" in error_message:
-                detail_message = "El DNI ya existe"
             else:
                 detail_message = error_message
 
@@ -75,4 +73,3 @@ class UserController:
     def exists_user_by_id(id: int, db: Session):
         user = db.query(UserModel).filter(UserModel.id == id).one_or_none()
         return {"existe": user is not None}
-

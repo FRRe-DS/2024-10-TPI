@@ -28,7 +28,6 @@ class AuthController:
             "nombre": user_b.nombre,
             "apellido": user_b.apellido,
             "correo": user_b.correo,
-            "dni": user_b.dni,
             "rol": user_b.rol,
         }
         return {"token": token_response, "user": user_response}

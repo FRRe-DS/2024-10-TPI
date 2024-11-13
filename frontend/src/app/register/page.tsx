@@ -10,7 +10,7 @@ export default function Page() {
       <div className="p-10 border drop-shadow-md shadow-sm w-96 rounded-xl">
         <h1 className="font-bold text-xl mb-4">Registrarse</h1>
         <form className="flex flex-col space-y-4" action={handleRegister}>
-        <input
+          <input
             type="name"
             placeholder="Nombre"
             name="nombre"
@@ -21,13 +21,6 @@ export default function Page() {
             type="lastname"
             placeholder="Apellido"
             name="apellido"
-            className="border p-2 rounded"
-            required
-          />
-          <input
-            type="dni"
-            placeholder="DNI"
-            name="dni"
             className="border p-2 rounded"
             required
           />
@@ -60,3 +53,4 @@ export default function Page() {
     </div>
   );
 }
+
