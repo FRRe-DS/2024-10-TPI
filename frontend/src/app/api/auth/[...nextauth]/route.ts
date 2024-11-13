@@ -1,6 +1,6 @@
-import NextAuth from 'next-auth';
-import GoogleProvider from 'next-auth/providers/google';
-import { Profile } from 'next-auth';
+import NextAuth from "next-auth";
+import GoogleProvider from "next-auth/providers/google";
+import { Profile } from "next-auth";
 
 interface GoogleProfile extends Profile {
   email_verified?: boolean;
@@ -11,35 +11,37 @@ interface GoogleProfile extends Profile {
 const handler = NextAuth({
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID ?? '',
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
+      clientId: process.env.GOOGLE_CLIENT_ID ?? "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? "",
       authorization: {
         params: {
-          scope: "openid email profile"
-        }
-      }
+          scope: "openid email profile",
+        },
+      },
     }),
   ],
+  secret: process.env.SECRET,
   callbacks: {
     async signIn({ user, account, profile }) {
-      if (account?.provider === 'google') {
+      if (account?.provider === "google") {
         const googleProfile = profile as GoogleProfile;
-        console.log('\n🌟 ===============================');
-        console.log('📧 Inicio de sesión con Google exitoso');
-        console.log('===============================');
-        console.log('👤 Datos del usuario:');
-        console.log('   • Nombre:', user.name);
-        console.log('   • Email:', user.email);
-        console.log('   • Foto de perfil:', user.image);
-        console.log('===============================\n');
+        console.log("\n🌟 ===============================");
+        console.log("📧 Inicio de sesión con Google exitoso");
+        console.log("===============================");
+        console.log("👤 Datos del usuario:");
+        console.log("   • Nombre:", user.name);
+        console.log("   • Email:", user.email);
+        console.log("   • Foto de perfil:", user.image);
+        console.log("===============================\n");
       }
       return true;
     },
     async session({ session }) {
       return session;
-    }
+    },
   },
   debug: false,
 });
 
 export { handler as GET, handler as POST };
+

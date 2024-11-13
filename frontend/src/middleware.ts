@@ -10,11 +10,17 @@ export function middleware(req: NextRequest) {
   const isProtectedRoute = protectedRoutes.includes(path);
 
   // 3. Decrypt the session from the cookie
-  // const cookieStore = cookies();
+  const cookieStore = cookies();
+  const userCookie = cookieStore.get("user");
 
-  // const userString = cookieStore.get("user");
-  const userString = req.cookies.get("user")?.value;
-  const user = userString ? JSON.parse(userString) : null;
+  let user = null;
+  try {
+    user = userCookie ? JSON.parse(userCookie.value) : null;
+  } catch {
+    // Si hay un error al parsear, mantenemos user como null
+    console.error("Error al parsear el usuario, seteando user a null");
+    user = null;
+  }
 
   // 4. Redirect to /login if the user is not authenticated
   if (isProtectedRoute && !user) {
@@ -36,5 +42,5 @@ export function middleware(req: NextRequest) {
 
 // Routes Middleware should not run on
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"],
+  matcher: "/admin",
 };
