@@ -11,7 +11,10 @@ export default function SculptureList({ esculturasInicio }: SculptureList) {
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {esculturasInicio.map((escultura: Escultura) => (
-          <div className="w-full max-w-[450px] justify-self-center">
+          <div
+            key={escultura.id}
+            className="w-full max-w-[450px] justify-self-center"
+          >
             <SculptureCard key={escultura.id} escultura={escultura} />
           </div>
         ))}
@@ -19,3 +22,4 @@ export default function SculptureList({ esculturasInicio }: SculptureList) {
     </div>
   );
 }
+

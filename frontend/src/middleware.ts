@@ -4,16 +4,17 @@ import { cookies } from "next/headers";
 // 1. Specify protected and public routes
 const protectedRoutes = ["/admin"];
 
-export default async function middleware(req: NextRequest) {
+export function middleware(req: NextRequest) {
   // 2. Check if the current route is protected or public
   const path = req.nextUrl.pathname;
   const isProtectedRoute = protectedRoutes.includes(path);
 
   // 3. Decrypt the session from the cookie
-  const cookieStore = cookies();
+  // const cookieStore = cookies();
 
-  const userString = cookieStore.get("user");
-  const user = userString ? JSON.parse(userString?.value) : null;
+  // const userString = cookieStore.get("user");
+  const userString = req.cookies.get("user")?.value;
+  const user = userString ? JSON.parse(userString) : null;
 
   // 4. Redirect to /login if the user is not authenticated
   if (isProtectedRoute && !user) {
