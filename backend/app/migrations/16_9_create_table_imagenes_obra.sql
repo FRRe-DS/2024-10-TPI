@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS Imagenes_obra (
     updated_at DATETIME DEFAULT NULL,
     deleted_at DATETIME DEFAULT NULL,
    
+    PRIMARY KEY (id_obra, id_imagen),
     FOREIGN KEY (id_obra) REFERENCES Obras(id),
     FOREIGN KEY (id_imagen) REFERENCES Imagenes(id)
 );
