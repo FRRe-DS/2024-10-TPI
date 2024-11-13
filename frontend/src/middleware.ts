@@ -4,16 +4,23 @@ import { cookies } from "next/headers";
 // 1. Specify protected and public routes
 const protectedRoutes = ["/admin"];
 
-export default async function middleware(req: NextRequest) {
+export function middleware(req: NextRequest) {
   // 2. Check if the current route is protected or public
   const path = req.nextUrl.pathname;
   const isProtectedRoute = protectedRoutes.includes(path);
 
   // 3. Decrypt the session from the cookie
   const cookieStore = cookies();
+  const userCookie = cookieStore.get("user");
 
-  const userString = cookieStore.get("user");
-  const user = userString ? JSON.parse(userString?.value) : null;
+  let user = null;
+  try {
+    user = userCookie ? JSON.parse(userCookie.value) : null;
+  } catch {
+    // Si hay un error al parsear, mantenemos user como null
+    console.error("Error al parsear el usuario, seteando user a null");
+    user = null;
+  }
 
   // 4. Redirect to /login if the user is not authenticated
   if (isProtectedRoute && !user) {
@@ -35,5 +42,5 @@ export default async function middleware(req: NextRequest) {
 
 // Routes Middleware should not run on
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"],
+  matcher: "/admin",
 };
