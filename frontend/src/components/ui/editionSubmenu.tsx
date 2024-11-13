@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./nav.module.css";
 import Link from "next/link";
-export default function EditionSubmenu({ toggleMenu }) {
+export default function EditionSubmenu({ toggleMenu }: { toggleMenu: any }) {
   const [showEditions, setShowEditions] = useState(false);
   // Elementos del submenú de ediciones
   const ediciones = [
