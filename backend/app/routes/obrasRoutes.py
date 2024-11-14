@@ -4,7 +4,7 @@ from sqlalchemy.orm import Session
 
 from app.config.db import get_db
 from app.controllers.obrasController import ObraController
-from backend.app.dtos.obrasDto import ObraBase, ObraOut
+from app.dtos.obrasDto import ObraBase, ObraOut
 
 obras = APIRouter()
 

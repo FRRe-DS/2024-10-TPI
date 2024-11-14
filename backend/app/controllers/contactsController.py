@@ -2,7 +2,7 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from app.models.contactsModel import ContactModel
-from backend.app.dtos.contactsDto import ContactCreate, ContactUpdate
+from app.dtos.contactsDto import ContactCreate, ContactUpdate
 
 class ContactController:
 
