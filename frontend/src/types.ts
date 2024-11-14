@@ -21,3 +21,17 @@ export interface Escultura {
     pais_origen: string;
   };
 }
+
+
+export interface Eventos {
+  edicion: number;
+  nombre: string;
+  fecha_inicio: string;
+  fecha_fin: string;
+  lugar: string;
+  descripcion: string;
+  tematica: string;
+  created_at?: string;
+  updated_at?: string;
+  deleted_at?: string;
+}

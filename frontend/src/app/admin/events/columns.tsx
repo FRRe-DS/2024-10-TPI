@@ -14,14 +14,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Checkbox } from "@/components/ui/checkbox";
-import { deleteAutor } from "@/app/autores/action";
 
 export type Payment = {
-  id: string;
+  edicion: number;
   nombre: string;
-  apellido: string;
-  // biografia: string;
-  pais_origen: string;
+  fechaInicio: Date;
+  fechaFin: Date;
+  lugar: string;
+  tematica: string;
 };
 
 export const columns: ColumnDef<Payment>[] = [
@@ -48,9 +48,9 @@ export const columns: ColumnDef<Payment>[] = [
     enableHiding: false,
   },
   {
-    accessorKey: "id",
-    header: "ID",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("id")}</div>,
+    accessorKey: "edicion",
+    header: "Edicion",
+    cell: ({ row }) => <div className="capitalize">{row.getValue("edicion")}</div>,
   },
   {
     accessorKey: "nombre",
@@ -68,39 +68,65 @@ export const columns: ColumnDef<Payment>[] = [
     ),
   },
   {
-    accessorKey: "apellido",
+    accessorKey: "fechaInicio",
     header: ({ column }) => (
       <Button
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        Apellido
+        Fecha Inicio
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("apellido")}</div>,
+    cell: ({ row }) => <div>{row.getValue("fechaInicio")}</div>,
   },
   // Columna oculta para filtrado combinado de nombre y apellido
+  // {
+  //   id: "nombreApellido",
+  //   filterFn: (row, _columnId, filterValue) => {
+  //     const fullName =
+  //       `${row.original.nombre} ${row.original.apellido}`.toLowerCase();
+  //     return fullName.includes(filterValue.toLowerCase());
+  //   },
+  // },
   {
-    id: "nombreApellido",
-    filterFn: (row, _columnId, filterValue) => {
-      const fullName =
-        `${row.original.nombre} ${row.original.apellido}`.toLowerCase();
-      return fullName.includes(filterValue.toLowerCase());
-    },
-  },
-  {
-    accessorKey: "pais_origen",
+    accessorKey: "fechaFin",
     header: ({ column }) => (
       <Button
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
       >
-        País
+        Fecha Fin
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("pais_origen")}</div>,
+    cell: ({ row }) => <div>{row.getValue("fechaFin")}</div>,
+  },
+  {
+    accessorKey: "lugar",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Lugar
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => <div>{row.getValue("lugar")}</div>,
+  },
+  {
+    accessorKey: "tematica",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Tematica
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => <div>{row.getValue("tematica")}</div>,
   },
   {
     id: "actions",
@@ -119,15 +145,15 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Acción</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
+              onClick={() => navigator.clipboard.writeText(payment.edicion.toString())}
             >
-              Copiar id Autor
+              Copiar edicion evento
             </DropdownMenuItem>
-            <DropdownMenuItem
+            {/* <DropdownMenuItem
               onClick={() => deleteAutor(payment.id)}
             >
               Eliminar Autor
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
             {/* <DropdownMenuItem
               onClick={() => updateAutor(payment.id, payment)}
             >
