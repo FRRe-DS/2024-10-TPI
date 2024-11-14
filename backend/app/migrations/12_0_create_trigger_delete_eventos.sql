@@ -1,4 +1,4 @@
-CREATE TRIGGER before_delete_evento
+CREATE TRIGGER IF NOT EXISTS before_delete_evento
 BEFORE DELETE ON Eventos
 FOR EACH ROW
 BEGIN

@@ -1,4 +1,4 @@
-CREATE TRIGGER before_update_imagenes_obra
+CREATE TRIGGER IF NOT EXISTS before_update_imagenes_obra
 BEFORE UPDATE ON Imagenes_obra
 FOR EACH ROW
 BEGIN

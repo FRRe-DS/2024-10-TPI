@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from app.config.db import get_db
 from app.controllers.eventsController import EventController
-from app.schemas.eventsSchema import EventCreate, EventUpdate
+from backend.app.dtos.eventsDto import EventCreate, EventUpdate
 
 events = APIRouter()
 

@@ -1,7 +1,7 @@
 from app.controllers.usersController import UserController
 from app.models.usersModel import UserModel
-from app.schemas.tokenSchema import Token
-from app.schemas.usersSchema import UserCreate, UserLogin
+from backend.app.dtos.tokenDto import Token
+from backend.app.dtos.usersDto import UserCreate, UserLogin
 from app.utils.jwt import create_access_token
 from fastapi import HTTPException
 from passlib.context import CryptContext

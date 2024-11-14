@@ -2,7 +2,7 @@ from datetime import datetime
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from app.models.eventsModel import EventModel
-from app.schemas.eventsSchema import EventCreate, EventUpdate
+from backend.app.dtos.eventsDto import EventCreate, EventUpdate
 
 class EventController:
 

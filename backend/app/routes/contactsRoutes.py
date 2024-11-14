@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.controllers.contactsController import ContactController
-from app.schemas.contactsSchema import ContactCreate, ContactUpdate
+from backend.app.dtos.contactsDto import ContactCreate, ContactUpdate
 from app.config.db import get_db
 
 contact = APIRouter()

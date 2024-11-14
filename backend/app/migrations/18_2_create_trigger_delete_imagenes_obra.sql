@@ -1,4 +1,4 @@
-CREATE TRIGGER before_delete_imagenes_obra
+CREATE TRIGGER IF NOT EXISTS before_delete_imagenes_obra
 BEFORE DELETE ON Imagenes
 FOR EACH ROW
 BEGIN

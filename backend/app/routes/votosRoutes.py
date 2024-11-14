@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 
 from app.config.db import get_db
 from app.controllers.votosController import VotosController
-from app.schemas.votosSchema import VotosSchema
+from backend.app.dtos.votosDto import VotosSchema
 
 votos = APIRouter()
 

@@ -1,6 +1,6 @@
 from app.config.db import get_db
 from app.controllers.authorsController import AuthorController
-from app.schemas.authorsSchema import AuthorBase, AuthorCreate, AuthorOut, AuthorUpdate
+from backend.app.dtos.authorsDto import AuthorBase, AuthorCreate, AuthorOut, AuthorUpdate
 from fastapi import APIRouter, Depends
 from fastapi_pagination import Page
 from sqlalchemy.orm import Session

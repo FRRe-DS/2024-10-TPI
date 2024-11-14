@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
 
-from app.schemas.authorsSchema import AuthorObra
+from backend.app.dtos.authorsDto import AuthorObra
 from pydantic import BaseModel
 
 

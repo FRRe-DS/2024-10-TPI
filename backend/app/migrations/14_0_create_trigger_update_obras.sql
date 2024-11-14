@@ -1,6 +1,6 @@
-CREATE TRIGGER before_update_obras
+CREATE TRIGGER IF NOT EXISTS before_update_obras
 BEFORE UPDATE ON Obras
-FOR EACH ROW
-BEGIN
+    FOR EACH ROW
+    BEGIN
     SET NEW.updated_at = NOW();
 END;

@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from app.models.usersModel import UserModel
-from app.schemas.usersSchema import UserCreate, UserUpdate
+from backend.app.dtos.usersDto import UserCreate, UserUpdate
 from fastapi import HTTPException, status
 from passlib.context import CryptContext
 from sqlalchemy.exc import IntegrityError

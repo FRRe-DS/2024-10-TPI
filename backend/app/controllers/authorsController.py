@@ -1,7 +1,7 @@
 from datetime import datetime
 
 from app.models.authorsModel import AuthorModel
-from app.schemas.authorsSchema import AuthorCreate, AuthorUpdate
+from backend.app.dtos.authorsDto import AuthorCreate, AuthorUpdate
 from fastapi import HTTPException
 from fastapi_pagination import paginate, set_params
 from fastapi_pagination.default import Params

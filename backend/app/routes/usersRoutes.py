@@ -1,6 +1,6 @@
 from app.config.db import get_db
 from app.controllers.usersController import UserController
-from app.schemas.usersSchema import UserCreate, UserUpdate
+from backend.app.dtos.usersDto import UserCreate, UserUpdate
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
