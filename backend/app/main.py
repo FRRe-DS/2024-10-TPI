@@ -6,6 +6,7 @@ from app.routes.authRoutes import auth
 from app.routes.contactsRoutes import contact
 from app.routes.eventsRoutes import events
 from app.routes.obrasRoutes import obras
+from app.routes.imagenesRoutes import router as imagenes_router
 
 # from app.routes.eventsRoutes import event
 from app.routes.usersRoutes import user
@@ -74,6 +75,6 @@ app.include_router(auth)
 app.include_router(obras)
 app.include_router(events)
 app.include_router(votos)
-
+app.include_router(imagenes_router)
 # Agrega la configuración de paginación
 add_pagination(app)

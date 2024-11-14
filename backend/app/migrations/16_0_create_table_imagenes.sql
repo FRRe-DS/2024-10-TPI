@@ -1,7 +1,8 @@
 CREATE TABLE IF NOT EXISTS Imagenes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_obra INT NOT NULL,
-    imagen_blob INT,
+    url VARCHAR(255) NOT NULL,
+    public_id VARCHAR(255) NOT NULL,
     etapa_obra ENUM('antes', 'durante', 'despues'),
     created_at DATETIME NOT NULL DEFAULT NOW(),
     updated_at DATETIME DEFAULT NULL,

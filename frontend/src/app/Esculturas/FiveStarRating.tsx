@@ -77,7 +77,7 @@ export default function FiveStarRating({ esculturaId, votoUsuario}: FiveStarRati
       )}
 
       {hasVoted && (
-        <span className="text-green-600 font-medium">
+        <span className="text-green-600 font-medium pl-3">
           ¡Gracias por tu voto!
         </span>
       )}
