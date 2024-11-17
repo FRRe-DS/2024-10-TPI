@@ -14,8 +14,3 @@ CREATE TABLE IF NOT EXISTS Obras (
 	FOREIGN KEY (id_edicion) REFERENCES Eventos(edicion)
 );
 
--- otro enfoque podria ser almacenar por la ruta la imagen para no cargar tanto a la base de datos, todo depende que tipo de enfoque se de al momento de almacenar
-
--- tambien podria ser usada la referencia a la tabla entidad debil imagenes para la actualizacion de la foto
-
--- en este caso se esta almacenando el formato binario de la imagen de la obra, es decir la imagen tal cual

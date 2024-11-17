@@ -1,10 +1,9 @@
 from sqlalchemy import DateTime, ForeignKey, Integer, String, func
-from sqlalchemy.orm import Mapped, mapped_column
-
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.config.db import Base
 
 class ImagenesModel(Base):
-    __tablename__ = "Imagenes"
+    __tablename__ = "Imagenes_obra"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
     id_obra: Mapped[int] = mapped_column(
@@ -21,3 +20,5 @@ class ImagenesModel(Base):
         DateTime, onupdate=func.now(), nullable=True
     )
     deleted_at: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
+
+    obra: Mapped["ObrasModel"] = relationship("ObrasModel", back_populates="imagenes")

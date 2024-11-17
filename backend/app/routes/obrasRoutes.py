@@ -1,13 +1,11 @@
 from fastapi import APIRouter, Depends
 from fastapi_pagination import Page
 from sqlalchemy.orm import Session
-
 from app.config.db import get_db
 from app.controllers.obrasController import ObraController
 from app.dtos.obrasDto import ObraBase, ObraOut
 
 obras = APIRouter()
-
 
 @obras.get(
     path="/obras",

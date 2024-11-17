@@ -1,6 +1,8 @@
 # archivo específico para las configuraciones de servicios externos
 
 import cloudinary
+import cloudinary.api
+import cloudinary.uploader
 
 cloudinary.config(
     cloud_name = "dqnb9dlsb",

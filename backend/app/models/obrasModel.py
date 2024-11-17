@@ -2,7 +2,7 @@ from app.config.db import Base
 from app.models.authorsModel import AuthorModel
 from sqlalchemy import DateTime, ForeignKey, Integer, String, Text, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
-
+from typing import List
 
 class ObrasModel(Base):
     __tablename__ = "Obras"
@@ -25,3 +25,7 @@ class ObrasModel(Base):
     deleted_at: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
 
     autor: Mapped["AuthorModel"] = relationship("AuthorModel", back_populates="obras")
+    imagenes: Mapped[List["ImagenesModel"]] = relationship("ImagenesModel", back_populates="obra")
+
+    class Config:
+        from_attributes = True

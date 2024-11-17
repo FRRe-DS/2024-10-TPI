@@ -1,8 +1,9 @@
 from datetime import datetime
-from typing import Optional
+from typing import Optional, List
 
 from app.dtos.authorsDto import AuthorObra
 from pydantic import BaseModel
+from app.dtos.imagenDto import ImagenBase
 
 
 class ObraBase(BaseModel):
@@ -16,7 +17,7 @@ class ObraBase(BaseModel):
     updated_at: Optional[datetime] = None
     deleted_at: Optional[datetime] = None
     autor: Optional[AuthorObra]
-
+    imagenes: Optional[List[ImagenBase]] = None
 
 class ObraOut(ObraBase):
     class Config:

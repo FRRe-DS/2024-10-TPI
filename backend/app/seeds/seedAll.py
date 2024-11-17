@@ -6,7 +6,8 @@ from app.models.contactsModel import ContactModel
 from app.models.eventsModel import EventModel
 from app.models.obrasModel import ObrasModel
 from app.models.usersModel import UserModel
-from app.seeds.seedServices import insert_usuarios, seed_table
+from app.models.imagenesModel import ImagenesModel
+from app.seeds.seedServices import insert_usuarios, seed_table, seed_imagenes
 from sqlalchemy.orm import Session
 
 
@@ -30,6 +31,8 @@ def seed_all():
         seed_table(ObrasModel, json_path, db, date_fields=[])
 
         insert_usuarios(UserModel, db)
+
+        seed_imagenes(ImagenesModel, db)
 
     except Exception as e:
         print(e)

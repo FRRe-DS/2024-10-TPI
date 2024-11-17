@@ -13,6 +13,8 @@ class AuthorModel(Base):
     fec_nac: Mapped[str] = mapped_column(Date, nullable=False)
     pais_origen: Mapped[str] = mapped_column(String(255), nullable=False)
     biografia: Mapped[str] = mapped_column(Text, nullable=False)
+    url: Mapped[str] = mapped_column(String(255), nullable=False)
+    public_id: Mapped[str] = mapped_column(String(255), nullable=False)
 
     contactos: Mapped[List["ContactModel"]] = relationship("ContactModel", back_populates="autor_relacion")  # type: ignore
     obras = relationship("ObrasModel", back_populates="autor")

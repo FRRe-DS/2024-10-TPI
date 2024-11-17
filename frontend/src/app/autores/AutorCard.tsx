@@ -6,20 +6,19 @@ interface AutorProps {
 }
 
 const AutorCard = ({ autor }: AutorProps) => {
-  // Función para formatear la fecha de manera consistente
-  const formatearFecha = (fecha: string) => {
-    const date = new Date(fecha);
-    return date.toLocaleDateString("es-ES", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    });
-  };
-
   return (
-    <div className="bg-white border rounded-lg w-[700px] h-[250px] overflow-hidden flex hover:shadow-lg transition-shadow">
-      {/* Contenido - Lado izquierdo */}
-      <div className="flex-1 p-6">
+    <div className="bg-white border rounded-lg w-full h-[470px] max-w-sm overflow-hidden hover:shadow-lg transition-shadow">
+      {/* Imagen - Arriba */}
+      <div className="w-full h-48 sm:h-56">
+        <img
+          src={`./gatito.jpg`}
+          alt={`${autor.nombre} ${autor.apellido}`}
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Contenido - Abajo */}
+      <div className="p-4 sm:p-6">
         {/* Header con nombre */}
         <div className="mb-4">
           <h2 className="text-xl font-bold">
@@ -30,26 +29,17 @@ const AutorCard = ({ autor }: AutorProps) => {
 
         {/* Información principal */}
         <div className="space-y-2">
-          <p className="text-sm text-gray-600 line-clamp-3 break-words">
+          <p className="text-sm text-gray-600 break-words line-clamp-5">
             <span className="font-semibold">Biografía: </span>
             {autor.biografia}
           </p>
-          <div className="gap-4 mt-4">
+          <div className="mt-4">
             <p className="text-sm text-gray-600">
               <span className="font-semibold">Fecha de Nacimiento: </span>
               {new Date(autor.fec_nac).toLocaleDateString()}
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Imagen - Lado derecho */}
-      <div className="w-[250px] flex-shrink-0">
-        <img
-          src={`./gatito.jpg`}
-          alt={`${autor.nombre} ${autor.apellido}`}
-          className="w-full h-full object-cover"
-        />
       </div>
     </div>
   );
