@@ -4,18 +4,35 @@ import { Escultura } from "@/types";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-
 export const getEsculturas = async () => {
     try {
       const url = `${process.env.NEXT_PUBLIC_API}/obras`;
-      const response = await fetch(url);
-    const data = (await response.json()).items as Escultura[];
-    return data;
-  } catch (error: unknown) {
-    console.error(error);
-      throw new Error(`Error: ${error}`);
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        cache: 'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error(`Error HTTP: ${response.status}`);
+      }
+
+      const jsonResponse = await response.json();
+      const data = jsonResponse.items as Escultura[];
+      data.forEach(escultura => {
+        if (!escultura.imagenes) {
+          console.warn(`La escultura ${escultura.id} no tiene imágenes`);
+        }
+      });
+
+      return data;
+    } catch (error: unknown) {
+      throw new Error(`Error al obtener esculturas: ${error}`);
     }
 };
+
 
 export const getVote = async (esculturaId: number) => {
   try {

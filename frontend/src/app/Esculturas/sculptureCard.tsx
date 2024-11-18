@@ -7,32 +7,21 @@ type UserProps = {
   escultura: Escultura;
 };
 
-const images = {
-  '1': '1.jpg',
-  '2': '2.jpg',
-  '3': '3.jpg',
-  '4': '4.jpg',
-  '5': '5.jpg',
-  '6': '6.jpg',
-  '7': '7.jpg',
-  '8': '8.jpg',
-  '9': '9.jpg',
-} as const;
-
-// Función para obtener una imagen aleatoria
-const getRandomImage = () => {
-  const keys = Object.keys(images); // Obtiene ['1', '2', '3', '4', '5', '6']
-  const randomKey = keys[Math.floor(Math.random() * keys.length)];
-  return `/sculptures/${images[randomKey as keyof typeof images]}`;
-};
 
 export default function SculptureCard({ escultura }: UserProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const imageArray = Object.values(images);
 
+  // Verificar que escultura.imagenes exista antes de usarlo
+  const imageArray = escultura?.imagenes ?? [];
+
+  // Verificación de seguridad antes de renderizar
+  if (!imageArray || imageArray.length === 0) {
+    return <div>Cargando...</div>;
+  }
+  
   const nextImage = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Evita que se abra el modal
+    e.stopPropagation();
     setCurrentImageIndex((prev) => (prev + 1) % imageArray.length);
   };
 
@@ -54,9 +43,9 @@ export default function SculptureCard({ escultura }: UserProps) {
 
         <div className="w-full h-[420px] relative group">
           <img 
-            src={getRandomImage()}
+            src={imageArray[currentImageIndex].url} // Usar la URL de la imagen actual
             alt={escultura.nombre_obra}
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
           />
           
           {/* Flechas de navegación */}
