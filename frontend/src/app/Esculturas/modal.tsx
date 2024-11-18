@@ -3,36 +3,16 @@ import FiveStarRating from './FiveStarRating';
 import { getVote } from './action';
 import { useEffect, useState } from 'react';
 
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  escultura: Escultura;
+  escultura: Escultura;  // Cambiado de EsculturaPaginatedResponse a Escultura
 }
-const images = {
-  '1': '1.jpg',
-  '2': '2.jpg',
-  '3': '3.jpg',
-  '4': '4.jpg',
-  '5': '5.jpg',
-  '6': '6.jpg',
-  '7': '7.jpg',
-  '8': '8.jpg',
-  '9': '9.jpg',
-} as const;
 
-// Función para obtener una imagen aleatoria
-const getRandomImage = () => {
-  const keys = Object.keys(images); // Obtiene ['1', '2', '3', '4', '5', '6']
-  const randomKey = keys[Math.floor(Math.random() * keys.length)];
-  return `/sculptures/${images[randomKey as keyof typeof images]}`;
-};
 export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  {/* Aca obtengo el voto del usuario del cookie con este id de escultura */}
   const [voto, setVoto] = useState<{ rating: number } | null>(null);
-  const imageArray = Object.values(images);
+  const imageArray = escultura.imagenes; // Ya no necesitamos Object.values ni items[0]
 
   // Funciones de navegación
   const nextImage = (e: React.MouseEvent) => {
@@ -44,13 +24,11 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
     e.stopPropagation();
     setCurrentImageIndex((prev) => (prev - 1 + imageArray.length) % imageArray.length);
   };
-
   useEffect(() => {
     const fetchVoto = async () => {
-      if (isOpen) {  // Solo hacer la petición si el modal está abierto
+      if (isOpen) {
         try {
           const votoDatos = await getVote(escultura.id);
-          console.log('votoDatos',votoDatos);
           setVoto(votoDatos);
         } catch (error) {
           console.error('Error al obtener el voto:', error);
@@ -77,7 +55,7 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
           {/* Contenedor de imagen con navegación */}
           <div className="w-full md:w-1/2 h-[50vh] md:h-full flex-shrink-0 bg-gray-100 relative group">
             <img 
-              src={getRandomImage()}
+              src={escultura.imagenes[currentImageIndex].url}
               alt={escultura.nombre_obra}
               className="w-full h-full object-contain"
             />
@@ -165,8 +143,7 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
                 <p className="text-gray-600">
                   <span className="font-semibold">Descripción: </span>
                   {escultura.descripcion}
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed nulla a lacus efficitur egestas. Maecenas non mattis tellus. Curabitur pretium semper libero, nec maximus tellus blandit nec. Aliquam erat volutpat. Maecenas rhoncus elit mauris, ut elementum metus faucibus vel. Aenean eu justo a nisi iaculis imperdiet. Nam nec varius nunc, vel varius enim. Aenean suscipit blandit mi, in rhoncus mi bibendum sed. Cras vestibulum mollis dictum.
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed nulla a lacus efficitur egestas. Maecenas non mattis tellus. Curabitur pretium semper libero, nec maximus tellus blandit nec. Aliquam erat volutpat. Maecenas rhoncus elit mauris, ut elementum metus faucibus vel. Aenean eu justo a nisi iaculis imperdiet. Nam nec varius nunc, vel varius enim. Aenean suscipit blandit mi, in rhoncus mi bibendum sed. Cras vestibulum mollis dictum.</p>
+                </p>
               </div>
 
 

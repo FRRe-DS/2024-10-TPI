@@ -2,7 +2,7 @@ from app.config.db import get_db
 from app.controllers.authorsController import AuthorController
 from app.dtos.authorsDto import AuthorBase, AuthorCreate, AuthorOut, AuthorUpdate
 from fastapi import APIRouter, Depends
-from fastapi_pagination import Page
+from typing import List
 from sqlalchemy.orm import Session
 
 author = APIRouter()
@@ -11,7 +11,7 @@ author = APIRouter()
 @author.get(
     path="/autores",
     name="Gets all the rows of Authors table",
-    response_model=Page[AuthorOut],
+    response_model=List[AuthorOut],
     tags=["autores"],
 )
 async def get_authors(db: Session = Depends(get_db)):

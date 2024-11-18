@@ -7,19 +7,20 @@ type UserProps = {
   escultura: Escultura;
 };
 
-
 export default function SculptureCard({ escultura }: UserProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Verificar que escultura.imagenes exista antes de usarlo
   const imageArray = escultura?.imagenes ?? [];
 
-  // Verificación de seguridad antes de renderizar
-  if (!imageArray || imageArray.length === 0) {
-    return <div>Cargando...</div>;
+  if (!escultura?.imagenes?.length) {
+    return (
+      <div className="bg-white border rounded-lg w-full max-w-[450px] h-[600px] flex items-center justify-center">
+        <p>No hay imágenes disponibles</p>
+      </div>
+    );
   }
-  
+
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
     setCurrentImageIndex((prev) => (prev + 1) % imageArray.length);
@@ -30,25 +31,53 @@ export default function SculptureCard({ escultura }: UserProps) {
     setCurrentImageIndex((prev) => (prev - 1 + imageArray.length) % imageArray.length);
   };
 
+  const handleShare = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.share({
+      title: escultura.nombre_obra,
+      text: `Obra "${escultura.nombre_obra}" por ${escultura.autor.nombre} ${escultura.autor.apellido}`,
+      url: window.location.href,
+    }).catch((error) => console.log('Error al compartir:', error));
+  };
+
   return (
     <div>
-      <div className="bg-white border rounded-lg w-full max-w-[450px] h-[600px] gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+      <div 
+        className="bg-white border rounded-lg w-full max-w-[450px] h-[620px] gap-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer"
         onClick={() => setIsModalOpen(true)}
       > 
-        <div className="grid items-center p-3">
+        <div className="flex items-center justify-between p-3">
           <div className="font-semibold text-sm ml-2">
             {escultura.autor.nombre} {escultura.autor.apellido}
           </div>
+          <button 
+            onClick={handleShare}
+            className="p-1.5 rounded-full mr-2 border border-gray-300"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-5 w-5 text-blue-600"
+              fill="none" 
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M4 15v1a3 3 0 003 3h10a3 3 0 003-3v-1m-3-4l-5-5m0 0l-5 5m5-5v10"
+              />
+            </svg>
+          </button>
         </div>
 
         <div className="w-full h-[420px] relative group">
           <img 
-            src={imageArray[currentImageIndex].url} // Usar la URL de la imagen actual
+            src={imageArray[currentImageIndex].url}
             alt={escultura.nombre_obra}
             className="w-full h-full object-cover"
           />
           
-          {/* Flechas de navegación */}
           <div className="absolute inset-y-0 left-0 flex items-center">
             <button
               onClick={previousImage}
@@ -93,7 +122,6 @@ export default function SculptureCard({ escultura }: UserProps) {
             </button>
           </div>
 
-          {/* Indicadores de posición más sutiles */}
           <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-1.5">
             {imageArray.map((_, index) => (
               <button
@@ -113,26 +141,22 @@ export default function SculptureCard({ escultura }: UserProps) {
         </div>
 
         <div className="p-3" onClick={(e) => e.stopPropagation()}>
-          
           <h3 className="font-semibold text-sm truncate">{escultura.nombre_obra}</h3>
-          <p className="text-sm text-gray-600 mt-1 line-clamp-2 break-words">{escultura.descripcion}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam id ex malesuada, vitae porttitor felis rhoncus. Cras aliquam ipsum a libero laoreet, ut bibendum libero eleifend. Etiam elementum auctor enim ac faucibus. Sed ac velit bibendum, convallis nisi nec, lobortis massa. Etiam tincidunt a arcu in malesuada. Ut dapibus elit eget velit aliquet dignissim non non justo. Aenean bibendum eros in lectus condimentum aliquet. Pellentesque porttitor nunc ac dui interdum malesuada. Nam ac diam ultrices lacus imperdiet aliquet ut eget risus. Nullam tempor tortor in erat posuere, dignissim vestibulum diam pretium. Vivamus malesuada in nisi eget scelerisque. Vivamus dictum velit eget purus pellentesque, vel laoreet urna ullamcorper. Aliquam arcu sapien, mattis ac convallis eget, euismod id orci. Maecenas tincidunt, massa at pulvinar fringilla, dui diam varius tortor, semper auctor odio odio sit amet orci. Quisque congue faucibus elit ut scelerisque.
-
-
+          <p className="text-sm text-gray-600 mt-1 line-clamp-2 break-words">
+            {escultura.descripcion}
           </p>
           <p className="text-sm text-gray-600 mt-1">Técnica: {escultura.tecnica}</p>
           <p className="text-sm text-gray-600 mt-1">Edición: {escultura.id_edicion}</p>
         </div>
       </div>
-      {
-        isModalOpen && ( // Aca renderiza el modal si está abierto
-          <Modal 
-            isOpen={isModalOpen} 
-            onClose={() => setIsModalOpen(false)}
-            escultura={escultura}
-          />
-        )
-      }
+
+      {isModalOpen && (
+        <Modal 
+          isOpen={isModalOpen} 
+          onClose={() => setIsModalOpen(false)}
+          escultura={escultura}
+        />
+      )}
     </div>
   );
 }

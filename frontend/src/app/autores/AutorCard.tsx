@@ -7,11 +7,11 @@ interface AutorProps {
 
 const AutorCard = ({ autor }: AutorProps) => {
   return (
-    <div className="bg-white border rounded-lg w-full h-[470px] max-w-sm overflow-hidden hover:shadow-lg transition-shadow">
+    <div className="bg-white border rounded-lg w-full max-w-sm overflow-hidden hover:shadow-lg transition-shadow">
       {/* Imagen - Arriba */}
-      <div className="w-full h-48 sm:h-56">
+      <div className="w-full h-[400px]">
         <img
-          src={`./gatito.jpg`}
+          src={autor.url}
           alt={`${autor.nombre} ${autor.apellido}`}
           className="w-full h-full object-cover"
         />

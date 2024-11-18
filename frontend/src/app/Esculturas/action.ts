@@ -1,38 +1,30 @@
 // acá va el fetch de las esculturas
 "use server"; 
-import { Escultura } from "@/types";
+import { EsculturaPaginatedResponse } from "@/types";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
 export const getEsculturas = async () => {
-    try {
-      const url = `${process.env.NEXT_PUBLIC_API}/obras`;
-      const response = await fetch(url, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        cache: 'no-store'
-      });
+  try {
+    const url = `${process.env.NEXT_PUBLIC_API}/obras`;
+    const response = await fetch(url, {
+      // Desactivamos el caché para asegurar datos frescos
+      cache: 'no-store',
+      // Agregamos headers explícitos
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
 
-      if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`);
-      }
-
-      const jsonResponse = await response.json();
-      const data = jsonResponse.items as Escultura[];
-      data.forEach(escultura => {
-        if (!escultura.imagenes) {
-          console.warn(`La escultura ${escultura.id} no tiene imágenes`);
-        }
-      });
-
-      return data;
-    } catch (error: unknown) {
-      throw new Error(`Error al obtener esculturas: ${error}`);
-    }
+    const jsonResponse = await response.json();
+    const data = jsonResponse.items as EsculturaPaginatedResponse;
+    return data;
+  } catch (error: unknown) {
+    console.error('Error detallado:', error);
+    throw new Error(`Error al obtener esculturas: ${error}`);
+  }
 };
-
 
 export const getVote = async (esculturaId: number) => {
   try {
