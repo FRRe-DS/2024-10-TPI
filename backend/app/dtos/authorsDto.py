@@ -1,6 +1,7 @@
 from datetime import date, datetime
 from typing import List, Optional
 
+from app.dtos.contactsDto import ContactBase
 from pydantic import BaseModel
 
 
@@ -11,6 +12,9 @@ class AuthorBase(BaseModel):
     fec_nac: date
     biografia: str
     pais_origen: str
+    url: str
+    public_id: str
+    contactos: List[ContactBase] = []
 
 
 class AuthorCreate(AuthorBase):
@@ -24,6 +28,8 @@ class AuthorUpdate(AuthorBase):
     fec_nac: Optional[date] = None
     biografia: Optional[str] = None
     pais_origen: Optional[str] = None
+    url: Optional[str] = None
+    public_id: Optional[str] = None
 
 
 class Author(AuthorBase):
