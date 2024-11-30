@@ -2,7 +2,7 @@ from app.config.db import get_db
 from app.controllers.authorsController import AuthorController
 from app.dtos.authorsDto import AuthorBase, AuthorCreate, AuthorOut, AuthorUpdate
 from fastapi import APIRouter, Depends
-from typing import List
+from fastapi_pagination import Page
 from sqlalchemy.orm import Session
 
 author = APIRouter()
@@ -11,7 +11,7 @@ author = APIRouter()
 @author.get(
     path="/autores",
     name="Gets all the rows of Authors table",
-    response_model=List[AuthorOut],
+    response_model=Page[AuthorOut],
     tags=["autores"],
 )
 async def get_authors(db: Session = Depends(get_db)):
@@ -41,4 +41,3 @@ def delete_author(id: int, db: Session = Depends(get_db)):
 @author.head("/autores/{id}", tags=["autores"])
 def exists_author_by_id(id: int, db: Session = Depends(get_db)):
     return AuthorController.exists_author_by_id(id, db)
-

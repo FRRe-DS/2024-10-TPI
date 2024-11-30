@@ -78,3 +78,12 @@ export interface Eventos {
   updated_at?: string;
   deleted_at?: string;
 }
+
+export interface Usuario {
+  contrasenia_hasheada: string;
+  id: number;
+  correo: string;
+  rol: "votante" | "admin" | "visualizadorQR";
+  nombre: string;
+  apellido: string;
+}
