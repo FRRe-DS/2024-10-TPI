@@ -7,7 +7,7 @@ from app.dtos.contactsDto import ContactCreate, ContactUpdate
 class ContactController:
 
   def get_contacts(db: Session):
-      return db.query(ContactModel).all()
+      return db.query(ContactModel).filter(ContactModel.deleted_at == None).all()
   
   def get_contact_by_id(id: int, db: Session):
       contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()

@@ -9,6 +9,9 @@ class ObraController:
         
         query = (
             db.query(ObrasModel)
+            .filter(
+                ObrasModel.deleted_at == None
+                )
             .options(
                 selectinload(ObrasModel.autor),
                 selectinload(ObrasModel.imagenes)

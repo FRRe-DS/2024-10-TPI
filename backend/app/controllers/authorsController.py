@@ -11,7 +11,7 @@ from sqlalchemy.orm import Session
 class AuthorController:
 
     def get_authors(db: Session):
-        results = db.query(AuthorModel).all()
+        results = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
         set_params(Params(size=20))
         return paginate(results)
 
@@ -41,12 +41,19 @@ class AuthorController:
 
     def delete_author(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
+        
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
+        
+        if author.deleted_at is None:
+            author.deleted_at = datetime.now()
+            db.commit()
+            return {"mensaje": "Borrado lógico realizado correctamente, autor marcado como eliminado."}
+        
         db.delete(author)
         db.commit()
-        return {"mensaje": "Autor eliminado correctamente"}
-
+        return {"mensaje": "Borrado físico realizado correctamente, autor eliminado de forma permanente."}
+    
     def exists_author_by_id(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
         return {"existe": author is not None}
