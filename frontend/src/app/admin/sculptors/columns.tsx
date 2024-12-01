@@ -15,16 +15,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Checkbox } from "@/components/ui/checkbox";
 import { deleteAutor } from "@/app/autores/action";
+import { Autor } from "@/types";
 
-export type Payment = {
-  id: string;
-  nombre: string;
-  apellido: string;
-  // biografia: string;
-  pais_origen: string;
-};
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Autor>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -80,6 +73,21 @@ export const columns: ColumnDef<Payment>[] = [
     ),
     cell: ({ row }) => <div>{row.getValue("apellido")}</div>,
   },
+  
+  {
+    accessorKey: "fec_nac",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Fecha nacimiento
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => <div>{row.getValue("fec_nac")}</div>,
+  },
+
   // Columna oculta para filtrado combinado de nombre y apellido
   {
     id: "nombreApellido",
@@ -119,12 +127,12 @@ export const columns: ColumnDef<Payment>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Acción</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id)}
+              onClick={() => navigator.clipboard.writeText(payment.id.toString())}
             >
               Copiar id Autor
             </DropdownMenuItem>
             <DropdownMenuItem
-              onClick={() => deleteAutor(payment.id)}
+              onClick={() => deleteAutor(payment.id.toString())}
             >
               Eliminar Autor
             </DropdownMenuItem>

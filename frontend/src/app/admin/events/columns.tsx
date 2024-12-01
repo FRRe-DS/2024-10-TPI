@@ -14,17 +14,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Eventos } from "@/types";
 
-export type Payment = {
-  edicion: number;
-  nombre: string;
-  fechaInicio: Date;
-  fechaFin: Date;
-  lugar: string;
-  tematica: string;
-};
 
-export const columns: ColumnDef<Payment>[] = [
+
+export const columns: ColumnDef<Eventos>[] = [
   {
     id: "select",
     header: ({ table }) => (

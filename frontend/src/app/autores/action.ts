@@ -1,36 +1,42 @@
 "use server";
-import { AutorPaginatedResponse } from "@/types";
+import { Autor } from "@/types";
 
-export const getAutores = async () => {
+const handleResponse = async (response: Response) => {
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(`Error: ${errorData.message || response.statusText}`);
+  }
+  return response.json();
+};
+
+export const getAutores = async (pageNumber = 1) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API}/autores`;
+    const url = `${process.env.NEXT_PUBLIC_API}/autores?page=${pageNumber}`;
     const response = await fetch(url);
-    const data = (await response.json()) as AutorPaginatedResponse;
+    const data = (await handleResponse(response)).items as Autor[];
     return data;
-
-  } catch (error: unknown) {
+  } catch (error) {
     console.error(error);
-    throw new Error(`Error: ${error}`);
+    throw new Error(`Error fetching authors: ${error}`);
   }
 };
 
-// export const createAutor = async (autor: Autor) => {
-//   try {
-//     const url = `${process.env.NEXT_PUBLIC_API}/autores`;
-//     const response = await fetch(url, {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify(autor),
-//     });
-//     const data = await response.json();
-//     return data;
-//   } catch (error: unknown) {
-//     console.error(error);
-//     throw new Error(`Error: ${error}`);
-//   }
-// };
+export const createAutor = async (autor: Autor) => {
+  try {
+    const url = `${process.env.NEXT_PUBLIC_API}/autores`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(autor),
+    });
+    return handleResponse(response);
+  } catch (error) {
+    console.error(error);
+    throw new Error(`Error creating author: ${error}`);
+  }
+};
 
 export const updateAutor = async (id: string, autor: Autor) => {
   try {
@@ -42,22 +48,22 @@ export const updateAutor = async (id: string, autor: Autor) => {
       },
       body: JSON.stringify(autor),
     });
-    const data = await response.json();
-    return data;
-  } catch (error: unknown) {
+    return handleResponse(response);
+  } catch (error) {
     console.error(error);
-    throw new Error(`Error: ${error}`);
+    throw new Error(`Error updating author: ${error}`);
   }
 };
 
 export const deleteAutor = async (id: string) => {
   try {
     const url = `${process.env.NEXT_PUBLIC_API}/autores/${id}`;
-    await fetch(url, {
+    const response = await fetch(url, {
       method: 'DELETE',
     });
-  } catch (error: unknown) {
+    await handleResponse(response);
+  } catch (error) {
     console.error(error);
-    throw new Error(`Error: ${error}`);
+    throw new Error(`Error deleting author: ${error}`);
   }
 };

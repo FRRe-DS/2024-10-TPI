@@ -1,24 +1,32 @@
-import { CircleData } from "@/components/estadisticos/circle";
-import { Payment, columns } from "./columns";
+"use client";
+import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { getEventos } from "./action";
 import { Calendar } from "@/components/ui/calendar";
+import { useEffect, useState } from "react";
+import { Eventos } from "@/types";
+import { Button } from "@/components/ui/button";
+import { EventoModal } from "../Component/modal";
 
-async function getData(): Promise<Payment[]> {
-  const eventos = await getEventos();
-  console.log(eventos);
-  return eventos.map((evento) => ({
-    edicion: evento.edicion,
-    nombre: evento.nombre,
-    fechaInicio: new Date(evento.fecha_inicio).toLocaleDateString(),
-    fechaFin: new Date(evento.fecha_fin).toLocaleDateString(),
-    lugar: evento.lugar,
-    tematica: evento.tematica,
-  }));
-}
+export default function Page() {
+  const [data, setData] = useState<Eventos[]>([]); // Estado para almacenar las esculturas
 
-export default async function DemoPage() {
-  const data = await getData();
+  async function fetchData() {
+    const eventos = await getEventos();
+    console.log(eventos)
+    setData(eventos);
+  }
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [, setEventos] = useState<Eventos[]>([]);
+
+  const handleSave = (nuevoEvento: Eventos) => {
+    setEventos((prev) => [...prev, nuevoEvento]); // Agrega el nuevo evento a la lista
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div className="flex flex-1 flex-col gap-4 p-4">
@@ -27,11 +35,21 @@ export default async function DemoPage() {
           <DataTable columns={columns} data={data} />
         </div>
         <div className="md:col-span-1">
-          <Calendar />
+          <Button
+            variant="outline"
+            className="ml-auto"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Crear evento
+          </Button>
+          <EventoModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            onSave={handleSave}
+          />
+          {/* <Calendar /> */}
         </div>
       </div>
-
-      {/* <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" /> */}
     </div>
   );
 }

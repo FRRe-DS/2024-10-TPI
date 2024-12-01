@@ -30,6 +30,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -66,26 +67,16 @@ export function DataTable<TData, TValue>({
     },
   });
 
+
   return (
     <div className="w-full">
-      <div className="flex items-center py-4">
-        {/* <Input
-          placeholder="Filtrar Nombre y Apellido..."
-          value={
-            (table.getColumn("nombreApellido")?.getFilterValue() as string) ??
-            ""
-          }
-          onChange={(event) =>
-            table
-              .getColumn("nombreApellido")
-              ?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
-        /> */}
+      <div className="flex items-center py-4 ">
+       
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
-              Columns <ChevronDown />
+              Columnas <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
