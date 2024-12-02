@@ -1,10 +1,10 @@
 from sqlalchemy.orm import Session
-
 from app.models.votosModel import VotosModel
-
+from app.controllers.obrasController import ObraController
+from sqlalchemy.exc import IntegrityError
+from fastapi import HTTPException, status
 
 class VotosController:
-    @staticmethod
     def get_voto(usuario_id: int, obra_id: int, db: Session):
         return (
             db.query(VotosModel)
@@ -12,29 +12,25 @@ class VotosController:
             .one_or_none()
         )
 
-    @staticmethod
     def post_voto(voto: VotosModel, db: Session):
-        votoquery = (
-            db.query(VotosModel)
-            .filter(
-                VotosModel.usuario_id == voto.usuario_id,
-                VotosModel.obra_id == voto.obra_id,
-            )
-            .one_or_none()
-        )
+      new_voto = VotosModel(**voto.model_dump())
+      try:
+          db.add(new_voto)
+          ObraController.incrementar_votos_y_puntaje(voto.obra_id, voto.estrellas, db)
+          db.commit()
+          db.refresh(new_voto)
+      except IntegrityError as e:
+          db.rollback()
+          error_message = str(e.orig)
+          if "usuario_id" in error_message:
+              detail_message = "El usuario ya votó por esta obra"
+          else:
+              detail_message = error_message
+          raise HTTPException(
+              status_code=status.HTTP_409_CONFLICT, detail=detail_message
+          )
+      return {"ok": True, "mensaje": "Voto registrado correctamente"}
 
-        if votoquery is not None:
-            return {"ok": False, "mensaje": "Ya existe un voto con ese usuario y obra"}
-
-        new_voto = VotosModel(
-            usuario_id=voto.usuario_id, obra_id=voto.obra_id, estrellas=voto.estrellas
-        )
-        db.add(new_voto)
-        db.commit()
-        db.refresh(new_voto)
-        return {"ok": True, "mensaje": "Voto registrado correctamente"}
-
-    @staticmethod
     def update_voto(voto: VotosModel, db: Session):
         votoquery = (
             db.query(VotosModel)
@@ -57,7 +53,6 @@ class VotosController:
             "mensaje": "Voto actualizado correctamente",
         }
 
-    @staticmethod
     def delete_voto(voto: VotosModel, db: Session):
         votoquery = (
             db.query(VotosModel)

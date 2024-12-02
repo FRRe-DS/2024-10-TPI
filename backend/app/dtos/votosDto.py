@@ -8,4 +8,4 @@ class VotosSchema(BaseModel):
     estrellas: int
 
     class Config:
-        orm_mode = True  # Allows Pydantic to read data as if it were from an ORM model
+        from_attributes = True

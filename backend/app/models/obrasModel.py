@@ -12,6 +12,8 @@ class ObrasModel(Base):
     nombre_obra: Mapped[str] = mapped_column(String(255), nullable=False)
     descripcion: Mapped[str] = mapped_column(Text, nullable=False)
     tecnica: Mapped[str] = mapped_column(String(50), nullable=False)
+    cant_votos: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
+    puntaje_total: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now(), nullable=False)
     updated_at: Mapped[DateTime] = mapped_column(DateTime, onupdate=func.now(), nullable=True)
     deleted_at: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
