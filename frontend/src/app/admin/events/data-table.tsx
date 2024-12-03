@@ -30,6 +30,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { Calendar } from "@/components/ui/calendar";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -67,10 +68,9 @@ export function DataTable<TData, TValue>({
     },
   });
 
-
   return (
-    <div className="w-full">
-      <div className="flex items-center py-4 ">
+    <div className="w-full y-2 ">
+      {/* <div className="flex items-center py-4 ">
        
 
         <DropdownMenu>
@@ -99,7 +99,8 @@ export function DataTable<TData, TValue>({
               })}
           </DropdownMenuContent>
         </DropdownMenu>
-      </div>
+      </div> */}
+      
       <div className="rounded-md border">
         <Table>
           <TableHeader>
@@ -165,7 +166,9 @@ export function DataTable<TData, TValue>({
             )}
           </TableBody>
         </Table>
+        
       </div>
+      
       <div className="flex items-center justify-end space-x-2 py-4">
         <div className="flex-1 text-sm text-muted-foreground">
           {table.getFilteredSelectedRowModel().rows.length} of{" "}
@@ -190,6 +193,8 @@ export function DataTable<TData, TValue>({
           </Button>
         </div>
       </div>
+      
     </div>
+    
   );
 }

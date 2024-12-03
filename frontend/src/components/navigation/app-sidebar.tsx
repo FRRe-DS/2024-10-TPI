@@ -1,5 +1,5 @@
 import { Home, Inbox, Search, Settings, User } from "lucide-react";
-
+import Image from "next/image";
 
 import {
   Sidebar,
@@ -51,8 +51,15 @@ export function AppSidebar() {
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Bienal Admin</SidebarGroupLabel>
-          <SidebarGroupContent>
+          <SidebarGroupLabel>
+            <Image
+              width={120}
+              height={40}
+              src="/bienal-del-chaco.jpg"
+              alt="Bienal del Chaco"
+            />
+          </SidebarGroupLabel>
+          <SidebarGroupContent className="py-4">
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
