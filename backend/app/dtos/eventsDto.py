@@ -32,6 +32,8 @@ class EventUpdate(BaseModel):
 # Class for the event response
 class Event(EventBase):
     edicion: int  # Primary key, not optional in responses
+    fecha_inicio: datetime
+    fecha_fin: datetime
     created_at: datetime
     updated_at: Optional[datetime] = None
     deleted_at: Optional[datetime] = None

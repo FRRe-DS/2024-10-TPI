@@ -14,7 +14,7 @@ author = APIRouter()
     response_model=Page[AuthorOut],
     tags=["autores"],
 )
-async def get_authors(db: Session = Depends(get_db)):
+def get_authors(db: Session = Depends(get_db)):
     return AuthorController.get_authors(db)
 
 

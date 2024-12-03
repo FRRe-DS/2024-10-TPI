@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from app.dtos.authorsDto import AuthorCreate, AuthorUpdate
+from app.dtos.authorsDto import AuthorCreate, AuthorUpdate, AuthorOut
 from app.models.authorsModel import AuthorModel
 from fastapi import HTTPException
 from fastapi_pagination import paginate, set_params
@@ -11,9 +11,9 @@ from sqlalchemy.orm import Session
 class AuthorController:
 
     def get_authors(db: Session):
-        results = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
+        autores = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
         set_params(Params(size=20))
-        return paginate(results)
+        return paginate(autores)
 
     def get_author_by_id(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
