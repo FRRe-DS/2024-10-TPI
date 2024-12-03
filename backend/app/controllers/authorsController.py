@@ -20,6 +20,12 @@ class AuthorController:
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
         return author
+    
+    def get_author_by_name(nombre: str, db: Session):
+        author = db.query(AuthorModel).filter(AuthorModel.nombre == nombre).one_or_none()
+        if author is None:
+            raise HTTPException(status_code=404, detail="Autor no encontrado")
+        return author
 
     def create_author(author: AuthorCreate, db: Session):
         new_author = AuthorModel(**author.model_dump())

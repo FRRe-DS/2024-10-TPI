@@ -19,6 +19,7 @@ class ObrasModel(Base):
     deleted_at: Mapped[DateTime] = mapped_column(DateTime, nullable=True)
     autor: Mapped["AuthorModel"] = relationship("AuthorModel", back_populates="obras") # type: ignore
     imagenes: Mapped[List["ImagenesModel"]] = relationship("ImagenesModel", back_populates="obra", cascade="all, delete-orphan") # type: ignore
+
     class Config:
         from_attributes = True
 
