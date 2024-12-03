@@ -52,9 +52,9 @@ class ObraController:
         return ObraOut.model_validate(obra)
         
     
-    def get_obras_by_autor(author: str, db: Session):
+    def get_obras_by_autor(nombre: str, apellido: str, db: Session):
         # buscar el id del autor
-        author = AuthorController.get_author_by_name(author, db)
+        author = AuthorController.get_author_by_name_and_lastname(nombre, apellido, db)
         
         query = (
             db.query(ObrasModel)

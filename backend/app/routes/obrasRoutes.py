@@ -12,9 +12,9 @@ obras = APIRouter()
     response_model=Page[ObraOut],
     tags=["obras"],
 )
-def get_obras(db: Session = Depends(get_db), nombre: str = None):
+def get_obras(db: Session = Depends(get_db), nombre: str = None, apellido: str = None):
     if nombre:
-        return ObraController.get_obras_by_autor(nombre, db)
+        return ObraController.get_obras_by_autor(nombre, apellido, db)
     return ObraController.get_obras(db)
 
 @obras.get("/obras/nombre/{nombre_obra}", response_model=ObraOut, tags=["obras"])
