@@ -47,11 +47,3 @@ class ContactController:
       contact.deleted_at = datetime.now()
       db.commit()
       return {'ok': True, 'mensaje': 'Borrado lógico del Contacto correcto'}
-  
-  def exists_contact_by_id(id: int, db: Session):
-      contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
-      return {"existe": contact is not None}
-  
-  def exists_contact_by_author(author: int, db: Session):
-      contact = db.query(ContactModel).filter(ContactModel.autor == author).one_or_none()
-      return {"existe": contact is not None}

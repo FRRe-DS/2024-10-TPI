@@ -62,7 +62,4 @@ class AuthorController:
         author.deleted_at = datetime.now()
         db.commit()
         return {'ok': True, 'mensaje': 'Borrado lógico del Autor correcto'}
-    
-    def exists_author_by_id(id: int, db: Session):
-        author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
-        return {"existe": author is not None}
+
