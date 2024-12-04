@@ -30,7 +30,7 @@ class AuthorUpdate(AuthorBase):
     pais_origen: Optional[str] = None
     url: Optional[str] = None
     public_id: Optional[str] = None
-
+    contactos: Optional[List[ContactBase]] = None
 
 class Author(AuthorBase):
     id: Optional[int]
