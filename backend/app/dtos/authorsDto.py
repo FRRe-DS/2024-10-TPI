@@ -32,7 +32,6 @@ class AuthorUpdate(AuthorBase):
     public_id: Optional[str] = None
     contactos: Optional[List[ContactBase]] = None
 
-
 class Author(AuthorBase):
     id: Optional[int]
     contactos: Optional[List[ContactBase]]

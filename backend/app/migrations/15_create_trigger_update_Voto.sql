@@ -1,0 +1,6 @@
+CREATE TRIGGER IF NOT EXISTS before_update_votos
+BEFORE UPDATE ON Votos
+FOR EACH ROW
+BEGIN
+    SET NEW.updated_at = NOW();
+END;

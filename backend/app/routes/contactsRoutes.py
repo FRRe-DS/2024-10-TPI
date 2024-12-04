@@ -25,11 +25,3 @@ def update_contact(id: int, updatedContact: ContactUpdate, db: Session = Depends
 @contact.delete("/contactos/{id}",tags = ["contactos"])
 def delete_contact(id: int, db: Session = Depends(get_db)):
     return ContactController.delete_contact(id, db)
-
-@contact.head("/contactos/{id}",tags = ["contactos"])
-def exists_contact_by_id(id: int, db: Session = Depends(get_db)):
-    return ContactController.exists_contact_by_id(id, db)
-
-@contact.head("/contactos/autor/{author}",tags = ["contactos"])
-def exists_contact_by_author(author: int, db: Session = Depends(get_db)):
-    return ContactController.exists_contact_by_author(author, db)
