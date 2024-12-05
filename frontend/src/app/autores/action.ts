@@ -38,7 +38,7 @@ export const createAutor = async (autor: Autor) => {
   }
 };
 
-export const updateAutor = async (id: string, autor: Autor) => {
+export const updateAutor = async (id: number, autor: Autor) => {
   try {
     const url = `${process.env.NEXT_PUBLIC_API}/autores/${id}`;
     const response = await fetch(url, {
@@ -55,7 +55,7 @@ export const updateAutor = async (id: string, autor: Autor) => {
   }
 };
 
-export const deleteAutor = async (id: string) => {
+export const deleteAutor = async (id: number) => {
   try {
     const url = `${process.env.NEXT_PUBLIC_API}/autores/${id}`;
     const response = await fetch(url, {

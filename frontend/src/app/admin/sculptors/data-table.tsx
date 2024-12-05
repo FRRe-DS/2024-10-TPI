@@ -31,6 +31,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
@@ -65,6 +66,11 @@ export function DataTable<TData, TValue>({
       columnVisibility,
       rowSelection,
     },
+    initialState: {
+      pagination: {
+        pageSize: 20, // Cambia este valor para mostrar más filas por página
+      },
+    },
   });
 
   return (
@@ -86,7 +92,7 @@ export function DataTable<TData, TValue>({
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
-              Columns <ChevronDown />
+              Columas <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
@@ -117,15 +123,7 @@ export function DataTable<TData, TValue>({
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead
-                      key={header.id}
-                      className={`${
-                        header.column.id === "votos" ||
-                        header.column.id === "escultor"
-                          ? "text-center"
-                          : ""
-                      }`}
-                    >
+                    <TableHead key={header.id} className="text-center">
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -148,12 +146,12 @@ export function DataTable<TData, TValue>({
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
-                      className={
-                        cell.column.id === "votos" ||
-                        cell.column.id === "escultor"
-                          ? "text-center"
-                          : ""
-                      }
+                      // className={
+                      //   cell.column.id === "votos" ||
+                      //   cell.column.id === "escultor"
+                      //     ? "text-center"
+                      //     : ""
+                      // }
                     >
                       {flexRender(
                         cell.column.columnDef.cell,
@@ -177,10 +175,10 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
-        <div className="flex-1 text-sm text-muted-foreground">
-          {table.getFilteredSelectedRowModel().rows.length} de{" "}
-          {table.getFilteredRowModel().rows.length} Fila(s) seleccionada(s).
-        </div>
+        {/* <div className="flex-1 text-sm text-muted-foreground">
+          {table.getFilteredSelectedRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} Filas(s) seleccionadas.
+        </div> */}
         <div className="space-x-2">
           <Button
             variant="outline"
