@@ -5,7 +5,9 @@ interface AutorProps {
   autor: Autor;
 }
 
-const AutorCard = ({ autor }: AutorProps) => {
+export function AutorCard({ autor }: AutorProps) {
+  if (!autor) { return null; }
+  
   return (
     <div className="bg-white border rounded-lg w-full max-w-sm overflow-hidden hover:shadow-lg transition-shadow">
       {/* Imagen - Arriba */}

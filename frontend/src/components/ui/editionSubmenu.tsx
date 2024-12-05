@@ -5,10 +5,11 @@ export default function EditionSubmenu({ toggleMenu }: { toggleMenu: any }) {
   const [showEditions, setShowEditions] = useState(false);
   // Elementos del submenú de ediciones
   const ediciones = [
-    { nombre: "Bienal 2022", ruta: "/ediciones/2022" },
-    { nombre: "Bienal 2010", ruta: "/ediciones/2018" },
-    { nombre: "Bienal 2018", ruta: "/ediciones/2016" },
+    { nombre: "Bienal 2022", ruta: "/ediciones?edicion=2022" },
+    { nombre: "Bienal 2018", ruta: "/ediciones?edicion=2018" },
+    { nombre: "Bienal 2016", ruta: "/ediciones?edicion=2016" },
   ];
+
   return (
     <div
       onMouseEnter={() => setShowEditions(true)}

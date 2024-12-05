@@ -31,10 +31,16 @@ def seed_all():
         seed_table(EventModel, json_path, db, date_fields=[])
 
         # Insertar obras
+        print("Insertando seed de obras...")
         json_path = path.join(path.dirname(__file__), "data", "obras.json")
         seed_table(ObrasModel, json_path, db, date_fields=[])
 
+        # Obtener el número de obras insertadas
+        obras_count = db.query(ObrasModel).count()
+        print(f"Se insertaron {obras_count} obras")
+
         # Insertar imágenes
+        print("Insertando seed de imágenes...")
         seed_imagenes(ImagenesModel, db)
 
         # Insertar votos

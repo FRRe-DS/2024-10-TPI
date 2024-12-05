@@ -1,11 +1,24 @@
-import { Autorcarousel } from "@/components/carrusel/AutoresCarousel";
-import dynamic from "next/dynamic";
+"use client";
 
+import { getEsculturasRandom } from "./actions";
+import dynamic from "next/dynamic";
+import { ImageCarousel } from "@/components/carrusel/imageCarousel";
+import { useEffect, useState } from "react";
 const Model = dynamic(() => import("@/components/Model"), { ssr: false });
 
 
 
 export default function Home() {
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const urls = await getEsculturasRandom();
+      setImageUrls(urls);
+    };
+    fetchData();
+  }, []);
+  
   return (
     <div className="w-full h-screen overflow-hidden">
       <div className="w-full h-screen overflow-y-scroll snap-y snap-proximity scrollbar-none scroll-smooth">
@@ -50,8 +63,8 @@ export default function Home() {
 
         {/* Div del carrusel */}
         <div className="h-auto max-h-[500px] bg-neutral-800 overflow-hidden">
-  <Autorcarousel />
-</div>
+          <ImageCarousel images={imageUrls} />
+        </div>
       </div>
 
      {/* Tercera sección */}
@@ -154,7 +167,7 @@ export default function Home() {
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen={true}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
