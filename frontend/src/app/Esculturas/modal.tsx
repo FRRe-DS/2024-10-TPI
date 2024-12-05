@@ -1,15 +1,30 @@
-import { Escultura } from '@/types';
-import FiveStarRating from './FiveStarRating';
-import { getVote } from './action';
-import { useEffect, useState } from 'react';
+import { Escultura, Usuario } from "@/types";
+import FiveStarRating from "./FiveStarRating";
+import { getVote } from "./action";
+import { useEffect, useState } from "react";
+import QRCode from "./qrCode";
+import { cookies } from "next/headers";
+
+// interface ModalProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+//   escultura: Escultura; // Cambiado de EsculturaPaginatedResponse a Escultura
+// }
 
 interface ModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  escultura: Escultura;  // Cambiado de EsculturaPaginatedResponse a Escultura
+  isModalOpen: boolean;
+  escultura: Escultura;
+  usuario: Usuario;
+  setIsModalOpen: any;
 }
 
-export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
+// export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
+export default function Modal({
+  isModalOpen,
+  escultura,
+  usuario,
+  setIsModalOpen,
+}: ModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [voto, setVoto] = useState<{ rating: number } | null>(null);
   const imageArray = escultura.imagenes; // Ya no necesitamos Object.values ni items[0]
@@ -22,84 +37,103 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
 
   const previousImage = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setCurrentImageIndex((prev) => (prev - 1 + imageArray.length) % imageArray.length);
+    setCurrentImageIndex(
+      (prev) => (prev - 1 + imageArray.length) % imageArray.length,
+    );
   };
-  useEffect(() => {
-    const fetchVoto = async () => {
-      if (isOpen) {
-        try {
-          const votoDatos = await getVote(escultura.id);
-          setVoto(votoDatos);
-        } catch (error) {
-          console.error('Error al obtener el voto:', error);
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const fetchVoto = async () => {
+  //     if (isOpen) {
+  //       try {
+  //         const votoDatos = await getVote(escultura.id);
+  //         setVoto(votoDatos);
+  //       } catch (error) {
+  //         console.error('Error al obtener el voto:', error);
+  //       }
+  //     }
+  //   };
+  //
+  //   fetchVoto();
+  // }, [isOpen, escultura.id]);
+  //
+  // if (!isOpen) return null;
 
-    fetchVoto();
-  }, [isOpen, escultura.id]);
-
-  if (!isOpen) return null;
-
+  // useEffect(() => {
+  //   const fetchVoto = async () => {
+  //     if (isOpen) {
+  //       // Solo hacer la petición si el modal está abierto
+  //       try {
+  //         const votoDatos = await getVote(escultura.id);
+  //         console.log("votoDatos", votoDatos);
+  //         setVoto(votoDatos);
+  //       } catch (error) {
+  //         console.error("Error al obtener el voto:", error);
+  //       }
+  //     }
+  //   };
+  //
+  //   fetchVoto();
+  // }, [isOpen, escultura.id]);
+  if (!isModalOpen) return null;
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-lg w-full max-w-[1000px] h-[90vh] h-[600px] overflow-hidden relative">
-        <button 
-          onClick={onClose}
+      <div className="bg-white rounded-lg w-full max-w-[1000px] h-fit min-h-[600px] overflow-hidden relative">
+        <button
+          onClick={() => setIsModalOpen(false)}
           className="absolute top-4 right-4 text-gray-700 hover:text-black z-10"
         >
           <span className="text-2xl">✕</span>
         </button>
-  
-        <div className="flex flex-col md:flex-row h-full">
+
+        <div className="flex flex-col md:flex-row h-full flex-grow">
           {/* Contenedor de imagen con navegación */}
           <div className="w-full md:w-1/2 h-[50vh] md:h-full flex-shrink-0 bg-gray-100 relative group">
-            <img 
+            <img
               src={escultura.imagenes[currentImageIndex].url}
               alt={escultura.nombre_obra}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain py-auto my-auto"
             />
-            
+
             {/* Flechas de navegación */}
             <div className="absolute inset-y-0 left-0 flex items-center">
               <button
                 onClick={previousImage}
                 className="ml-2 p-1.5 rounded-full bg-white/50 hover:bg-white/95 shadow-lg transition-all duration-300 transform hover:scale-110"
               >
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 text-gray-800" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-800"
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2.5} 
-                    d="M15 19l-7-7 7-7" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M15 19l-7-7 7-7"
                   />
                 </svg>
               </button>
             </div>
-            
+
             <div className="absolute inset-y-0 right-0 flex items-center">
               <button
                 onClick={nextImage}
                 className="mr-2 p-1.5 rounded-full bg-white/80 hover:bg-white/95 shadow-lg transition-all duration-300 transform hover:scale-110"
               >
-                <svg 
-                  xmlns="http://www.w3.org/2000/svg" 
-                  className="h-5 w-5 text-gray-800" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-gray-800"
+                  fill="none"
+                  viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2.5} 
-                    d="M9 5l7 7-7 7" 
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M9 5l7 7-7 7"
                   />
                 </svg>
               </button>
@@ -115,9 +149,9 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
                     setCurrentImageIndex(index);
                   }}
                   className={`w-2 h-1.5 rounded-full transition-all duration-300 ${
-                    currentImageIndex === index 
-                      ? 'bg-white w-3' 
-                      : 'bg-white/60 hover:bg-white/80'
+                    currentImageIndex === index
+                      ? "bg-white w-3"
+                      : "bg-white/60 hover:bg-white/80"
                   }`}
                 />
               ))}
@@ -125,19 +159,17 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
           </div>
 
           {/* Contenedor de detalles */}
-          <div className="w-full md:w-1/2 h-[40vh] md:h-full relative">
-            <div className="p-4 md:p-6 overflow-y-auto h-[calc(100%-80px)] md:h-[calc(100%-100px)]">
+          <div className="w-full md:w-1/2 md:h-full relative">
+            <div className="p-4 md:p-6 overflow-y-auto h-[calc(100%-80px)] md:h-[calc(100%-80px)]">
               {/* Header y contenido - sin cambios */}
               {/* Header */}
               <h2 className="text-2xl font-bold mb-4">
                 Información de la escultura
               </h2>
-
               {/* Título de la obra */}
               <h3 className="text-xl font-bold mb-4">
                 {escultura.nombre_obra}
               </h3>
-
               {/* Descripción */}
               <div className="mb-6 text-justify">
                 <p className="text-gray-600">
@@ -145,9 +177,6 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
                   {escultura.descripcion}
                 </p>
               </div>
-
-
-
               {/* Detalles técnicos */}
               <div className="space-y-2">
                 <p className="text-gray-600">
@@ -159,7 +188,6 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
                   {escultura.id_edicion}
                 </p>
               </div>
-
               {/* Información del autor */}
               <div className="mt-8">
                 <h2 className="text-2xl font-bold mb-4">
@@ -180,16 +208,11 @@ export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
                   </p>
                 </div>
               </div>
-            </div>
-  
-            {/* Sistema de rating */}
-            <div className="absolute bottom-0 right-0 w-full bg-white border-t border-gray-200 p-4 md:p-6">
-              <div className="scale-75 md:scale-100 transform-origin-center">
-                <FiveStarRating 
-                  esculturaId={escultura.id}
-                  votoUsuario={voto || {rating: 0}}
-                />
-              </div>
+              {usuario?.rol === "visualizadorQR" && (
+                <div className="mt-8">
+                  <QRCode id={escultura.id} />
+                </div>
+              )}
             </div>
           </div>
         </div>
