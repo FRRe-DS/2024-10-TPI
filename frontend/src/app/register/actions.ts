@@ -10,6 +10,7 @@ export async function handleRegister(data: FormData) {
     apellido: data.get("apellido"),
     correo: data.get("correo"),
     contrasenia_hasheada: data.get("contrasenia_hasheada"),
+    rol: "votante",
   };
 
   // me conecto con el endpoint, mi bd
