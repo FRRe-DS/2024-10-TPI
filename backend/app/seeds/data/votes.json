@@ -1,0 +1,5002 @@
+[
+    {
+        "usuario_id": 100,
+        "obra_id": 53,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 2,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 4,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 208,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 213,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 40,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 313,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 164,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 135,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 315,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 229,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 56,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 4,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 128,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 100,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 167,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 79,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 91,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 116,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 81,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 307,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 324,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 201,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 145,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 92,
+        "obra_id": 12,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 209,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 321,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 127,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 301,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 263,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 278,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 131,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 236,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 311,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 107,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 288,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 9,
+        "obra_id": 202,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 343,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 114,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 290,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 196,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 41,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 147,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 82,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 333,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 209,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 134,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 20,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 43,
+        "obra_id": 9,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 217,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 188,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 236,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 138,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 151,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 197,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 77,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 11,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 91,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 269,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 251,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 39,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 40,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 202,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 30,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 215,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 47,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 53,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 230,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 227,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 301,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 136,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 269,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 45,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 284,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 144,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 215,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 294,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 157,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 141,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 131,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 104,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 192,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 184,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 244,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 63,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 12,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 253,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 300,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 187,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 63,
+        "obra_id": 255,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 42,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 222,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 267,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 55,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 281,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 12,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 101,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 348,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 342,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 129,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 209,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 180,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 198,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 88,
+        "obra_id": 121,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 202,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 144,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 43,
+        "obra_id": 219,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 58,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 238,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 269,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 325,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 3,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 7,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 48,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 49,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 252,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 316,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 307,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 319,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 277,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 314,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 281,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 98,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 35,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 94,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 278,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 171,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 1,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 291,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 234,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 242,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 318,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 103,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 300,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 60,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 306,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 75,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 31,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 30,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 60,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 8,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 36,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 311,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 74,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 62,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 28,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 106,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 63,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 224,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 35,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 8,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 220,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 342,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 257,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 111,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 318,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 31,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 143,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 303,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 239,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 294,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 51,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 36,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 45,
+        "obra_id": 188,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 63,
+        "obra_id": 154,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 306,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 160,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 82,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 172,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 34,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 120,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 42,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 249,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 283,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 198,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 246,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 1,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 232,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 174,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 184,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 202,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 279,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 259,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 3,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 53,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 164,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 187,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 10,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 12,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 90,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 232,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 22,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 82,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 297,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 3,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 43,
+        "obra_id": 282,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 11,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 63,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 305,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 340,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 75,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 299,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 76,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 166,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 36,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 99,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 15,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 58,
+        "obra_id": 134,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 234,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 238,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 155,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 314,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 256,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 74,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 208,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 211,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 242,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 35,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 81,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 57,
+        "obra_id": 7,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 256,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 163,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 66,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 309,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 114,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 169,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 297,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 130,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 225,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 323,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 138,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 260,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 80,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 255,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 66,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 209,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 191,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 246,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 163,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 285,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 45,
+        "obra_id": 331,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 140,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 187,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 83,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 23,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 239,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 316,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 178,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 19,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 319,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 116,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 293,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 4,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 106,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 125,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 257,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 70,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 202,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 200,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 34,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 294,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 128,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 44,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 69,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 16,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 103,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 147,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 63,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 269,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 126,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 275,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 85,
+        "obra_id": 3,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 285,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 98,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 21,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 28,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 180,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 11,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 269,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 105,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 262,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 28,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 177,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 179,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 228,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 58,
+        "obra_id": 155,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 273,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 116,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 328,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 58,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 208,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 79,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 225,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 242,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 160,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 85,
+        "obra_id": 21,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 253,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 217,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 220,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 127,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 193,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 76,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 152,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 284,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 332,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 277,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 330,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 241,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 84,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 71,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 2,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 302,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 49,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 40,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 225,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 188,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 72,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 259,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 243,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 329,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 43,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 260,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 183,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 62,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 289,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 279,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 158,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 136,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 40,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 324,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 235,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 195,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 24,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 302,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 7,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 180,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 62,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 46,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 188,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 41,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 330,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 259,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 273,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 135,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 268,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 82,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 77,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 300,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 10,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 257,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 199,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 317,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 243,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 95,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 6,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 63,
+        "obra_id": 28,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 59,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 184,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 12,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 196,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 305,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 167,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 85,
+        "obra_id": 186,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 3,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 169,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 113,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 81,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 44,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 166,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 8,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 107,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 8,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 284,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 251,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 262,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 68,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 196,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 249,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 277,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 87,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 265,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 61,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 274,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 236,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 313,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 102,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 195,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 19,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 113,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 85,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 40,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 333,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 122,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 185,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 183,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 254,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 180,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 350,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 334,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 234,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 248,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 245,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 183,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 111,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 306,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 195,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 315,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 137,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 301,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 274,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 342,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 81,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 158,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 5,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 50,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 239,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 327,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 212,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 331,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 280,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 121,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 174,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 331,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 345,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 254,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 49,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 175,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 80,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 176,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 37,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 159,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 333,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 317,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 254,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 345,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 34,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 262,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 293,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 215,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 216,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 68,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 128,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 108,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 229,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 208,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 59,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 84,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 88,
+        "obra_id": 164,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 289,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 154,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 247,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 299,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 129,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 213,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 83,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 25,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 275,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 106,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 7,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 164,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 218,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 201,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 94,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 121,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 161,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 317,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 175,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 156,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 219,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 182,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 340,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 349,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 222,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 298,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 63,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 11,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 53,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 74,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 289,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 3,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 210,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 26,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 343,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 92,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 50,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 82,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 75,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 227,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 227,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 231,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 269,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 58,
+        "obra_id": 275,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 161,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 346,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 153,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 130,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 34,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 313,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 187,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 118,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 247,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 140,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 96,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 118,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 38,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 343,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 161,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 118,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 72,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 237,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 42,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 211,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 307,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 279,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 211,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 78,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 251,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 92,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 110,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 13,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 345,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 152,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 40,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 299,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 233,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 16,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 297,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 25,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 129,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 127,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 127,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 135,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 182,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 98,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 102,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 44,
+        "obra_id": 210,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 43,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 30,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 30,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 164,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 17,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 121,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 169,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 184,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 104,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 71,
+        "obra_id": 262,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 19,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 300,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 155,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 60,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 3,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 204,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 1,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 347,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 288,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 234,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 90,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 195,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 9,
+        "obra_id": 311,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 319,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 38,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 263,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 27,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 11,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 324,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 308,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 147,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 210,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 37,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 330,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 195,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 11,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 118,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 6,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 71,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 301,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 219,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 202,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 237,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 121,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 273,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 96,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 252,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 2,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 133,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 69,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 4,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 150,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 14,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 346,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 49,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 275,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 29,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 274,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 337,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 78,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 325,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 161,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 203,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 173,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 261,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 128,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 207,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 45,
+        "obra_id": 149,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 69,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 315,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 27,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 72,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 192,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 51,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 117,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 202,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 193,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 101,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 63,
+        "obra_id": 108,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 243,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 311,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 294,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 122,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 126,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 259,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 9,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 238,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 327,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 304,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 141,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 108,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 302,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 63,
+        "obra_id": 322,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 272,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 25,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 122,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 136,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 334,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 169,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 75,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 289,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 199,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 327,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 122,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 73,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 93,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 231,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 325,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 153,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 18,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 213,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 244,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 304,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 261,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 255,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 292,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 148,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 88,
+        "obra_id": 342,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 345,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 192,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 318,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 142,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 43,
+        "obra_id": 14,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 28,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 101,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 290,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 270,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 161,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 102,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 225,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 151,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 10,
+        "obra_id": 326,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 194,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 223,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 253,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 198,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 88,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 311,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 120,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 171,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 236,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 67,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 187,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 17,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 272,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 144,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 269,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 265,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 276,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 311,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 212,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 155,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 338,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 34,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 193,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 288,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 283,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 87,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 177,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 4,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 129,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 57,
+        "obra_id": 336,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 261,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 68,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 28,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 143,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 184,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 208,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 216,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 235,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 160,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 341,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 272,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 34,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 11,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 173,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 136,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 150,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 222,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 330,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 274,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 271,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 128,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 95,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 227,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 60,
+        "obra_id": 6,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 86,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 326,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 262,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 36,
+        "obra_id": 225,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 229,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 234,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 35,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 269,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 60,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 183,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 332,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 168,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 125,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 208,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 30,
+        "obra_id": 1,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 118,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 23,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 281,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 57,
+        "obra_id": 81,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 298,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 88,
+        "obra_id": 165,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 270,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 226,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 45,
+        "obra_id": 126,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 94,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 217,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 162,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 34,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 181,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 193,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 9,
+        "obra_id": 105,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 119,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 92,
+        "obra_id": 252,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 87,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 38,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 49,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 139,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 58,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 5,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 31,
+        "obra_id": 215,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 296,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 162,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 85,
+        "obra_id": 271,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 178,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 13,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 279,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 34,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 43,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 280,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 9,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 340,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 87,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 121,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 6,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 229,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 46,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 54,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 267,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 54,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 101,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 85,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 342,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 215,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 242,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 98,
+        "obra_id": 57,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 23,
+        "obra_id": 263,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 153,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 113,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 246,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 173,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 119,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 166,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 339,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 224,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 132,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 50,
+        "obra_id": 107,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 56,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 68,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 174,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 51,
+        "obra_id": 149,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 41,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 5,
+        "obra_id": 326,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 48,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 27,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 53,
+        "obra_id": 122,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 48,
+        "obra_id": 137,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 217,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 266,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 240,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 294,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 81,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 102,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 14,
+        "obra_id": 331,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 159,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 119,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 256,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 101,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 284,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 217,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 213,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 264,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 6,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 161,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 22,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 14,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 196,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 192,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 275,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 116,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 75,
+        "obra_id": 108,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 17,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 193,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 224,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 163,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 37,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 6,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 144,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 77,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 341,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 49,
+        "obra_id": 310,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 43,
+        "obra_id": 313,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 270,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 13,
+        "obra_id": 153,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 249,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 135,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 37,
+        "obra_id": 161,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 203,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 259,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 82,
+        "obra_id": 331,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 232,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 66,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 79,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 81,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 23,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 54,
+        "obra_id": 334,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 223,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 240,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 212,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 6,
+        "obra_id": 105,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 336,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 70,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 241,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 43,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 55,
+        "obra_id": 167,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 323,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 296,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 62,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 73,
+        "obra_id": 22,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 327,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 59,
+        "obra_id": 180,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 57,
+        "obra_id": 130,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 110,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 285,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 309,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 2,
+        "obra_id": 264,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 90,
+        "obra_id": 70,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 220,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 86,
+        "obra_id": 305,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 213,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 97,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 148,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 176,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 18,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 25,
+        "obra_id": 16,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 85,
+        "obra_id": 8,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 10,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 39,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 140,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 164,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 319,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 293,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 174,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 78,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 318,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 22,
+        "obra_id": 257,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 122,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 69,
+        "obra_id": 130,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 76,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 32,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 267,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 285,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 77,
+        "obra_id": 138,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 336,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 92,
+        "obra_id": 265,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 87,
+        "obra_id": 126,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 11,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 205,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 203,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 92,
+        "obra_id": 126,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 87,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 3,
+        "obra_id": 286,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 8,
+        "obra_id": 73,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 8,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 35,
+        "obra_id": 269,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 15,
+        "obra_id": 278,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 147,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 62,
+        "obra_id": 144,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 89,
+        "obra_id": 335,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 24,
+        "obra_id": 124,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 23,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 97,
+        "obra_id": 168,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 74,
+        "obra_id": 45,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 103,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 285,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 129,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 61,
+        "obra_id": 15,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 270,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 81,
+        "obra_id": 17,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 173,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 91,
+        "obra_id": 110,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 161,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 241,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 1,
+        "obra_id": 257,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 96,
+        "obra_id": 91,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 141,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 93,
+        "obra_id": 242,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 76,
+        "obra_id": 90,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 316,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 65,
+        "obra_id": 162,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 84,
+        "obra_id": 316,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 28,
+        "obra_id": 178,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 47,
+        "obra_id": 207,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 10,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 72,
+        "obra_id": 259,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 103,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 53,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 323,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 4,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 12,
+        "obra_id": 16,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 2,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 160,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 46,
+        "obra_id": 207,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 27,
+        "obra_id": 244,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 34,
+        "obra_id": 320,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 307,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 88,
+        "obra_id": 131,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 311,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 4,
+        "obra_id": 24,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 78,
+        "obra_id": 75,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 223,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 70,
+        "obra_id": 186,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 92,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 64,
+        "obra_id": 118,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 79,
+        "obra_id": 128,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 27,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 100,
+        "obra_id": 327,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 68,
+        "obra_id": 99,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 7,
+        "obra_id": 152,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 16,
+        "obra_id": 48,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 172,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 97,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 32,
+        "obra_id": 132,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 42,
+        "obra_id": 307,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 18,
+        "obra_id": 344,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 26,
+        "obra_id": 324,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 11,
+        "obra_id": 322,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 66,
+        "obra_id": 262,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 38,
+        "obra_id": 131,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 170,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 83,
+        "obra_id": 289,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 21,
+        "obra_id": 86,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 45,
+        "obra_id": 165,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 119,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 95,
+        "obra_id": 135,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 33,
+        "obra_id": 335,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 39,
+        "obra_id": 96,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 41,
+        "obra_id": 183,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 17,
+        "obra_id": 101,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 29,
+        "obra_id": 127,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 19,
+        "obra_id": 317,
+        "estrellas": 2
+    },
+    {
+        "usuario_id": 99,
+        "obra_id": 164,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 94,
+        "obra_id": 14,
+        "estrellas": 1
+    },
+    {
+        "usuario_id": 67,
+        "obra_id": 137,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 40,
+        "obra_id": 118,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 20,
+        "obra_id": 43,
+        "estrellas": 3
+    },
+    {
+        "usuario_id": 80,
+        "obra_id": 194,
+        "estrellas": 5
+    },
+    {
+        "usuario_id": 56,
+        "obra_id": 325,
+        "estrellas": 4
+    },
+    {
+        "usuario_id": 52,
+        "obra_id": 69,
+        "estrellas": 1
+    }
+]

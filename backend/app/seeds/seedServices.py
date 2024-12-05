@@ -163,3 +163,25 @@ def seed_imagenes(model, db: Session):
             f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevas imágenes."
         )
 
+def seed_votos(model, db: Session):
+    json_path = path.join(path.dirname(__file__), "data", "votes.json")
+    try:
+        with open(json_path, "r", encoding="utf-8") as file:
+            votos = json.load(file)
+
+        records = []
+        for voto in votos:
+            record = model(
+                usuario_id=voto["usuario_id"],
+                obra_id=voto["obra_id"],
+                estrellas=voto["estrellas"],
+            )
+            records.append(record)
+
+        db.add_all(records)
+        db.commit()
+        print(f"{len(records)} votos insertados en la tabla {model.__tablename__}.")
+
+    except Exception as e:
+        db.rollback()
+        print(f"Error al insertar votos: {e}")
