@@ -2,9 +2,9 @@ import json
 import random
 from datetime import datetime
 from os import path
-
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
+from app.controllers.obrasController import ObraController
 
 
 def seed_table(model, json_file: str, db: Session, date_fields: list = []):
@@ -164,24 +164,30 @@ def seed_imagenes(model, db: Session):
         )
 
 def seed_votos(model, db: Session):
-    json_path = path.join(path.dirname(__file__), "data", "votes.json")
-    try:
-        with open(json_path, "r", encoding="utf-8") as file:
-            votos = json.load(file)
+    if db.query(model).first() is None:
+        json_path = path.join(path.dirname(__file__), "data", "votes.json")
+        try:
+            with open(json_path, "r", encoding="utf-8") as file:
+                votos = json.load(file)
 
-        records = []
-        for voto in votos:
-            record = model(
-                usuario_id=voto["usuario_id"],
-                obra_id=voto["obra_id"],
-                estrellas=voto["estrellas"],
-            )
-            records.append(record)
+            records = []
+            for voto in votos:
+                record = model(
+                    usuario_id=voto["usuario_id"],
+                    obra_id=voto["obra_id"],
+                    estrellas=voto["estrellas"],
+                )
+                ObraController.incrementar_votos_y_puntaje(voto["obra_id"], voto["estrellas"], db)
+                records.append(record)
 
-        db.add_all(records)
-        db.commit()
-        print(f"{len(records)} votos insertados en la tabla {model.__tablename__}.")
+            db.add_all(records)
+            db.commit()
+            print(f"{len(records)} votos insertados en la tabla {model.__tablename__}.")
 
-    except Exception as e:
-        db.rollback()
-        print(f"Error al insertar votos: {e}")
+        except Exception as e:
+            db.rollback()
+            print(f"Error al insertar votos: {e}")
+    else: 
+        print(
+            f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevos votos."
+        )
