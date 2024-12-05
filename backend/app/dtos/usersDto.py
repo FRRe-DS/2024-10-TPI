@@ -30,6 +30,7 @@ class UserLogin(UserBase):
   apellido: Optional[str] = None
   contrasenia_hasheada: str
   correo: str
+  rol: Optional[str] = None
 
 # Representa a un usuario en el sistema, incluyendo atributos adicionales que podrían ser útiles, como created_at, updated_at, y deleted_at.
 class User(UserBase):

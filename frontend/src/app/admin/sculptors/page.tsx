@@ -8,7 +8,7 @@ import { Autor } from "@/types";
 export default async function page() {
   const [autores, setAutores] = useState<Autor[]>([]); // Estado para almacenar las esculturas
 
-  async function fetchData() {
+  const fetchData = async () => {
     const autores = await getAutores();
     setAutores(autores || []);
   }
