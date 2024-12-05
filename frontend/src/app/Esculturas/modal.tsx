@@ -206,8 +206,8 @@ export default function Modal({
                 <h2 className="text-2xl font-bold mb-4">Puntaje de la Obra</h2>
                 <div className="space-y-2">
                   <p className="text-gray-600">
-                    <span className="font-semibold">Estrellas: </span>
-                    {escultura.puntaje_total / escultura.cant_votos || 0}
+                    <span className="font-semibold">Promedio: </span>
+                    {(escultura.puntaje_total / escultura.cant_votos || 0).toFixed(2)}
                   </p>
                 </div>
               </div>

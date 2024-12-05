@@ -36,7 +36,7 @@ const AutorCard = ({ autor }: AutorProps) => {
           <div className="mt-4">
             <p className="text-sm text-gray-600">
               <span className="font-semibold">Fecha de Nacimiento: </span>
-              {new Date(autor.fec_nac).toLocaleDateString()}
+              {(autor.fec_nac)}
             </p>
           </div>
         </div>

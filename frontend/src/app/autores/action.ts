@@ -1,5 +1,5 @@
 "use server";
-import { Autor } from "@/types";
+import { Autor, AutorPaginatedResponse } from "@/types";
 
 const handleResponse = async (response: Response) => {
   if (!response.ok) {
@@ -11,9 +11,9 @@ const handleResponse = async (response: Response) => {
 
 export const getAutores = async (pageNumber = 1) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API}/autores?page=${pageNumber}`;
+    const url = `${process.env.NEXT_PUBLIC_API}/autores`;
     const response = await fetch(url);
-    const data = (await handleResponse(response)).items as Autor[];
+    const data = (await handleResponse(response)) as AutorPaginatedResponse;
     return data;
   } catch (error) {
     console.error(error);
