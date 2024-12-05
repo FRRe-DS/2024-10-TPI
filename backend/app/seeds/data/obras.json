@@ -8,10 +8,7 @@
     "tecnica": "Acuarela",
     "created_at": "2024-01-15 10:25:30",
     "updated_at": null,
-    "deleted_at": null
-  },
-  {
-    "id": 2,
+    "deleted_anull": 2,
     "autor_id": 2,
     "id_edicion": 2024,
     "nombre_obra": "Retrato de una Dama",
@@ -19,10 +16,7 @@
     "tecnica": "\u00d3leo",
     "created_at": "2024-02-10 14:00:00",
     "updated_at": null,
-    "deleted_at": null
-  },
-  {
-    "id": 3,
+    "deleted_anull": 3,
     "autor_id": 89,
     "id_edicion": 2024,
     "nombre_obra": "Escultura Cl\u00e1sica 1",
@@ -30,7 +24,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-05-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 4,
@@ -41,7 +35,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-07-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 5,
@@ -52,7 +46,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 6,
@@ -63,7 +57,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-01-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 7,
@@ -74,7 +68,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-05-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-21 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 8,
@@ -85,7 +79,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-10-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 9,
@@ -96,7 +90,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-05-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 10,
@@ -107,7 +101,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-01-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 11,
@@ -118,7 +112,7 @@
     "tecnica": "Madera",
     "created_at": "2023-12-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 12,
@@ -129,7 +123,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-03-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 13,
@@ -140,7 +134,7 @@
     "tecnica": "Madera",
     "created_at": "2023-04-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 14,
@@ -151,7 +145,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-10-08 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 15,
@@ -162,7 +156,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-01-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 16,
@@ -173,7 +167,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-11-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 17,
@@ -184,7 +178,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-09-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 18,
@@ -195,7 +189,7 @@
     "tecnica": "Madera",
     "created_at": "2023-10-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 19,
@@ -206,7 +200,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-05-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 20,
@@ -217,7 +211,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-06-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 21,
@@ -228,7 +222,7 @@
     "tecnica": "Resina",
     "created_at": "2023-02-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 22,
@@ -239,7 +233,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-07-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 23,
@@ -250,7 +244,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-05-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 24,
@@ -261,7 +255,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-03-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 25,
@@ -272,7 +266,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 26,
@@ -283,7 +277,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-02-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 27,
@@ -294,7 +288,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-10-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 28,
@@ -305,7 +299,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-07-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 29,
@@ -316,7 +310,7 @@
     "tecnica": "Granito",
     "created_at": "2023-01-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 30,
@@ -327,7 +321,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-01-08 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 31,
@@ -338,7 +332,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-03-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 32,
@@ -349,7 +343,7 @@
     "tecnica": "Granito",
     "created_at": "2023-09-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 33,
@@ -360,7 +354,7 @@
     "tecnica": "Resina",
     "created_at": "2023-07-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 34,
@@ -371,7 +365,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-10-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 35,
@@ -382,7 +376,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-05-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 36,
@@ -393,7 +387,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-05-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 37,
@@ -404,7 +398,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-08-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 38,
@@ -415,7 +409,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-02-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 39,
@@ -426,7 +420,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-02-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 40,
@@ -437,7 +431,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-02-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 41,
@@ -448,7 +442,7 @@
     "tecnica": "Resina",
     "created_at": "2023-12-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 42,
@@ -459,7 +453,7 @@
     "tecnica": "Madera",
     "created_at": "2023-04-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 43,
@@ -470,7 +464,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-12-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 44,
@@ -481,7 +475,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 45,
@@ -492,7 +486,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-06-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 46,
@@ -503,7 +497,7 @@
     "tecnica": "Madera",
     "created_at": "2023-07-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 47,
@@ -514,7 +508,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-06-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 48,
@@ -525,7 +519,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-08-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 49,
@@ -536,7 +530,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-11-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-21 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 50,
@@ -547,7 +541,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-10-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 51,
@@ -558,7 +552,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-08-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 52,
@@ -569,7 +563,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-06-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 53,
@@ -580,7 +574,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-06-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 54,
@@ -591,7 +585,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-03-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 55,
@@ -602,7 +596,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-07-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-21 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 56,
@@ -613,7 +607,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-07-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 57,
@@ -624,7 +618,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-05-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 58,
@@ -635,7 +629,7 @@
     "tecnica": "Resina",
     "created_at": "2023-04-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 59,
@@ -646,7 +640,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-08-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 60,
@@ -657,7 +651,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-12-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-24 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 61,
@@ -668,7 +662,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-05-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 62,
@@ -679,7 +673,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-08-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 63,
@@ -690,7 +684,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-09-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 64,
@@ -701,7 +695,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-08-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 65,
@@ -712,7 +706,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-05-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 66,
@@ -723,7 +717,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-08-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 67,
@@ -734,7 +728,7 @@
     "tecnica": "Madera",
     "created_at": "2023-08-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 68,
@@ -745,7 +739,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-09-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 69,
@@ -756,7 +750,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-06-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 70,
@@ -767,7 +761,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-06-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 71,
@@ -778,7 +772,7 @@
     "tecnica": "Madera",
     "created_at": "2023-01-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 72,
@@ -789,7 +783,7 @@
     "tecnica": "Madera",
     "created_at": "2023-03-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 73,
@@ -800,7 +794,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-07-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 74,
@@ -811,7 +805,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-12-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 75,
@@ -822,7 +816,7 @@
     "tecnica": "Madera",
     "created_at": "2023-02-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 76,
@@ -833,7 +827,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-09-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 77,
@@ -844,7 +838,7 @@
     "tecnica": "Madera",
     "created_at": "2023-02-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 78,
@@ -855,7 +849,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 79,
@@ -866,7 +860,7 @@
     "tecnica": "Madera",
     "created_at": "2023-03-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 80,
@@ -877,7 +871,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-08-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 81,
@@ -888,7 +882,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-02-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 82,
@@ -899,7 +893,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-06-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 83,
@@ -910,7 +904,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-02-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 84,
@@ -921,7 +915,7 @@
     "tecnica": "Madera",
     "created_at": "2023-02-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 85,
@@ -932,7 +926,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-09-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 86,
@@ -943,7 +937,7 @@
     "tecnica": "Resina",
     "created_at": "2023-12-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 87,
@@ -954,7 +948,7 @@
     "tecnica": "Granito",
     "created_at": "2023-02-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 88,
@@ -965,7 +959,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-11-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 89,
@@ -976,7 +970,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 90,
@@ -987,7 +981,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-07-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 91,
@@ -998,7 +992,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-12-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 92,
@@ -1009,7 +1003,7 @@
     "tecnica": "Resina",
     "created_at": "2023-05-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 93,
@@ -1020,7 +1014,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-12-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 94,
@@ -1031,7 +1025,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-06-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 95,
@@ -1042,7 +1036,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-06-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 96,
@@ -1053,7 +1047,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 97,
@@ -1064,7 +1058,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-11-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 98,
@@ -1075,7 +1069,7 @@
     "tecnica": "Granito",
     "created_at": "2023-11-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 99,
@@ -1086,7 +1080,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 100,
@@ -1097,7 +1091,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-06-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 101,
@@ -1108,7 +1102,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 102,
@@ -1119,7 +1113,7 @@
     "tecnica": "Granito",
     "created_at": "2023-12-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 103,
@@ -1130,7 +1124,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-09-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 104,
@@ -1141,7 +1135,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-10-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 105,
@@ -1152,7 +1146,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-09-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 106,
@@ -1163,7 +1157,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-01-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-24 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 107,
@@ -1174,7 +1168,7 @@
     "tecnica": "Granito",
     "created_at": "2023-12-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 108,
@@ -1185,7 +1179,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-12-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 109,
@@ -1196,7 +1190,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-01-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-21 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 110,
@@ -1207,7 +1201,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-12-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 111,
@@ -1218,7 +1212,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-11-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 112,
@@ -1229,7 +1223,7 @@
     "tecnica": "Madera",
     "created_at": "2023-01-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 113,
@@ -1240,7 +1234,7 @@
     "tecnica": "Madera",
     "created_at": "2023-11-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 114,
@@ -1251,7 +1245,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-11-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 115,
@@ -1262,7 +1256,7 @@
     "tecnica": "Granito",
     "created_at": "2023-04-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 116,
@@ -1273,7 +1267,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 117,
@@ -1284,7 +1278,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-02-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 118,
@@ -1295,7 +1289,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-09-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 119,
@@ -1306,7 +1300,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-10-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 120,
@@ -1317,7 +1311,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-12-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 121,
@@ -1328,7 +1322,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-12-07 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 122,
@@ -1339,7 +1333,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-12-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 123,
@@ -1350,7 +1344,7 @@
     "tecnica": "Madera",
     "created_at": "2023-11-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 124,
@@ -1361,7 +1355,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-03-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 125,
@@ -1372,7 +1366,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-06-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 126,
@@ -1383,7 +1377,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-12-08 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 127,
@@ -1394,7 +1388,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-02-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 128,
@@ -1405,7 +1399,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-07-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 129,
@@ -1416,7 +1410,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-05-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 130,
@@ -1427,7 +1421,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-03-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 131,
@@ -1438,7 +1432,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-09-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 132,
@@ -1449,7 +1443,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-02-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 133,
@@ -1460,7 +1454,7 @@
     "tecnica": "Resina",
     "created_at": "2023-07-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 134,
@@ -1471,7 +1465,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-09-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 135,
@@ -1482,7 +1476,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-11-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 136,
@@ -1493,7 +1487,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-01-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 137,
@@ -1504,7 +1498,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-08-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 138,
@@ -1515,7 +1509,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-09-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 139,
@@ -1526,7 +1520,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-06-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 140,
@@ -1537,7 +1531,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-01-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 141,
@@ -1548,7 +1542,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-11-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 142,
@@ -1559,7 +1553,7 @@
     "tecnica": "Granito",
     "created_at": "2023-08-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 143,
@@ -1570,7 +1564,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-11-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 144,
@@ -1581,7 +1575,7 @@
     "tecnica": "Granito",
     "created_at": "2023-09-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 145,
@@ -1592,7 +1586,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-02-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 146,
@@ -1603,7 +1597,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-01-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 147,
@@ -1614,7 +1608,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-01-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 148,
@@ -1625,7 +1619,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-04-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 149,
@@ -1636,7 +1630,7 @@
     "tecnica": "Resina",
     "created_at": "2023-11-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 150,
@@ -1647,7 +1641,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-03-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 151,
@@ -1658,7 +1652,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-02-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 152,
@@ -1669,7 +1663,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-07-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 153,
@@ -1680,7 +1674,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-10-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 154,
@@ -1691,7 +1685,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-05-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 155,
@@ -1702,7 +1696,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-03-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 156,
@@ -1713,7 +1707,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 157,
@@ -1724,7 +1718,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 158,
@@ -1735,7 +1729,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-08-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 159,
@@ -1746,7 +1740,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 160,
@@ -1757,7 +1751,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-04-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 161,
@@ -1768,7 +1762,7 @@
     "tecnica": "Granito",
     "created_at": "2023-05-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 162,
@@ -1779,7 +1773,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-11-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 163,
@@ -1790,7 +1784,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-07-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 164,
@@ -1801,7 +1795,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-08-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 165,
@@ -1812,7 +1806,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-07-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 166,
@@ -1823,7 +1817,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-10-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 167,
@@ -1834,7 +1828,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-12-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 168,
@@ -1845,7 +1839,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-10-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 169,
@@ -1856,7 +1850,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-07-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 170,
@@ -1867,7 +1861,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-06-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 171,
@@ -1878,7 +1872,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-02-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 172,
@@ -1889,7 +1883,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-02-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 173,
@@ -1900,7 +1894,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 174,
@@ -1911,7 +1905,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-04-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 175,
@@ -1922,7 +1916,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-05-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 176,
@@ -1933,7 +1927,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-03-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 177,
@@ -1944,7 +1938,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 178,
@@ -1955,7 +1949,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-12-08 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 179,
@@ -1966,7 +1960,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-24 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 180,
@@ -1977,7 +1971,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-01-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 181,
@@ -1988,7 +1982,7 @@
     "tecnica": "Resina",
     "created_at": "2023-06-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 182,
@@ -1999,7 +1993,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-05-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 183,
@@ -2010,7 +2004,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-09-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 184,
@@ -2021,7 +2015,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-12-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 185,
@@ -2032,7 +2026,7 @@
     "tecnica": "Resina",
     "created_at": "2023-11-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 186,
@@ -2043,7 +2037,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-01-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 187,
@@ -2054,7 +2048,7 @@
     "tecnica": "Resina",
     "created_at": "2023-04-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 188,
@@ -2065,7 +2059,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-07-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 189,
@@ -2076,7 +2070,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-09-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 190,
@@ -2087,7 +2081,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-10-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 191,
@@ -2098,7 +2092,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-09-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 192,
@@ -2109,7 +2103,7 @@
     "tecnica": "Resina",
     "created_at": "2023-05-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 193,
@@ -2120,7 +2114,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-05-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 194,
@@ -2131,7 +2125,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-07-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 195,
@@ -2142,7 +2136,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-03-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 196,
@@ -2153,7 +2147,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-04-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 197,
@@ -2164,7 +2158,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-11-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 198,
@@ -2175,7 +2169,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-06-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 199,
@@ -2186,7 +2180,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 200,
@@ -2197,7 +2191,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-12-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 201,
@@ -2208,7 +2202,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-02-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 202,
@@ -2219,7 +2213,7 @@
     "tecnica": "Resina",
     "created_at": "2023-02-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 203,
@@ -2230,7 +2224,7 @@
     "tecnica": "Granito",
     "created_at": "2023-12-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 204,
@@ -2241,7 +2235,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-03-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 205,
@@ -2252,7 +2246,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-06-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 206,
@@ -2263,7 +2257,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 207,
@@ -2274,7 +2268,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-04-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 208,
@@ -2285,7 +2279,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-05-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 209,
@@ -2296,7 +2290,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-11-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 210,
@@ -2307,7 +2301,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 211,
@@ -2318,7 +2312,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-02-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 212,
@@ -2329,7 +2323,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-07-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 213,
@@ -2340,7 +2334,7 @@
     "tecnica": "Granito",
     "created_at": "2023-02-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 214,
@@ -2351,7 +2345,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-08-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 215,
@@ -2362,7 +2356,7 @@
     "tecnica": "Granito",
     "created_at": "2023-06-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 216,
@@ -2373,7 +2367,7 @@
     "tecnica": "Madera",
     "created_at": "2023-02-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 217,
@@ -2384,7 +2378,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-06-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 218,
@@ -2395,7 +2389,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 219,
@@ -2406,7 +2400,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 220,
@@ -2417,7 +2411,7 @@
     "tecnica": "Resina",
     "created_at": "2023-10-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 221,
@@ -2428,7 +2422,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-03-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 222,
@@ -2439,7 +2433,7 @@
     "tecnica": "Madera",
     "created_at": "2023-10-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 223,
@@ -2450,7 +2444,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 224,
@@ -2461,7 +2455,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-05-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 225,
@@ -2472,7 +2466,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-03-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 226,
@@ -2483,7 +2477,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-06-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 227,
@@ -2494,7 +2488,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-24 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 228,
@@ -2505,7 +2499,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-08-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 229,
@@ -2516,7 +2510,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-11-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 230,
@@ -2527,7 +2521,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-07-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 231,
@@ -2538,7 +2532,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 232,
@@ -2549,7 +2543,7 @@
     "tecnica": "Granito",
     "created_at": "2023-08-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 233,
@@ -2560,7 +2554,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-04-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 234,
@@ -2571,7 +2565,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-08-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 235,
@@ -2582,7 +2576,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 236,
@@ -2593,7 +2587,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-08-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 237,
@@ -2604,7 +2598,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-10-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 238,
@@ -2615,7 +2609,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-01-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 239,
@@ -2626,7 +2620,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-11-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 240,
@@ -2637,7 +2631,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 241,
@@ -2648,7 +2642,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-01-31 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 242,
@@ -2659,7 +2653,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-05-07 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 243,
@@ -2670,7 +2664,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 244,
@@ -2681,7 +2675,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-10-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 245,
@@ -2692,7 +2686,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-04-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 246,
@@ -2703,7 +2697,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-08-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 247,
@@ -2714,7 +2708,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-04-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 248,
@@ -2725,7 +2719,7 @@
     "tecnica": "Madera",
     "created_at": "2023-10-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 249,
@@ -2736,7 +2730,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-11-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 250,
@@ -2747,7 +2741,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-06-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 251,
@@ -2758,7 +2752,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 252,
@@ -2769,7 +2763,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-01-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 253,
@@ -2780,7 +2774,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-04-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 254,
@@ -2791,7 +2785,7 @@
     "tecnica": "Granito",
     "created_at": "2023-08-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 255,
@@ -2802,7 +2796,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-09-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 256,
@@ -2813,7 +2807,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-08-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 257,
@@ -2824,7 +2818,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-12-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 258,
@@ -2835,7 +2829,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-12-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 259,
@@ -2846,7 +2840,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-05-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 260,
@@ -2857,7 +2851,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-02-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 261,
@@ -2868,7 +2862,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-01-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 262,
@@ -2879,7 +2873,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-03-07 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 263,
@@ -2890,7 +2884,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-01-13 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 264,
@@ -2901,7 +2895,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-03-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 265,
@@ -2912,7 +2906,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-10-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 266,
@@ -2923,7 +2917,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-09-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 267,
@@ -2934,7 +2928,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 268,
@@ -2945,7 +2939,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-07-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 269,
@@ -2956,7 +2950,7 @@
     "tecnica": "Resina",
     "created_at": "2023-11-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 270,
@@ -2967,7 +2961,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-04-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 271,
@@ -2978,7 +2972,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-07-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 272,
@@ -2989,7 +2983,7 @@
     "tecnica": "Granito",
     "created_at": "2023-11-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 273,
@@ -3000,7 +2994,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-04-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 274,
@@ -3011,7 +3005,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-06-17 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 275,
@@ -3022,7 +3016,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-09-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 276,
@@ -3033,7 +3027,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 277,
@@ -3044,7 +3038,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-10 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 278,
@@ -3055,7 +3049,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-01-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 279,
@@ -3066,7 +3060,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-11-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 280,
@@ -3077,7 +3071,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-02-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 281,
@@ -3088,7 +3082,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-07-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-04 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 282,
@@ -3099,7 +3093,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-10-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 283,
@@ -3110,7 +3104,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-07-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 284,
@@ -3121,7 +3115,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-08-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-02 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 285,
@@ -3132,7 +3126,7 @@
     "tecnica": "Granito",
     "created_at": "2023-12-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-29 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 286,
@@ -3143,7 +3137,7 @@
     "tecnica": "Madera",
     "created_at": "2023-09-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 287,
@@ -3154,7 +3148,7 @@
     "tecnica": "Resina",
     "created_at": "2023-10-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 288,
@@ -3165,7 +3159,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 289,
@@ -3176,7 +3170,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-12-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 290,
@@ -3187,7 +3181,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-11-24 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 291,
@@ -3198,7 +3192,7 @@
     "tecnica": "Resina",
     "created_at": "2023-03-19 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 292,
@@ -3209,7 +3203,7 @@
     "tecnica": "Resina",
     "created_at": "2023-01-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 293,
@@ -3220,7 +3214,7 @@
     "tecnica": "Madera",
     "created_at": "2023-05-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 294,
@@ -3231,7 +3225,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-04-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 295,
@@ -3242,7 +3236,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 296,
@@ -3253,7 +3247,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-07-28 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 297,
@@ -3264,7 +3258,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-04-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 298,
@@ -3275,7 +3269,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-04-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 299,
@@ -3286,7 +3280,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-07-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 300,
@@ -3297,7 +3291,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 301,
@@ -3308,7 +3302,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-04-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-12 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 302,
@@ -3319,7 +3313,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 303,
@@ -3330,7 +3324,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-09-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-05 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 304,
@@ -3341,7 +3335,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-10-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-21 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 305,
@@ -3352,7 +3346,7 @@
     "tecnica": "Resina",
     "created_at": "2023-05-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 306,
@@ -3363,7 +3357,7 @@
     "tecnica": "Madera",
     "created_at": "2023-11-15 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 307,
@@ -3374,7 +3368,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-11-05 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-30 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 308,
@@ -3385,7 +3379,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-08-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 309,
@@ -3396,7 +3390,7 @@
     "tecnica": "M\u00e1rmol",
     "created_at": "2023-05-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 310,
@@ -3407,7 +3401,7 @@
     "tecnica": "Granito",
     "created_at": "2023-08-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 311,
@@ -3418,7 +3412,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-10-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-28 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 312,
@@ -3429,7 +3423,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-10-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 313,
@@ -3440,7 +3434,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-11-07 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-11 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 314,
@@ -3451,7 +3445,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-06-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-08-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 315,
@@ -3462,7 +3456,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-06-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 316,
@@ -3473,7 +3467,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 317,
@@ -3484,7 +3478,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-01-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 318,
@@ -3495,7 +3489,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-01-09 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 319,
@@ -3506,7 +3500,7 @@
     "tecnica": "Granito",
     "created_at": "2023-09-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 320,
@@ -3517,7 +3511,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-05-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 321,
@@ -3528,7 +3522,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-05-11 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-16 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 322,
@@ -3539,7 +3533,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-01-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-02-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 323,
@@ -3550,7 +3544,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-09-06 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 324,
@@ -3561,7 +3555,7 @@
     "tecnica": "Resina",
     "created_at": "2023-03-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 325,
@@ -3572,7 +3566,7 @@
     "tecnica": "Granito",
     "created_at": "2023-12-25 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 326,
@@ -3583,7 +3577,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-05-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-14 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 327,
@@ -3594,7 +3588,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-05-18 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-06-19 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 328,
@@ -3605,7 +3599,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-11-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-01 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 329,
@@ -3616,7 +3610,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-10 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 330,
@@ -3627,7 +3621,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-01-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 331,
@@ -3638,7 +3632,7 @@
     "tecnica": "Resina",
     "created_at": "2023-05-30 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 332,
@@ -3649,7 +3643,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-12-22 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-03-15 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 333,
@@ -3660,7 +3654,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-20 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 334,
@@ -3671,7 +3665,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-05-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-07-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 335,
@@ -3682,7 +3676,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-02-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-08 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 336,
@@ -3693,7 +3687,7 @@
     "tecnica": "Resina",
     "created_at": "2023-08-21 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-31 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 337,
@@ -3704,7 +3698,7 @@
     "tecnica": "Bronce",
     "created_at": "2023-10-02 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-09 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 338,
@@ -3715,7 +3709,7 @@
     "tecnica": "Granito",
     "created_at": "2023-10-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-25 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 339,
@@ -3726,7 +3720,7 @@
     "tecnica": "Granito",
     "created_at": "2023-08-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-13 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 340,
@@ -3737,7 +3731,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-11-23 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-12-27 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 341,
@@ -3748,7 +3742,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-03-27 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-05-23 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 342,
@@ -3759,7 +3753,7 @@
     "tecnica": "Aluminio",
     "created_at": "2023-09-29 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-26 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 343,
@@ -3770,7 +3764,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-10-12 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-11-17 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 344,
@@ -3781,7 +3775,7 @@
     "tecnica": "Chapa",
     "created_at": "2023-06-26 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-09-03 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 345,
@@ -3792,7 +3786,7 @@
     "tecnica": "Vidrio",
     "created_at": "2023-08-04 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 346,
@@ -3803,7 +3797,7 @@
     "tecnica": "Hierro forjado",
     "created_at": "2023-12-14 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-02-07 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 347,
@@ -3814,7 +3808,7 @@
     "tecnica": "Terracota",
     "created_at": "2023-01-01 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-03-22 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 348,
@@ -3825,7 +3819,7 @@
     "tecnica": "Cer\u00e1mica",
     "created_at": "2023-02-20 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-04-06 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 349,
@@ -3836,7 +3830,7 @@
     "tecnica": "Piedra caliza",
     "created_at": "2023-12-03 00:00:00",
     "updated_at": null,
-    "deleted_at": "2024-01-18 00:00:00"
+    "deleted_at": null
   },
   {
     "id": 350,
@@ -3847,6 +3841,6 @@
     "tecnica": "Granito",
     "created_at": "2023-09-16 00:00:00",
     "updated_at": null,
-    "deleted_at": "2023-10-28 00:00:00"
+    "deleted_at": null
   }
 ]
