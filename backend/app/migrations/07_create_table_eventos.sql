@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS Eventos (
     fecha_inicio DATETIME NOT NULL,
     fecha_fin DATETIME NOT NULL,
     lugar VARCHAR(255) NOT NULL,
-    descripcion VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
     tematica VARCHAR(255) NOT NULL,
 
     created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,

@@ -5,6 +5,7 @@ from os import path
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
 from app.controllers.obrasController import ObraController
+from app.models.obrasModel import ObrasModel
 
 
 def seed_table(model, json_file: str, db: Session, date_fields: list = []):
@@ -129,6 +130,12 @@ def insert_usuarios(model, db: Session):
 def seed_imagenes(model, db: Session):
     # Verificar si la tabla ya tiene datos
     if db.query(model).first() is None:
+        # Obtener las obras existentes primero
+        obras_existentes = db.query(ObrasModel).all()
+        if not obras_existentes:
+            print("No hay obras en la base de datos. Saltando inserción de imágenes.")
+            return
+
         # Cargar imágenes desde el archivo JSON
         json_path = path.join(path.dirname(__file__), "data", "imagenes_obras.json")
         with open(json_path, "r", encoding="utf-8") as file:
@@ -136,8 +143,8 @@ def seed_imagenes(model, db: Session):
             imagenes_cloudinary = data["imagenes_cloudinary"]
 
         records = []
-        # Para cada obra
-        for obra_id in range(1, 351):
+        # Iterar sobre las obras existentes en lugar de un rango fijo
+        for obra in obras_existentes:
             # Número aleatorio de imágenes para esta obra (entre 5 y 10)
             num_imagenes = random.randint(5, 10)
 
@@ -149,19 +156,24 @@ def seed_imagenes(model, db: Session):
                 record = model(
                     url=imagen["url"],
                     public_id=imagen["public_id"],
-                    id_obra=obra_id,
+                    id_obra=obra.id,  # Usar el ID real de la obra
                     etapa_obra=random.choice(["antes", "durante", "despues"]),
                 )
                 records.append(record)
 
-        # Insertar los registros en la base de datos
-        db.add_all(records)
-        db.commit()
-        print(f"{len(records)} imágenes insertadas en la tabla {model.__tablename__}.")
+        try:
+            # Insertar los registros en la base de datos
+            db.add_all(records)
+            db.commit()
+            print(f"{len(records)} imágenes insertadas en la tabla {model.__tablename__}.")
+        except Exception as e:
+            db.rollback()
+            print(f"Error al insertar imágenes: {e}")
     else:
         print(
             f"La tabla {model.__tablename__} ya tiene datos, no se agregaron nuevas imágenes."
         )
+
 
 def seed_votos(model, db: Session):
     if db.query(model).first() is None:

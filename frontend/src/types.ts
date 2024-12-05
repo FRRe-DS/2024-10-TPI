@@ -89,3 +89,14 @@ export interface Usuario {
   nombre: string;
   apellido: string;
 }
+
+
+export interface Evento {
+  edicion: number;
+  nombre: string;
+  fecha_inicio: string;
+  fecha_fin: string;
+  lugar: string;
+  descripcion: string;
+  tematica: string;
+}

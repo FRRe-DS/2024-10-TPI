@@ -2,36 +2,27 @@
 
 import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-export function Autorcarousel() {
-  const images = [
-    "/parque2DeFebrero/imagen1.jpg",
-    "/parque2DeFebrero/imagen2.jpg",
-    "/parque2DeFebrero/imagen3.jpg",
-    "/parque2DeFebrero/imagen4.jpg",
-    "/parque2DeFebrero/imagen5.jpg",
-  ];
+interface CarouselProps {
+  images: string[];
+}
 
+export function ImageCarousel({ images }: CarouselProps) {
   return (
-    <div className="relative w-full h-[500px] border-t-2 border-black">
+    <div className="relative w-full h-[500px]">
       <div className="relative z-10">
         <Carousel
-          plugins={[Autoplay()]}
-          opts={{
-            loop: false,
-            align: "center",
-          }}
+          plugins={[
+            Autoplay({
+              delay: 3000,
+              stopOnInteraction: false,
+            })
+          ]}
           className="w-full h-full max-w-screen-xl mx-auto"
         >
-          <CarouselContent className="flex items-center justify-center h-full py-7">
+          <CarouselContent className="flex items-center justify-center h-full py-14">
             {images.map((image, index) => (
               <CarouselItem
                 key={index}
@@ -42,8 +33,9 @@ export function Autorcarousel() {
                     <CardContent className="w-full h-full relative p-0">
                       <img
                         src={image}
-                        alt={`Escultor ${index + 1}`}
+                        alt={`Imagen ${index + 1}`}
                         className="w-full h-full object-cover"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-black/30 hover:bg-black/0 transition-all duration-300" />
                     </CardContent>

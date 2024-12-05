@@ -7,15 +7,15 @@ import { handleGoogleLogin } from './actions';
 export default function Page() {
   const { pending } = useFormStatus();
   
-  const handleGoogleClick = async () => {
-    try {
-        const response = await handleGoogleLogin();
-        console.log("URL de redirección:", response.url);
-        window.location.href = response.url;
-    } catch (error) {
-        console.error("Error al iniciar sesión con Google:", error);
-    }
-  };
+  // const handleGoogleClick = async () => {
+  //   try {
+  //       const response = await handleGoogleLogin();
+  //       console.log("URL de redirección:", response.url);
+  //       window.location.href = response.url;
+  //   } catch (error) {
+  //       console.error("Error al iniciar sesión con Google:", error);
+  //   }
+  // };
   
   return (
     <div className="mx-auto flex p-5 flex-col justify-center items-center">
@@ -45,14 +45,14 @@ export default function Page() {
           </button>
 
           {/* boton de google */}
-          <button
+          {/* <button
             type="button"
             onClick={handleGoogleClick}
             className="flex items-center justify-center gap-2 w-full bg-white text-gray-700 p-2 rounded border border-gray-300 hover:bg-gray-50"
           >
             <img src="/google.svg" alt="Google logo" className="w-5 h-5" />
             Continuar con Google
-          </button>
+          </button> */}
 
         </form>
         <Link href="/register" className="mt-4 text-blue-500 underline">
