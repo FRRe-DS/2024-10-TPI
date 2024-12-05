@@ -31,12 +31,12 @@ const items = [
   },
   {
     title: "Escultores",
-    url: "/admin/sculptors",
+    url: "/admin/escultores",
     icon: User,
   },
   {
     title: "Esculturas",
-    url: "/admin/sculptures",
+    url: "/admin/esculturas",
     icon: Search,
   },
   // {

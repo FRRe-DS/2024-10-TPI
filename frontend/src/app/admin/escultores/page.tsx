@@ -2,15 +2,15 @@
 import { useEffect, useState } from "react";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-import { getAutores } from "@/app/autores/action";
 import { Autor } from "@/types";
+import { getAutores } from "./action";
 
 export default async function page() {
   const [autores, setAutores] = useState<Autor[]>([]); // Estado para almacenar las esculturas
 
   const fetchData = async () => {
     const autores = await getAutores();
-    setAutores(autores || []);
+    setAutores(autores);
   }
   useEffect(() => {
     fetchData();

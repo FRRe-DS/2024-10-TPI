@@ -1,19 +1,21 @@
 "use server";
 import { Eventos } from "@/types";
 
-export const getEventos = async () => {
+const handleResponse = async (response: Response) => {
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(`Error: ${errorData.message || response.statusText}`);
+  }
+  return response.json();
+};
+
+export const getEventos = async (pageNumber = 1) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API}/eventos`;
-    const response = await fetch(url, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    });
-    const data = (await response.json()) as Eventos[];
+    const url = `${process.env.NEXT_PUBLIC_API}/eventos?page=${pageNumber}`;
+    const response = await fetch(url)
+    const data = (await handleResponse(response)).items as Eventos[];
     return data;
-  } catch (error: unknown) {
+  } catch (error) {
     console.error(error);
     throw new Error(`Error: ${error}`);
   }
@@ -29,9 +31,9 @@ export const createEvento = async (evento: Eventos) => {
       },
       body: JSON.stringify(evento),
     });
-    const data = (await response.json()) as Eventos;
+    const data = await handleResponse(response) as Eventos;
     return data;
-  } catch (error: unknown) {
+  } catch (error) {
     console.error(error);
     throw new Error(`Error: ${error}`);
   }

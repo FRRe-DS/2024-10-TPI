@@ -20,8 +20,8 @@ import React from "react";
 // Mapeo de rutas a nombres de páginas
 const pageNames: Record<string, string> = {
   "/admin/events": "Eventos",
-  "/admin/sculptors": "Escultores",
-  "/admin/sculptures": "Esculturas",
+  "/admin/escultores": "Escultores",
+  "/admin/esculturas": "Esculturas",
 
   // Agrega más rutas según sea necesario
 };

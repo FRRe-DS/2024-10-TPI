@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
-import { getEventos } from "./action";
 import { Calendar } from "@/components/ui/calendar";
 import { Eventos } from "@/types";
 import { Button } from "@/components/ui/button";
 import { EventoModal } from "../Component/modalEvent";
+import { getEventos } from "./action";
 
 export default function Page() {
   const [data, setData] = useState<Eventos[]>([]);
@@ -23,7 +23,7 @@ export default function Page() {
   }, []);
 
   const handleSave = (nuevoEvento: Eventos) => {
-    setData((prev) => [...prev, nuevoEvento]);
+      setData((prev) => (Array.isArray(prev) ? [...prev, nuevoEvento] : [nuevoEvento]));
   };
 
   return (

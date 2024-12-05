@@ -153,12 +153,7 @@ export function DataTable<TData, TValue>({
                   {row.getVisibleCells().map((cell) => (
                     <TableCell
                       key={cell.id}
-                      className={
-                        cell.column.id === "votos" ||
-                        cell.column.id === "escultor"
-                          ? "text-center"
-                          : ""
-                      }
+                     
                     >
                       {flexRender(
                         cell.column.columnDef.cell,

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Label, Pie, PieChart } from "recharts";
 import {
   Card,
@@ -12,6 +12,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
+import { Button } from "../ui/button";
 
 // Configuración de colores
 const chartConfig = {
@@ -26,14 +27,26 @@ interface CircleDataProps {
 }
 
 export function CircleData({ data }: CircleDataProps) {
+  const [showTopThree, setShowTopThree] = useState(true);
+
+  const filteredData = useMemo(() => {
+    if (showTopThree) {
+      return [...data].sort((a, b) => b.Votos - a.Votos).slice(0, 5);
+    }
+    return data;
+  }, [data, showTopThree]);
+
   const totalVotos = useMemo(() => {
-    return data.reduce((acc, curr) => acc + curr.Votos, 0);
-  }, [data]);
+    return filteredData.reduce((acc, curr) => acc + curr.Votos, 0);
+  }, [filteredData]);
 
   return (
     <Card className="flex flex-col w-96">
       <CardHeader className="items-center pb-0">
         <CardTitle>Obras más votadas</CardTitle>
+        <Button onClick={() => setShowTopThree(!showTopThree)}>
+          {showTopThree ? "Ver todas las obras " : "Ver top 5 "}
+        </Button>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -46,11 +59,11 @@ export function CircleData({ data }: CircleDataProps) {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={data}
+              data={filteredData}
               dataKey="Votos"
               nameKey="nombre"
               innerRadius={60}
-              strokeWidth={5}
+              strokeWidth={6}
             >
               <Label
                 content={({ viewBox }) => {
