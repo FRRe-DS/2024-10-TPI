@@ -1,55 +1,41 @@
+// acá va el fetch de las esculturas
 "use server";
-import { EsculturaPaginatedResponse } from "@/types";
+import { Escultura } from "@/types";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 
-export const getEsculturas = async (
-  pageNumber = 1,
-): Promise<EsculturaPaginatedResponse> => {
-  const url = `${process.env.NEXT_PUBLIC_API}/obras?page=${pageNumber}`;
-  const response = await fetch(url, {
-    method: "GET", // Cambiado a GET para mayor compatibilidad
-    cache: "no-store", // Evitamos el caché
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-  });
+export async function getUser() {
+  const cookiesStore = cookies();
+  const userString = cookiesStore.get("user");
+  const user = userString ? JSON.parse(userString?.value) : null;
+  return user;
+}
 
-  console.log(response);
-  if (!response.ok) {
-    throw new Error(`Error ${response.status}: ${response.statusText}`);
+export const getEsculturaId = async (id: string) => {
+  try {
+    const url = `${process.env.NEXT_PUBLIC_API}/obras/${id}`;
+    const response = await fetch(url);
+    const data = (await response.json()) as Escultura;
+    console.log(data);
+    return data;
+  } catch (error: unknown) {
+    console.error(error);
+    throw new Error(`Error: ${error}`);
   }
-
-  return response.json();
-};
-
-export const getQRToken = async () => {
-  const url = `${process.env.NEXT_PUBLIC_API}/qr`;
-  const response = await fetch(url);
-
-  console.log(response);
-  if (!response.ok) {
-    throw new Error(`Error ${response.status}: ${response.statusText}`);
-  }
-
-  return response.json();
 };
 
 export const isValidQRToken = async (token: string) => {
   const url = `${process.env.NEXT_PUBLIC_API}/qr/verify?token=${token}`;
   const response = await fetch(url);
-
-  if (!response.ok) {
+  if (!response?.ok) {
     throw new Error(`Error ${response.status}: ${response.statusText}`);
   }
-
-  return response.json();
+  const data = await response.json();
+  console.log("EL DATA", data);
+  return data?.expirado;
 };
 
-export const getVote = async (
-  esculturaId: number,
-): Promise<{ rating: number } | null> => {
+export const getVote = async (esculturaId: number) => {
   try {
     const userString = cookies().get("user");
     const user = userString ? JSON.parse(userString?.value) : null;
@@ -72,15 +58,11 @@ export const getVote = async (
       rating: data.estrellas,
     };
   } catch (error) {
-    console.error("Error detallado:", error);
     return null;
   }
 };
 
-export const postVote = async (
-  esculturaId: number,
-  rating: number,
-): Promise<any> => {
+export const postVote = async (esculturaId: number, rating: number) => {
   const cookieStore = cookies();
   const accessToken = cookieStore.get("access_token");
   const userString = cookieStore.get("user");
@@ -96,7 +78,7 @@ export const postVote = async (
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${accessToken?.value}`,
+        Authorization: `Bearer ${accessToken.value}`,
       },
       body: JSON.stringify({
         usuario_id: user?.id,

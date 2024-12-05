@@ -1,7 +1,7 @@
 import { getEsculturas } from "./action";
 import type { Escultura, EsculturaPaginatedResponse } from "@/types";
 import ClientPage from "./ClientPage";
-import { getUser } from "./[id]/[time]/action";
+import { getUser } from "./[id]/[token]/action";
 
 export default async function Page() {
   const esculturasR: EsculturaPaginatedResponse = await getEsculturas();

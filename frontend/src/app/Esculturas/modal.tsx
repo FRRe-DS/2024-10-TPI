@@ -200,11 +200,6 @@ export default function Modal({
                   </p>
                 </div>
               </div>
-              {usuario?.rol === "visualizadorQR" && (
-                <div className="mt-8">
-                  <QRCode id={escultura.id} />
-                </div>
-              )}
 
               {/* Información del autor */}
               <div className="mt-8">
@@ -217,6 +212,11 @@ export default function Modal({
                 </div>
               </div>
             </div>
+              {usuario?.rol === "visualizadorQR" && (
+                <div className="mt-8">
+                  <QRCode id={escultura.id} />
+                </div>
+              )}
 
             {/* Sistema de rating */}
             {/* <div className="absolute bottom-0 right-0 w-full bg-white border-t border-gray-200 p-4 md:p-6"> */}
