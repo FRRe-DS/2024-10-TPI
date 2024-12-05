@@ -99,39 +99,34 @@ export const columns: ColumnDef<Escultura>[] = [
     accessorKey: "imagenes",
     header: "Imágenes",
     cell: ({ row }) => {
-      const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
       return (
         <>
-          <Dialog open={!!selectedImage} onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}>
+          <Dialog>
             <DialogTrigger asChild>
-              <Button onClick={() => setSelectedImage(row.original.imagenes[0]?.url)}>
+              <Button>
                 Ver
               </Button>
             </DialogTrigger>
-            {selectedImage && (
-              <DialogContent>
-                <DialogHeader>
-                  <DialogTitle>Escultura {row.original.nombre_obra}</DialogTitle>
-                  
-                </DialogHeader>
-                <div className="flex justify-center">
-                  <img
-                    src={selectedImage}
-                    alt="Detalle de imagen"
-                    className="max-w-full max-h-96"
-                  />
-                </div>
-                <DialogFooter>
-                  <Button variant="ghost" onClick={() => setSelectedImage(null)}>
-                    Cerrar
-                  </Button>
-                </DialogFooter>
-              </DialogContent>
-            )}
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Escultura {row.original.nombre_obra}</DialogTitle>
+              </DialogHeader>
+              <div className="flex justify-center">
+                <img
+                  src={row.original.imagenes[0]?.url}
+                  alt="Detalle de imagen"
+                  className="max-w-full max-h-96"
+                />
+              </div>
+              <DialogFooter>
+                <Button variant="ghost">Cerrar</Button>
+              </DialogFooter>
+            </DialogContent>
           </Dialog>
         </>
       );
+      
     },
   },
   {

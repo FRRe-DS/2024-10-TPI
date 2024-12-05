@@ -5,7 +5,7 @@ import { DataTable } from "./data-table";
 import { Autor } from "@/types";
 import { getAutores } from "./action";
 
-export default async function page() {
+export default async function Page() {
   const [autores, setAutores] = useState<Autor[]>([]); // Estado para almacenar las esculturas
 
   const fetchData = async () => {

@@ -38,7 +38,7 @@ export const EditAutorModal: React.FC<ModalProps> = ({
 //   };
 
   const handleSave = () => {
-    onUpdate(autorData.id.toString(), {
+    onUpdate(autorData.id, {
       ...autorData,
       ...formData,
     });
