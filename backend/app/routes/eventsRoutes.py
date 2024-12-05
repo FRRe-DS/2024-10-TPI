@@ -1,15 +1,20 @@
 from fastapi import APIRouter, Depends
+from fastapi_pagination import Page, Params
+from fastapi_pagination.ext.sqlalchemy import paginate
 from sqlalchemy.orm import Session
-
 from app.config.db import get_db
 from app.controllers.eventsController import EventController
-from app.dtos.eventsDto import EventCreate, EventUpdate
+from app.dtos.eventsDto import EventOut, EventCreate, EventUpdate
 
 events = APIRouter()
 
-@events.get("/eventos", tags=["eventos"])
-def get_events(db: Session = Depends(get_db)):
-    return EventController.get_events(db)
+@events.get(
+        path="/eventos",
+        response_model=Page[EventOut],
+        tags=["eventos"]
+)
+def get_events(db: Session = Depends(get_db), params: Params = Depends()):
+    return EventController.get_events(db, params)
 
 
 @events.get("/eventos/{edicion}", tags=["eventos"])

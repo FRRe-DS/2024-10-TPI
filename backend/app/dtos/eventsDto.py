@@ -41,3 +41,7 @@ class Event(EventBase):
     class Config:
         from_attributes = True
 
+class EventOut(EventBase):
+    
+    class Config:
+        from_attributes = True

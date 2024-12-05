@@ -36,7 +36,8 @@ export interface Escultura {
   nombre_obra: string;
   descripcion: string;
   tecnica: string;
-  cant_votos:number,
+  cant_votos: number;
+  puntaje_total: number;
   created_at: string;
   updated_at: string | null;
   deleted_at: string | null;

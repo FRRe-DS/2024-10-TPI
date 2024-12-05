@@ -1,19 +1,19 @@
 from datetime import datetime
 
+from sqlalchemy import or_
 from app.dtos.authorsDto import AuthorCreate, AuthorUpdate, AuthorOut
 from app.models.authorsModel import AuthorModel
 from fastapi import HTTPException
-from fastapi_pagination import paginate, set_params
-from fastapi_pagination.default import Params
+from fastapi_pagination.ext.sqlalchemy import paginate
+from fastapi_pagination import Params
 from sqlalchemy.orm import Session
 
 
 class AuthorController:
 
-    def get_authors(db: Session):
-        autores = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
-        set_params(Params(size=20))
-        return paginate(autores)
+    def get_authors(db: Session, params: Params):
+        autores = db.query(AuthorModel).filter(AuthorModel.deleted_at == None)
+        return paginate(autores, params)
 
     def get_author_by_id(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
@@ -24,7 +24,16 @@ class AuthorController:
         return author
     
     def get_author_by_name_and_lastname(nombre: str, apellido: str, db: Session):
-        author = db.query(AuthorModel).filter(AuthorModel.nombre == nombre, AuthorModel.apellido == apellido).one_or_none()
+        # Crea patrones para la búsqueda con Regex
+        nombre_pattern = f"%{nombre}%" if nombre else "%"
+        apellido_pattern = f"%{apellido}%" if apellido else "%"
+        
+        author = db.query(AuthorModel).filter(
+            or_(
+                AuthorModel.nombre.ilike(nombre_pattern),
+                AuthorModel.apellido.ilike(apellido_pattern)
+            )
+        ).filter(AuthorModel.deleted_at.is_(None)).one_or_none()
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
         elif author.deleted_at is not None:
