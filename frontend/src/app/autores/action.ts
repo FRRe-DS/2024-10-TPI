@@ -11,15 +11,16 @@ const handleResponse = async (response: Response) => {
 
 export const getAutores = async (pageNumber = 1) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_API}/autores`;
+    const url = `${process.env.NEXT_PUBLIC_API}/autores?page=${pageNumber}`;
     const response = await fetch(url);
-    const data = (await handleResponse(response)) as AutorPaginatedResponse;
+    const data = (await handleResponse(response)).items as Autor[];
     return data;
   } catch (error) {
     console.error(error);
     throw new Error(`Error fetching authors: ${error}`);
   }
 };
+
 
 export const createAutor = async (autor: Autor) => {
   try {
