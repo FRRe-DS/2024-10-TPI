@@ -15,9 +15,10 @@ export default async function page() {
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
-      <div className="w-full pr-8">
+      <div className="w-full pr-10">
         <DataTable columns={columns} data={autores} />
       </div>
     </div>

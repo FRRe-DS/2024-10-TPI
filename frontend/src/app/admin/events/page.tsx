@@ -1,35 +1,34 @@
 "use client";
+import { useEffect, useState } from "react";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { getEventos } from "./action";
 import { Calendar } from "@/components/ui/calendar";
-import { useEffect, useState } from "react";
 import { Eventos } from "@/types";
 import { Button } from "@/components/ui/button";
 import { EventoModal } from "../Component/modalEvent";
 
 export default function Page() {
-  const [data, setData] = useState<Eventos[]>([]); // Estado para almacenar las esculturas
+  const [data, setData] = useState<Eventos[]>([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  async function fetchData() {
+  const fetchData = async () => {
     const eventos = await getEventos();
     setData(eventos);
-  }
-
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [, setEventos] = useState<Eventos[]>([]);
-
-  const handleSave = (nuevoEvento: Eventos) => {
-    setEventos((prev) => [...prev, nuevoEvento]); // Agrega el nuevo evento a la lista
   };
 
   useEffect(() => {
     fetchData();
+   
   }, []);
+
+  const handleSave = (nuevoEvento: Eventos) => {
+    setData((prev) => [...prev, nuevoEvento]);
+  };
 
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
-      <div className="w-full ">
+      <div className="w-full">
         <Button
           variant="outline"
           className="mb-4"

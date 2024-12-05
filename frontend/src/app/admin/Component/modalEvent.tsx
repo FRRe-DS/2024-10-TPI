@@ -4,8 +4,6 @@ import { Eventos } from "@/types";
 import React, { useState } from "react";
 import { createEvento } from "../events/action";
 
-
-
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -23,6 +21,8 @@ export const EventoModal: React.FC<ModalProps> = ({ isOpen, onClose, onSave }) =
     tematica: "",
   });
 
+  const [error, setError] = useState<string | null>(null); // Estado para manejar errores de validación
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -31,22 +31,49 @@ export const EventoModal: React.FC<ModalProps> = ({ isOpen, onClose, onSave }) =
     }));
   };
 
+  const validateForm = (): boolean => {
+    for (const key in formData) {
+      if (formData[key as keyof Eventos] === "") {
+        setError("Por favor, completa todos los campos.");
+        return false;
+      }
+    }
+    setError(null); // Limpia el error si no hay problemas
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!validateForm()) return; // Detiene el envío si no pasa la validación
+
     try {
       const data = await createEvento(formData);
       onSave(data);
+      resetForm();
       onClose();
     } catch (error: unknown) {
       console.error(error);
+      setError("Ocurrió un error al guardar el evento.");
     }
-  }
+  };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   onSave(formData);
-  //   onClose(); // Cerrar el modal después de guardar
-  // };
+  const resetForm = () => {
+    setFormData({
+      edicion: 1,
+      nombre: "",
+      fecha_inicio: "",
+      fecha_fin: "",
+      lugar: "",
+      descripcion: "",
+      tematica: "",
+    });
+    setError(null); // Limpia errores al reiniciar el formulario
+  };
+
+  const handleClose = () => {
+    resetForm();
+    onClose();
+  };
 
   if (!isOpen) return null;
 
@@ -54,6 +81,7 @@ export const EventoModal: React.FC<ModalProps> = ({ isOpen, onClose, onSave }) =
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
       <div className="bg-white p-6 rounded-lg shadow-md w-96">
         <h2 className="text-xl font-bold mb-4">Crear Evento</h2>
+        {error && <p className="text-red-500 text-sm mb-2">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="edicion" className="block text-sm font-medium">
@@ -155,7 +183,7 @@ export const EventoModal: React.FC<ModalProps> = ({ isOpen, onClose, onSave }) =
           <div className="flex justify-end space-x-2">
             <button
               type="button"
-              onClick={onClose}
+              onClick={handleClose}
               className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300"
             >
               Cancelar

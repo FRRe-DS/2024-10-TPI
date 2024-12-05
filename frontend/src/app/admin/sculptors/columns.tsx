@@ -99,9 +99,12 @@ export const columns: ColumnDef<Autor>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => (
-      <div className="text-center">{row.getValue("fec_nac")}</div>
-    ),
+    cell: ({ row }) => {
+      const fechaNac = new Date(
+        row.getValue("fec_nac")
+      ).toLocaleDateString();
+      return <div className="capitalize text-center">{fechaNac}</div>;
+    },
   },
 
   // Columna oculta para filtrado combinado de nombre y apellido

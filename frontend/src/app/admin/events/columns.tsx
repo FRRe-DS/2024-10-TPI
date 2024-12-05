@@ -19,32 +19,41 @@ import { Eventos } from "@/types";
 
 
 export const columns: ColumnDef<Eventos>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
+  // {
+  //   id: "select",
+  //   header: ({ table }) => (
+  //     <Checkbox
+  //       checked={
+  //         table.getIsAllPageRowsSelected() ||
+  //         (table.getIsSomePageRowsSelected() && "indeterminate")
+  //       }
+  //       onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
+  //       aria-label="Select all"
+  //     />
+  //   ),
+  //   cell: ({ row }) => (
+  //     <Checkbox
+  //       checked={row.getIsSelected()}
+  //       onCheckedChange={(value) => row.toggleSelected(!!value)}
+  //       aria-label="Select row"
+  //     />
+  //   ),
+  //   enableSorting: false,
+  //   enableHiding: false,
+  // },
   {
     accessorKey: "edicion",
-    header: "Edicion",
-    cell: ({ row }) => <div className="capitalize">{row.getValue("edicion")}</div>,
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        
+      >
+        Edicion
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => <div className="capitalize text-center">{row.getValue("edicion")}</div>,
   },
   {
     accessorKey: "nombre",
@@ -52,17 +61,18 @@ export const columns: ColumnDef<Eventos>[] = [
       <Button
         variant="ghost"
         onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        
       >
         Nombre
         <ArrowUpDown />
       </Button>
     ),
     cell: ({ row }) => (
-      <div className="capitalize">{row.getValue("nombre")}</div>
+      <div className="capitalize text-center">{row.getValue("nombre")}</div>
     ),
   },
   {
-    accessorKey: "fechaInicio",
+    accessorKey: "fecha_inicio",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -72,19 +82,14 @@ export const columns: ColumnDef<Eventos>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("fechaInicio")}</div>,
+    cell: ({ row }) => {
+      const fechaIn = new Date(row.getValue("fecha_inicio")).toLocaleDateString();
+      return <div className="capitalize text-center">{fechaIn}</div>;
+    },
   },
-  // Columna oculta para filtrado combinado de nombre y apellido
-  // {
-  //   id: "nombreApellido",
-  //   filterFn: (row, _columnId, filterValue) => {
-  //     const fullName =
-  //       `${row.original.nombre} ${row.original.apellido}`.toLowerCase();
-  //     return fullName.includes(filterValue.toLowerCase());
-  //   },
-  // },
+
   {
-    accessorKey: "fechaFin",
+    accessorKey: "fecha_fin",
     header: ({ column }) => (
       <Button
         variant="ghost"
@@ -94,7 +99,10 @@ export const columns: ColumnDef<Eventos>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("fechaFin")}</div>,
+    cell: ({ row }) => {
+      const fechaFin = new Date(row.getValue("fecha_fin")).toLocaleDateString();
+      return <div className="capitalize text-center">{fechaFin}</div>;
+    },
   },
   {
     accessorKey: "lugar",
@@ -107,7 +115,7 @@ export const columns: ColumnDef<Eventos>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("lugar")}</div>,
+    cell: ({ row }) => <div className="capitalize text-center">{row.getValue("lugar")}</div>,
   },
   {
     accessorKey: "tematica",
@@ -120,7 +128,7 @@ export const columns: ColumnDef<Eventos>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("tematica")}</div>,
+    cell: ({ row }) => <div className="capitalize text-center">{row.getValue("tematica")}</div>,
   },
   {
     id: "actions",
