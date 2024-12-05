@@ -1,4 +1,3 @@
-// Este archivo es un Server Component por defecto
 import { getEsculturas } from "./action";
 import type { Escultura, EsculturaPaginatedResponse } from "@/types";
 import ClientPage from "./ClientPage";

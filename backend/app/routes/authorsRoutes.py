@@ -2,7 +2,8 @@ from app.config.db import get_db
 from app.controllers.authorsController import AuthorController
 from app.dtos.authorsDto import AuthorBase, AuthorCreate, AuthorOut, AuthorUpdate
 from fastapi import APIRouter, Depends
-from fastapi_pagination import Page
+from fastapi_pagination import Page, Params
+from fastapi_pagination.ext.sqlalchemy import paginate
 from sqlalchemy.orm import Session
 
 author = APIRouter()
@@ -14,8 +15,8 @@ author = APIRouter()
     response_model=Page[AuthorOut],
     tags=["autores"],
 )
-def get_authors(db: Session = Depends(get_db)):
-    return AuthorController.get_authors(db)
+def get_authors(db: Session = Depends(get_db), params: Params = Depends()):
+    return AuthorController.get_authors(db, params)
 
 
 @author.get("/autores/{id}", response_model=AuthorBase, tags=["autores"])

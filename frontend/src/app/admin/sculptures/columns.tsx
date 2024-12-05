@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { ColumnDef } from "@tanstack/react-table";
 import { ArrowUpDown, MoreHorizontal } from "lucide-react";
 
@@ -13,33 +13,10 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Checkbox } from "@/components/ui/checkbox";
-import { deleteAutor } from "@/app/autores/action";
 import { Escultura } from "@/types";
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogFooter, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 export const columns: ColumnDef<Escultura>[] = [
-  {
-    id: "select",
-    header: ({ table }) => (
-      <Checkbox
-        checked={
-          table.getIsAllPageRowsSelected() ||
-          (table.getIsSomePageRowsSelected() && "indeterminate")
-        }
-        onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
-      />
-    ),
-    cell: ({ row }) => (
-      <Checkbox
-        checked={row.getIsSelected()}
-        onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
-      />
-    ),
-    enableSorting: false,
-    enableHiding: false,
-  },
   {
     accessorKey: "id",
     header: "ID",
@@ -73,8 +50,6 @@ export const columns: ColumnDef<Escultura>[] = [
     ),
     cell: ({ row }) => <div>{row.getValue("descripcion")}</div>,
   },
-  // Columna oculta para filtrado combinado de nombre y apellido
-
   {
     accessorKey: "tecnica",
     header: ({ column }) => (
@@ -86,13 +61,84 @@ export const columns: ColumnDef<Escultura>[] = [
         <ArrowUpDown />
       </Button>
     ),
-    cell: ({ row }) => <div>{row.getValue("tecnica")}</div>,
+    cell: ({ row }) => (
+      <div className="capitalize text-center">{row.getValue("tecnica")}</div>
+    ),
+  },
+  {
+    accessorKey: "cant_votos",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Votos
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => (
+      <div className="capitalize text-center">{row.getValue("cant_votos")}</div>
+    ),
+  },
+  {
+    accessorKey: "autor.nombre",
+    header: ({ column }) => (
+      <Button
+        variant="ghost"
+        onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+      >
+        Autor
+        <ArrowUpDown />
+      </Button>
+    ),
+    cell: ({ row }) => (
+      <div className="capitalize">{row.original.autor.nombre}</div>
+    ),
+  },
+  {
+    accessorKey: "imagenes",
+    header: "Imágenes",
+    cell: ({ row }) => {
+      const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+      return (
+        <>
+          <Dialog open={!!selectedImage} onOpenChange={(isOpen) => !isOpen && setSelectedImage(null)}>
+            <DialogTrigger asChild>
+              <Button onClick={() => setSelectedImage(row.original.imagenes[0]?.url)}>
+                Ver
+              </Button>
+            </DialogTrigger>
+            {selectedImage && (
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Escultura {row.original.nombre_obra}</DialogTitle>
+                  
+                </DialogHeader>
+                <div className="flex justify-center">
+                  <img
+                    src={selectedImage}
+                    alt="Detalle de imagen"
+                    className="max-w-full max-h-96"
+                  />
+                </div>
+                <DialogFooter>
+                  <Button variant="ghost" onClick={() => setSelectedImage(null)}>
+                    Cerrar
+                  </Button>
+                </DialogFooter>
+              </DialogContent>
+            )}
+          </Dialog>
+        </>
+      );
+    },
   },
   {
     id: "actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const payment = row.original;
+      const escultura = row.original;
 
       return (
         <DropdownMenu>
@@ -105,20 +151,12 @@ export const columns: ColumnDef<Escultura>[] = [
           <DropdownMenuContent align="end">
             <DropdownMenuLabel>Acción</DropdownMenuLabel>
             <DropdownMenuItem
-              onClick={() => navigator.clipboard.writeText(payment.id.toString())}
+              onClick={() =>
+                navigator.clipboard.writeText(escultura.id.toString())
+              }
             >
-              Copiar id Autor
+              Copiar ID
             </DropdownMenuItem>
-            {/* <DropdownMenuItem
-              onClick={() => deleteAutor(payment.id)}
-            >
-              Eliminar Autor
-            </DropdownMenuItem> */}
-            {/* <DropdownMenuItem
-              onClick={() => updateAutor(payment.id, payment)}
-            >
-              Editar Autor
-            </DropdownMenuItem> */}
             <DropdownMenuSeparator />
           </DropdownMenuContent>
         </DropdownMenu>

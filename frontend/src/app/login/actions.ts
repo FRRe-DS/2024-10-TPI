@@ -17,9 +17,6 @@ export const handleGoogleLogin = async () => {
 // esta funcion el facuBlanco no toco nada de nada.
 export async function handleLogin(data: FormData) {
   const formData = {
-    id: null,
-    nombre: null,
-    apellido: null,
     correo: data.get("correo"),
     contrasenia_hasheada: data.get("contrasenia_hasheada"),
   };

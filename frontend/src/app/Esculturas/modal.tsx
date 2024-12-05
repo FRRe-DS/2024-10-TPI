@@ -3,22 +3,14 @@ import FiveStarRating from "./FiveStarRating";
 import { getVote } from "./action";
 import { useEffect, useState } from "react";
 import QRCode from "./qrCode";
-import { cookies } from "next/headers";
-
-// interface ModalProps {
-//   isOpen: boolean;
-//   onClose: () => void;
-//   escultura: Escultura; // Cambiado de EsculturaPaginatedResponse a Escultura
-// }
 
 interface ModalProps {
   isModalOpen: boolean;
-  escultura: Escultura;
+  setIsModalOpen: (isOpen: boolean) => void;
   usuario: Usuario;
-  setIsModalOpen: any;
+  escultura: Escultura; // Cambiado de EsculturaPaginatedResponse a Escultura
 }
 
-// export default function Modal({ isOpen, onClose, escultura }: ModalProps) {
 export default function Modal({
   isModalOpen,
   escultura,
@@ -41,22 +33,22 @@ export default function Modal({
       (prev) => (prev - 1 + imageArray.length) % imageArray.length,
     );
   };
-  // useEffect(() => {
-  //   const fetchVoto = async () => {
-  //     if (isOpen) {
-  //       try {
-  //         const votoDatos = await getVote(escultura.id);
-  //         setVoto(votoDatos);
-  //       } catch (error) {
-  //         console.error('Error al obtener el voto:', error);
-  //       }
-  //     }
-  //   };
-  //
-  //   fetchVoto();
-  // }, [isOpen, escultura.id]);
-  //
-  // if (!isOpen) return null;
+  useEffect(() => {
+    const fetchVoto = async () => {
+      if (isModalOpen) {
+        try {
+          const votoDatos = await getVote(escultura.id);
+          setVoto(votoDatos);
+        } catch (error) {
+          console.error("Error al obtener el voto:", error);
+        }
+      }
+    };
+
+    fetchVoto();
+  }, [isModalOpen, escultura.id]);
+
+  if (!isModalOpen) return null;
 
   // useEffect(() => {
   //   const fetchVoto = async () => {
@@ -213,7 +205,28 @@ export default function Modal({
                   <QRCode id={escultura.id} />
                 </div>
               )}
+
+              {/* Información del autor */}
+              <div className="mt-8">
+                <h2 className="text-2xl font-bold mb-4">Puntaje de la Obra</h2>
+                <div className="space-y-2">
+                  <p className="text-gray-600">
+                    <span className="font-semibold">Estrellas: </span>
+                    {escultura.puntaje_total / escultura.cant_votos || 0}
+                  </p>
+                </div>
+              </div>
             </div>
+
+            {/* Sistema de rating */}
+            {/* <div className="absolute bottom-0 right-0 w-full bg-white border-t border-gray-200 p-4 md:p-6"> */}
+            {/*   <div className="scale-75 md:scale-100 transform-origin-center"> */}
+            {/*     <FiveStarRating */}
+            {/*       esculturaId={escultura.id} */}
+            {/*       votoUsuario={voto || { rating: 0 }} */}
+            {/*     /> */}
+            {/*   </div> */}
+            {/* </div> */}
           </div>
         </div>
       </div>

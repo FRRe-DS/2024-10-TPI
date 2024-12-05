@@ -1,13 +1,16 @@
 from datetime import datetime
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
+from fastapi_pagination.ext.sqlalchemy import paginate
+from fastapi_pagination import Params
 from app.models.eventsModel import EventModel
 from app.dtos.eventsDto import EventCreate, EventUpdate
 
 class EventController:
 
-  def get_events(db: Session):
-      return db.query(EventModel).filter(EventModel.deleted_at == None).all()
+  def get_events(db: Session, params: Params):
+      eventos = db.query(EventModel).filter(EventModel.deleted_at == None)
+      return paginate(eventos, params)
 
   def get_event_by_edicion(edicion: int, db: Session):
       event = db.query(EventModel).filter(EventModel.edicion == edicion).one_or_none()

@@ -1,22 +1,26 @@
+"use client";
+import { useEffect, useState } from "react";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { getAutores } from "@/app/autores/action";
-
+import { Autor } from "@/types";
 
 export default async function page() {
-  async function fetchData() {
-    const autores = await getAutores();
-    return autores;
-  }
-  return (
-    <div className="flex flex-1 flex-col gap-4 p-4">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="md:col-span-2">
-          <DataTable columns={columns} data={await fetchData()} />
-        </div>
-      </div>
+  const [autores, setAutores] = useState<Autor[]>([]); // Estado para almacenar las esculturas
 
-      {/* <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" /> */}
+  const fetchData = async () => {
+    const autores = await getAutores();
+    setAutores(autores || []);
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <div className="flex flex-col md:flex-row gap-4 p-4 w-full">
+      <div className="w-full pr-10">
+        <DataTable columns={columns} data={autores} />
+      </div>
     </div>
   );
 }

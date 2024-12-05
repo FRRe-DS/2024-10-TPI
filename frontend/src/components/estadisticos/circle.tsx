@@ -1,69 +1,39 @@
-
-
-"use client"
-
-import * as React from "react"
-import { TrendingUp } from "lucide-react"
-import { Label, Pie, PieChart } from "recharts"
-
+import React, { useMemo } from "react";
+import { Label, Pie, PieChart } from "recharts";
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart"
-const chartData = [
-  { browser: "chrome", Votos: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", Votos: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", Votos: 287, fill: "var(--color-firefox)" },
-  { browser: "edge", Votos: 173, fill: "var(--color-edge)" },
-  { browser: "other", Votos: 190, fill: "var(--color-other)" },
-]
+} from "@/components/ui/chart";
 
+// Configuración de colores
 const chartConfig = {
   Votos: {
     label: "Votos",
   },
-  chrome: {
-    label: "Chrome",
-    color: "hsl(var(--chart-1))",
-  },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-} satisfies ChartConfig
+} satisfies ChartConfig;
 
-export function CircleData() {
-  const totalVotos = React.useMemo(() => {
-    return chartData.reduce((acc, curr) => acc + curr.Votos, 0)
-  }, [])
+// Componente actualizado para recibir datos dinámicos
+interface CircleDataProps {
+  data: { nombre: string; Votos: number; fill: string }[];
+}
+
+export function CircleData({ data }: CircleDataProps) {
+  const totalVotos = useMemo(() => {
+    return data.reduce((acc, curr) => acc + curr.Votos, 0);
+  }, [data]);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col w-96">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Obras mas votadas</CardTitle>
-        <CardDescription>Enero - Junio 2024</CardDescription>
+        <CardTitle>Obras más votadas</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -76,9 +46,9 @@ export function CircleData() {
               content={<ChartTooltipContent hideLabel />}
             />
             <Pie
-              data={chartData}
+              data={data}
               dataKey="Votos"
-              nameKey="browser"
+              nameKey="nombre"
               innerRadius={60}
               strokeWidth={5}
             >
@@ -107,7 +77,7 @@ export function CircleData() {
                           Votos
                         </tspan>
                       </text>
-                    )
+                    );
                   }
                 }}
               />
@@ -115,14 +85,6 @@ export function CircleData() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 8.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total Votos for the last 6 months
-        </div>
-      </CardFooter>
     </Card>
-  )
+  );
 }
