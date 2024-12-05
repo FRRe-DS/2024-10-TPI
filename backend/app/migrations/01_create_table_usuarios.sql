@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS Usuarios (
 	nombre VARCHAR(255) NOT NULL,
 	apellido VARCHAR(255) NOT NULL,
 	contrasenia_hasheada VARCHAR(255) NOT NULL,
-	rol VARCHAR(25),
+	rol VARCHAR(25) NOT NULL,
 	correo VARCHAR(255) NOT NULL UNIQUE,
   
   created_at DATETIME NOT NULL DEFAULT NOW(),

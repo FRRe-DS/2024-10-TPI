@@ -8,6 +8,7 @@ class UserBase(BaseModel):
   nombre: str
   apellido: str
   contrasenia_hasheada: str
+  rol: str
   correo: str
 
 # Se usa para validar los datos cuando un nuevo usuario se registra.
@@ -19,6 +20,7 @@ class UserUpdate(UserBase):
   nombre: Optional[str] = None
   apellido: Optional[str] = None
   contrasenia_hasheada: Optional[str] = None
+  rol: Optional[str] = None
   correo: Optional[str] = None
 
 # Esta clase se usa para validar los datos durante el proceso de inicio de sesión de un usuario.

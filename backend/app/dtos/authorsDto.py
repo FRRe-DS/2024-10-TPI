@@ -14,7 +14,7 @@ class AuthorBase(BaseModel):
     pais_origen: str
     url: str
     public_id: str
-    contactos: List[ContactBase] = []
+    contactos: Optional[List[ContactBase]]
 
 
 class AuthorCreate(AuthorBase):
@@ -30,11 +30,11 @@ class AuthorUpdate(AuthorBase):
     pais_origen: Optional[str] = None
     url: Optional[str] = None
     public_id: Optional[str] = None
-
+    contactos: Optional[List[ContactBase]] = None
 
 class Author(AuthorBase):
     id: Optional[int]
-    contactos: Optional[List["ContactModel"]]
+    contactos: Optional[List[ContactBase]]
     created_at: datetime
     updated_at: datetime
     deleted_at: Optional[datetime]

@@ -15,6 +15,7 @@ class ContactUpdate(ContactBase):
     id: Optional[int] = None
     tipo: Optional[str] = None
     contenido: Optional[str] = None
+    autor: Optional[int] = None
 
 class Contact(ContactBase):
     id: Optional[int]

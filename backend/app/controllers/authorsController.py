@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from app.dtos.authorsDto import AuthorCreate, AuthorUpdate
+from app.dtos.authorsDto import AuthorCreate, AuthorUpdate, AuthorOut
 from app.models.authorsModel import AuthorModel
 from fastapi import HTTPException
 from fastapi_pagination import paginate, set_params
@@ -11,14 +11,24 @@ from sqlalchemy.orm import Session
 class AuthorController:
 
     def get_authors(db: Session):
-        results = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
+        autores = db.query(AuthorModel).filter(AuthorModel.deleted_at == None).all()
         set_params(Params(size=20))
-        return paginate(results)
+        return paginate(autores)
 
     def get_author_by_id(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
+        elif author.deleted_at is not None:
+            raise HTTPException(status_code=404, detail="Autor eliminado de forma lógica")
+        return author
+    
+    def get_author_by_name_and_lastname(nombre: str, apellido: str, db: Session):
+        author = db.query(AuthorModel).filter(AuthorModel.nombre == nombre, AuthorModel.apellido == apellido).one_or_none()
+        if author is None:
+            raise HTTPException(status_code=404, detail="Autor no encontrado")
+        elif author.deleted_at is not None:
+            raise HTTPException(status_code=404, detail="Autor eliminado de forma lógica")
         return author
 
     def create_author(author: AuthorCreate, db: Session):
@@ -26,34 +36,30 @@ class AuthorController:
         db.add(new_author)
         db.commit()
         db.refresh(new_author)
-        return {"mensaje": "Autor creado correctamente"}
+        return {'ok': True, 'mensaje': 'Creación del Autor correcta'}
 
     def update_author(id: int, updatedAuthor: AuthorUpdate, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
+        elif author.deleted_at is not None:
+            raise HTTPException(status_code=404, detail="Autor eliminado de forma lógica")
 
         for key, value in updatedAuthor.model_dump(exclude_unset=True).items():
             setattr(author, key, value)
         db.commit()
         db.refresh(author)
-        return {"mensaje": "Autor actualizado correctamente"}
+        return {'ok': True, 'mensaje': 'Actualización del Autor correcta'}
 
     def delete_author(id: int, db: Session):
         author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
         
         if author is None:
             raise HTTPException(status_code=404, detail="Autor no encontrado")
+        elif author.deleted_at is not None:
+            raise HTTPException(status_code=404, detail="Autor eliminado de forma lógica")
         
-        if author.deleted_at is None:
-            author.deleted_at = datetime.now()
-            db.commit()
-            return {"mensaje": "Borrado lógico realizado correctamente, autor marcado como eliminado."}
-        
-        db.delete(author)
+        author.deleted_at = datetime.now()
         db.commit()
-        return {"mensaje": "Borrado físico realizado correctamente, autor eliminado de forma permanente."}
-    
-    def exists_author_by_id(id: int, db: Session):
-        author = db.query(AuthorModel).filter(AuthorModel.id == id).one_or_none()
-        return {"existe": author is not None}
+        return {'ok': True, 'mensaje': 'Borrado lógico del Autor correcto'}
+

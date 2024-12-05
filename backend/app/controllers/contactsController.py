@@ -13,6 +13,8 @@ class ContactController:
       contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
       if contact is None:
           raise HTTPException(status_code=404, detail="Contacto no encontrado")
+      elif contact.deleted_at is not None:
+          raise HTTPException(status_code=404, detail="Contacto eliminado de forma lógica")
       return contact
   
   def create_contact(contact: ContactCreate, db: Session):
@@ -20,31 +22,28 @@ class ContactController:
       db.add(new_contact)
       db.commit()
       db.refresh(new_contact)
-      return {"mensaje": "Contacto creado correctamente"}
+      return {'ok': True, 'mensaje': 'Creación del Contacto correcta'}
   
   def update_contact(id: int, updatedContact: ContactUpdate, db: Session):
       contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
       if contact is None:
           raise HTTPException(status_code=404, detail="Contacto no encontrado")
+      elif contact.deleted_at is not None:
+          raise HTTPException(status_code=404, detail="Contacto eliminado de forma lógica")
       
       for key, value in updatedContact.model_dump(exclude_unset=True).items():
           setattr(contact, key, value)
       db.commit()
       db.refresh(contact)
-      return {"mensaje": "Contacto actualizado correctamente"}
+      return {'ok': True, 'mensaje': 'Actualización del Contacto correcta'}
   
   def delete_contact(id: int, db: Session):   
       contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
       if contact is None:
           raise HTTPException(status_code=404, detail="Contacto no encontrado")
-      db.delete(contact)
+      elif contact.deleted_at is not None:
+          raise HTTPException(status_code=404, detail="Contacto eliminado de forma lógica")
+      
+      contact.deleted_at = datetime.now()
       db.commit()
-      return {"mensaje": "Contacto eliminado correctamente"}
-  
-  def exists_contact_by_id(id: int, db: Session):
-      contact = db.query(ContactModel).filter(ContactModel.id == id).one_or_none()
-      return {"existe": contact is not None}
-  
-  def exists_contact_by_author(author: int, db: Session):
-      contact = db.query(ContactModel).filter(ContactModel.autor == author).one_or_none()
-      return {"existe": contact is not None}
+      return {'ok': True, 'mensaje': 'Borrado lógico del Contacto correcto'}

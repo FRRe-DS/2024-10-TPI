@@ -14,7 +14,7 @@ author = APIRouter()
     response_model=Page[AuthorOut],
     tags=["autores"],
 )
-async def get_authors(db: Session = Depends(get_db)):
+def get_authors(db: Session = Depends(get_db)):
     return AuthorController.get_authors(db)
 
 
@@ -36,8 +36,3 @@ def update_author(id: int, updatedAuthor: AuthorUpdate, db: Session = Depends(ge
 @author.delete("/autores/{id}", tags=["autores"])
 def delete_author(id: int, db: Session = Depends(get_db)):
     return AuthorController.delete_author(id, db)
-
-
-@author.head("/autores/{id}", tags=["autores"])
-def exists_author_by_id(id: int, db: Session = Depends(get_db)):
-    return AuthorController.exists_author_by_id(id, db)
